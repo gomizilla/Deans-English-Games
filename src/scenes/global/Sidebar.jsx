@@ -131,21 +131,21 @@ const SidebarComponent = () => {
                             Data
                         </Typography>
                         <Item 
-                            title="Manage Team"
-                            to="/team"
+                            title="Word Scramble"
+                            to="/wordscramble"
                             icon={<PeopleOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="Contacts Information"
+                            title="Secret Word"
                             to="/contacts"
                             icon={<ContactsOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="Invoice"
+                            title="TBA Game Idea"
                             to="/invoices"
                             icon={<ReceiptOutlinedIcon />}
                             selected={selected}
