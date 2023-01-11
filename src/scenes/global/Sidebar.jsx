@@ -78,7 +78,9 @@ const SidebarComponent = () => {
                                     Admins
                                 </Typography>
                                 <IconButton>
-                                    <MenuOutlinedIcon />
+                                    <MenuOutlinedIcon 
+                                    sx={{ color: colors.gray[100]}}
+                                    />
                                 </IconButton>
                             </Box>
                         )}

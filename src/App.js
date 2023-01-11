@@ -2,7 +2,7 @@ import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 // import Dashboard from "./scenes/dashboard";
-// import Topbar from "./scenes/global/Topbar";
+import Topbar from "./scenes/global/Topbar";
 import SidebarComponent from "./scenes/global/Sidebar";
 // import Team from "./scenes/team";
 // import Invoices from "./scenes/invoices";
@@ -26,7 +26,7 @@ function App() {
         <div className="app">
           <SidebarComponent />
           <main className="content">
-            {/* <Topbar /> */}
+            <Topbar />
             <Routes>
               {/* <Route path="/" element={<Dashboard />} /> */}
               {/* <Route path="/team" element={<Team />} />
