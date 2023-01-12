@@ -116,7 +116,7 @@ const SidebarComponent = () => {
                     {/* menu stuff */}
                     <Box>
                         <Item 
-                            title="Dashboard"
+                            title="Home"
                             to="/"
                             icon={<HomeOutlinedIcon />}
                             selected={selected}
@@ -128,7 +128,7 @@ const SidebarComponent = () => {
                             color={colors.gray[300]}
                             sx={{ m: "15px 0 5px 20px"}}
                         >
-                            Data
+                            Games
                         </Typography>
                         <Item 
                             title="Word Scramble"
