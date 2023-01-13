@@ -111,11 +111,35 @@ const WordScramble = () => {
                     <InputBase 
                         sx={{ ml: 2, flex: 1}} 
                         placeholder="Search"
-                        id="ws-guess"
+                        id={word}
+                        onKeyDown={(e) => {
+                            const userInput = document.getElementById(word);
+                            if (e.key === "Enter" && userInput.value === word) {
+                            console.log("various checks: ", word, scrambledWord, userInput.value);
+                            userInput.value = "";
+                            }
+                        }}
                     >
 
                     </InputBase>
-                    <IconButton type="button" sx={{ p: 1}} onClick={handleUserInput}>
+                    <IconButton 
+                        type="button" 
+                        sx={{ p: 1}} 
+                        onClick={()=>{
+                            const userInput = document.getElementById(word);
+                            if (userInput.value === word) {
+                            console.log("various checks: ", word, scrambledWord, userInput.value);
+                            userInput.value = "";
+                            }
+                        }}
+                        // onKeyDown={(e) => {
+                        //     const userInput = document.getElementById(word);
+                        //     if (userInput.value === word) {
+                        //     console.log("various checks: ", word, scrambledWord, userInput.value);
+                        //     userInput.value = "";
+                        //     }
+                        // }}
+                    >
                         <SearchIcon />
                     </IconButton>
                 </Box>
@@ -124,24 +148,25 @@ const WordScramble = () => {
         );
     };
 
-    const handleUserInput = (e) => {
-        e.preventDefault();
-        const userInput = document.getElementById("ws-guess");
-        const test = this.value
-        console.log("hello?", userInput.value)
-        console.log("test: ", test);
-        // ifnot workingbecause originally it used object whereas this is using array
-        // if (nh1VocabScrambleArr[userInput.value]) {
-        //     // document.getElementById(`${nh1VocabScrambleArr[userInput.value]}`).className = "correct";
-        //     document.getElementById(`${nh1VocabScrambleArr[userInput.value]}`).innerHTML = `${userInput.value} ✅`;
-        //     // setSubmittedWords([...submittedWords, userInput.value]);
-        //     console.log("testing");
-        // }
-        // if (userInput.value === )
+    // const handleUserInput = (e) => {
+    //     e.preventDefault();
+    //     console.log("test: ", e);
+    //     // const userInput = document.getElementById("ws-guess");
+    //     // const test = this.value
+    //     // console.log("hello?", userInput.value)
+    //     // console.log("test: ", test);
+    //     // ifnot workingbecause originally it used object whereas this is using array
+    //     // if (nh1VocabScrambleArr[userInput.value]) {
+    //     //     // document.getElementById(`${nh1VocabScrambleArr[userInput.value]}`).className = "correct";
+    //     //     document.getElementById(`${nh1VocabScrambleArr[userInput.value]}`).innerHTML = `${userInput.value} ✅`;
+    //     //     // setSubmittedWords([...submittedWords, userInput.value]);
+    //     //     console.log("testing");
+    //     // }
+    //     // if (userInput.value === )
 
 
-        userInput.value = "";
-    }
+    //     // userInput.value = "";
+    // }
 
     return (
         <Box m="20px">
