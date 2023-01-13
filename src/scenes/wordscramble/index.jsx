@@ -23,7 +23,7 @@ const WordScramble = () => {
 
     useEffect(() => {
         // console.log("test: ", gradeLevel)
-        console.log("state check: ", nh1VocabScrambleArr);
+        // console.log("state check: ", nh1VocabScrambleArr);
     },[gradeLevel]);
 
     useEffect(() => {
@@ -87,7 +87,7 @@ const WordScramble = () => {
         return scrambledWord;
     };
 
-    const wordBox = (word) => {
+    const wordBox = (word, scrambledWord) => {
         return (
             <Box
                 gridColumn="span 3"
@@ -100,7 +100,7 @@ const WordScramble = () => {
                 // id={word}
             >
                 <WordBox
-                    title={word}
+                    title={scrambledWord}
                     subtitle="図書館"
                     icon="📚"
                 />
@@ -108,14 +108,39 @@ const WordScramble = () => {
                     backgroundColor={colors.primary[300]} 
                     borderRadius="3px"
                 >
-                    <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                    <IconButton type="button" sx={{ p: 1}}>
+                    <InputBase 
+                        sx={{ ml: 2, flex: 1}} 
+                        placeholder="Search"
+                        id="ws-guess"
+                    >
+
+                    </InputBase>
+                    <IconButton type="button" sx={{ p: 1}} onClick={handleUserInput}>
                         <SearchIcon />
                     </IconButton>
                 </Box>
 
             </Box>
         );
+    };
+
+    const handleUserInput = (e) => {
+        e.preventDefault();
+        const userInput = document.getElementById("ws-guess");
+        const test = this.value
+        console.log("hello?", userInput.value)
+        console.log("test: ", test);
+        // ifnot workingbecause originally it used object whereas this is using array
+        // if (nh1VocabScrambleArr[userInput.value]) {
+        //     // document.getElementById(`${nh1VocabScrambleArr[userInput.value]}`).className = "correct";
+        //     document.getElementById(`${nh1VocabScrambleArr[userInput.value]}`).innerHTML = `${userInput.value} ✅`;
+        //     // setSubmittedWords([...submittedWords, userInput.value]);
+        //     console.log("testing");
+        // }
+        // if (userInput.value === )
+
+
+        userInput.value = "";
     }
 
     return (
@@ -207,9 +232,18 @@ const WordScramble = () => {
                 nh1VocabScrambleArr.map((word) => {
                     return wordBox(word);
                 })} */}
-                {gradeLevel === "first" ? 
+                {/* {gradeLevel === "first" ? 
                     nh1VocabScrambleArr.map((word) => {
                         return wordBox(word);
+                    })
+                : undefined
+                } */}
+                {gradeLevel === "first" ? 
+                    nh1Vocab.map((word, index) => {
+                        // console.log("index: ", index);
+                        // console.log("word: ", word.english_vocab)
+                        // console.log("test: ", nh1VocabScrambleArr[index])
+                        return wordBox(word.english_vocab, nh1VocabScrambleArr[index]);
                     })
                 : undefined
                 }
