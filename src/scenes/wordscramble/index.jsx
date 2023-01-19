@@ -20,15 +20,31 @@ const WordScramble = () => {
 
     const [gradeLevel, setGradeLevel] = useState();
     const [nh1VocabScrambleArr, setNh1VocabScrambleArr] = useState();
+    const [numCorrect, setNumCorrect] = useState([]);
+    const [nh1VocabTest, setNh1VocabTest] = useState({});
+
+    //test
+    const [toggled, setToggled] = useState(false);
+    //test
 
     useEffect(() => {
         // console.log("test: ", gradeLevel)
         // console.log("state check: ", nh1VocabScrambleArr);
+        console.log("grade select vocabtest check: ", nh1VocabTest)
     },[gradeLevel]);
 
     useEffect(() => {
         scrambler();
-    },[])
+        console.log("new words test check: ", nh1VocabTest);
+    },[]);
+
+    useEffect(() => {
+        console.log("num correct check: ", numCorrect);
+    }, [numCorrect])
+
+    useEffect(() => {
+        console.log("something changed in nh1vocabtest");
+    }, [nh1VocabTest])
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -64,7 +80,19 @@ const WordScramble = () => {
             return scrambleWord(word);
         });
         // console.log("scramble check: ", nh1VocabScrambled);
-        setNh1VocabScrambleArr(nh1VocabScrambled)
+        setNh1VocabScrambleArr(nh1VocabScrambled);
+
+        //test
+
+        let newWordsTest = nh1Vocab.map((word) => {
+            return {
+                en: word.english_vocab,
+                scrambled: scrambleWord(word.english_vocab),
+                jp: "",
+                toggled: false
+            }
+        });
+        setNh1VocabTest(newWordsTest);
     };
 
     const scrambleWord = (word) => {
@@ -87,24 +115,29 @@ const WordScramble = () => {
         return scrambledWord;
     };
 
-    const wordBox = (word, scrambledWord) => {
+    const wordBox = (word, scrambledWord, newListTest) => {
+        let correct = false;
+
+        // maybe if/else here that renders the whole box based on boolean?
+        // maybe get the main box elemeny by id and change display?
+
         return (
             <Box
                 gridColumn="span 3"
                 backgroundColor={colors.primary[400]}
-                display="flex"
+                display={newListTest.toggled ? "none" : "flex"}
                 alignItems="center"
                 justifyContent="space-around"
                 flexDirection="column"
-                key={word}
+                key={newListTest.en}
                 // id={word}
             >
                 <WordBox
-                    title={scrambledWord}
+                    title={newListTest.scrambled}
                     subtitle="図書館"
                     icon="📚"
                 />
-                    <Box 
+                <Box 
                     backgroundColor={colors.primary[300]} 
                     borderRadius="3px"
                 >
@@ -113,10 +146,23 @@ const WordScramble = () => {
                         placeholder="Search"
                         id={word}
                         onKeyDown={(e) => {
-                            const userInput = document.getElementById(word);
-                            if (e.key === "Enter" && userInput.value === word) {
-                            console.log("various checks: ", word, scrambledWord, userInput.value);
-                            userInput.value = "";
+                            // const userInput = document.getElementById(newListTest.en); //shouldnt be using vanilla js in react ?
+                            // console.log("correct check b4: ", correct);
+                            // console.log("hhhhhhhhmmmmmmmmmmmm: ", e.target.value);
+                            if (e.key === "Enter" && e.target.value === newListTest.en) {
+                                // console.log("various checks: ", word, scrambledWord, userInput.value);
+                                // correct = true;
+                                // setNumCorrect([...numCorrect, userInput.value])
+                                // userInput.value = "";
+                                // console.log("correct check after: ", correct);
+                                // console.log("check: ", this.display);
+                                // e.target.display = "none";
+                                // setToggled(true);
+                                // e.target.backgroundColor = "green";
+                                // console.log("check: ", e.target);
+                                e.target.value = "";
+                                newListTest.toggled = true;
+                                console.log("newlsittest check: ", newListTest);
                             }
                         }}
                     >
@@ -128,8 +174,8 @@ const WordScramble = () => {
                         onClick={()=>{
                             const userInput = document.getElementById(word);
                             if (userInput.value === word) {
-                            console.log("various checks: ", word, scrambledWord, userInput.value);
-                            userInput.value = "";
+                                console.log("various checks: ", word, scrambledWord, userInput.value);
+                                userInput.value = "";
                             }
                         }}
                         // onKeyDown={(e) => {
@@ -147,6 +193,7 @@ const WordScramble = () => {
             </Box>
         );
     };
+
 
     // const handleUserInput = (e) => {
     //     e.preventDefault();
@@ -268,7 +315,7 @@ const WordScramble = () => {
                         // console.log("index: ", index);
                         // console.log("word: ", word.english_vocab)
                         // console.log("test: ", nh1VocabScrambleArr[index])
-                        return wordBox(word.english_vocab, nh1VocabScrambleArr[index]);
+                        return wordBox(word.english_vocab, nh1VocabScrambleArr[index], nh1VocabTest[index]);
                     })
                 : undefined
                 }
