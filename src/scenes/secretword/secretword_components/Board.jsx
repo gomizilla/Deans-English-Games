@@ -1,6 +1,7 @@
 
 // import { nh1Vocab } from "../../../data/vocabWords";
 import { Box, Typography, useTheme, IconButton } from "@mui/material";
+import Letter from "./Letter";
 
 
 const tempWord = "FRUIT";
@@ -8,39 +9,110 @@ const tempWord = "FRUIT";
 const Board = () => {
 
     const BOARD_ROWS = 6;
+    const WORD_LENGTH = tempWord.split("").length;
+    // console.log("test: ", WORD_LENGTH);
 
-    const handleBoard = (round) => {
-        const word = tempWord.split("")
-        for (let i = 0; i < BOARD_ROWS; i++) {
-            <Box
-                // key={[round, i]}
-            >
-                {word.map((letter) => {
-                    return (
-                        <Box>
-                            {letter}
-                        </Box>
-                    )
-                })}
-            </Box>
-            // for (let j = 0; j < tempWord.length; j++) {
+    // const handleBoard = (round) => {
+    //     const word = tempWord.split("")
+    //     for (let i = 0; i < BOARD_ROWS; i++) {
+    //         <Box
+    //             // key={[round, i]}
+    //         >
+    //             {word.map((letter) => {
+    //                 return (
+    //                     <Box>
+    //                         {letter}
+    //                     </Box>
+    //                 )
+    //             })}
+    //         </Box>
+    //         // for (let j = 0; j < tempWord.length; j++) {
 
-            // }
-        }
-    }
+    //         // }
+    //     }
+    // }
 
     return (
+        // <Box
+        //     backgroundColor="pink"
+        //     display="grid"
+        //     justifyContent="center"
+        //     alignContent="center"
+        //     flexGrow="1"
+        //     // gridTemplateColumns="repeat(5, 4em)"
+        //     gridTemplateColumns={`repeat(${WORD_LENGTH}, 4em)`}
+        //     gridTemplateRows={`repeat(${BOARD_ROWS}, 4em)`}
+        //     gap=".25em"
+        //     marginBottom="1em"
+        //     // maxWidth="75%"
+        //     margin="20px"
+        //     paddingTop="20px"
+        //     paddingBottom="20px"
+        // >
         <Box
             backgroundColor="pink"
-            display="grid"
-            justifyContent="center"
-            alignContent="center"
-            flexGrow="1"
-            gridTemplateColumns="repeat(5, 4em)"
-            gridTemplateRows="repeat(6, 4em)"
+            display="flex"
+            // justifyContent="center"
+            // alignContent="center"
+            alignItems="center"
+            flexDirection="column"
+            // flexGrow="1"
+            // gridTemplateColumns="repeat(5, 4em)"
+            // gridTemplateColumns={`repeat(${WORD_LENGTH}, 4em)`}
+            // gridTemplateRows={`repeat(${BOARD_ROWS}, 4em)`}
             gap=".25em"
-            marginBottom="1em"
+            // marginBottom="1em"
+            // maxWidth="75%"
+            margin="20px"
+            paddingTop="20px"
+            paddingBottom="20px"
         >
+
+            {/* {[...Array(BOARD_ROWS*WORD_LENGTH)].map((e, index) => {
+                return (
+                    <Box
+                        key={index}
+                        border="1px solid blue"
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        {index}
+                    </Box>
+                )
+            })} */}
+
+            {[...Array(BOARD_ROWS)].map((e, index) => {
+                return (
+                    <Box
+                        key={index}
+                        border="1px solid blue"
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        // maxWidth="50%"
+                    >
+                        {[...Array(WORD_LENGTH)].map((e, index2) => {
+                            return (
+                                <Box
+                                    key={index2}
+                                    border="1px solid green"
+                                    display="flex"
+                                    justifyContent="center"
+                                    alignItems="center"
+                                    height="5rem"
+                                    width="5rem"
+                                    id={[index, index2]}
+                                >
+                                    {index2}
+                                    {/* <Letter round={index} pos={index2} /> ??? */}
+                                </Box>
+                            )
+                        })}
+                    </Box>
+                )
+            })}
+
             {/* {[...Array(BOARD_ROWS)].map((e,index) => {
                 return (
                     <Box
@@ -50,7 +122,32 @@ const Board = () => {
                     </Box>
                 )
             })} */}
-            <Box>1</Box>
+
+            {/* {[...Array(BOARD_ROWS)].map((e, index) => {
+                return (
+                    <Box
+                        key={index}
+                        backgroundColor="purple"
+                    >
+                        {[...Array(WORD_LENGTH)].map((e, i) => {
+                            return (
+                                <Box
+                                    key={[index, i]}
+                                    backgroundColor="white"
+                                >
+                                    <Typography
+                                        color="orange"
+                                    >
+                                        test
+                                    </Typography>
+                                </Box>
+                            )
+                        })}
+                    </Box>
+                )
+            })} */}
+
+            {/* <Box>1</Box>
             <Box>2</Box>
             <Box>3</Box>
             <Box>4</Box>
@@ -79,7 +176,7 @@ const Board = () => {
             <Box>27</Box>
             <Box>28</Box>
             <Box>29</Box>
-            <Box>30</Box>
+            <Box>30</Box> */}
         </Box>
     );
 };
