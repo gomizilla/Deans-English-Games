@@ -2,14 +2,14 @@
 // import { nh1Vocab } from "../../../data/vocabWords";
 import { Box, Typography, useTheme, IconButton } from "@mui/material";
 import Letter from "./Letter";
+import { tempWordMain } from "../index";
 
-
-const tempWord = "FRUIT";
+// const tempWord = "AWERAWER";
 
 const Board = () => {
 
     const BOARD_ROWS = 6;
-    const WORD_LENGTH = tempWord.split("").length;
+    const WORD_LENGTH = tempWordMain.split("").length;
     // console.log("test: ", WORD_LENGTH);
 
     // const handleBoard = (round) => {
@@ -94,19 +94,21 @@ const Board = () => {
                     >
                         {[...Array(WORD_LENGTH)].map((e, index2) => {
                             return (
-                                <Box
+                                <Letter
                                     key={index2}
-                                    border="1px solid green"
-                                    display="flex"
-                                    justifyContent="center"
-                                    alignItems="center"
-                                    height="5rem"
-                                    width="5rem"
-                                    id={[index, index2]}
+                                    // border="1px solid green"
+                                    // display="flex"
+                                    // justifyContent="center"
+                                    // alignItems="center"
+                                    // height="5rem"
+                                    // width="5rem"
+                                    // id={[index, index2]}
+                                    letterPos={index2}
+                                    round={index}
                                 >
                                     {index2}
                                     {/* <Letter round={index} pos={index2} /> ??? */}
-                                </Box>
+                                </Letter>
                             )
                         })}
                     </Box>

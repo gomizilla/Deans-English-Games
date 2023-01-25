@@ -20,7 +20,7 @@ import Letter from "./secretword_components/Letter";
 
 export const AppContext = createContext();
 
-const tempWordMain = "FRUIT";
+export const tempWordMain = "awerawer";
 
 
 const SecretWord = () => {
@@ -28,11 +28,35 @@ const SecretWord = () => {
     const BOARD_ROWS = 6;
     const WORD_LENGTH = tempWordMain.split("").length;
 
-    const [board, setBoard] = useState([]);
-    // const [currentAttempt, setCurrentAttempt] = useState(["0, 0"]);
+    // const tempBoard = [
+    //     ["", "", "", "", ""],
+    //     ["", "", "", "", ""],
+    //     ["", "", "", "", ""],
+    //     ["", "", "", "", ""],
+    //     ["", "", "", "", ""],
+    //     ["", "", "", "", ""],
+    // ];
+
+    const [board, setBoard] = useState([[]]);
+    // const [board, setBoard] = useState(tempBoard);
+    const [currentAttempt, setCurrentAttempt] = useState({round: 0, letterPos: 0});
     const [notUsed, setNotUsed] = useState([]);
     // const [gameover, setGameover] = useState({gameover: false, guessedWord: false});
     const [secretWord, setSecretWord] = useState("");
+    const [buttonClicked, setButtonClicked] = useState(false);
+
+    useEffect(() => {
+        handleSecretWord();
+        // handleDefaultBoard();
+        setSecretWord(tempWordMain);
+        console.log("board initial load: ", board);
+    }, []);
+
+    useEffect(() => {
+        // console.log("board b4: ", board);
+        // handleDefaultBoard();
+        console.log("board on word change: ", board);
+    }, [tempWordMain])
 
 
     const onSelectLetter = () => {
@@ -53,15 +77,18 @@ const SecretWord = () => {
 
     const handleDefaultBoard = () => {
         let boardSize = WORD_LENGTH;
-        let board = [];
+        let gameBoard = [];
         for (let i = 0; i < BOARD_ROWS; i++) {
             let tempArr = [];
             for (let j = 0; j < boardSize; j++) {
                 tempArr.push("");
             }
-            board.push(tempArr);
+            gameBoard.push(tempArr);
         }
-        setBoard(board);
+        setBoard(gameBoard);
+        setButtonClicked(true);
+        console.log("board", board);
+        return;
     }
 
     return (
@@ -70,8 +97,8 @@ const SecretWord = () => {
                 value={{
                     board,
                     setBoard,
-                    // currentAttempt,
-                    // setCurrentAttempt,
+                    currentAttempt,
+                    setCurrentAttempt,
                     onSelectLetter,
                     onEnter,
                     onDelete,
@@ -80,7 +107,12 @@ const SecretWord = () => {
                     secretWord
                 }}
             >
-                <Board />
+                {/* temp fix, change to MUI or something later*/}
+                <button onClick={handleDefaultBoard}>
+                    awer
+                </button>
+                {/* <Board /> */}
+                {buttonClicked ? <Board/> : undefined}
             </AppContext.Provider>
         </Box>
     );
