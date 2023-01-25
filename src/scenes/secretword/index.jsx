@@ -113,6 +113,7 @@ const SecretWord = () => {
                 </button>
                 {/* <Board /> */}
                 {buttonClicked ? <Board/> : undefined}
+                <Keyboard />
             </AppContext.Provider>
         </Box>
     );
