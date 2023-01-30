@@ -32,7 +32,7 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
             // display="grid"
             // alignItems="center"
             sx={{
-                backgroundColor: colors.primary[300],
+                backgroundColor: disabled ? "#3a393c" : colors.primary[300],
                 color: colors.primary[100],
                 // border: `1px solid ${colors.greenAccent[100]}`,
                 borderRadius: "4px",
@@ -62,6 +62,7 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
                 }}
             // fontSize="20px"
             // cursor="pointer"
+            // backgroundColor={disabled && "#3a393c"}
             onClick={selectedLetter}
         >
             { keyVal }
