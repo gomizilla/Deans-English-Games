@@ -20,7 +20,7 @@ import Letter from "./secretword_components/Letter";
 
 export const AppContext = createContext();
 
-export const tempWordMain = "awerawer";
+export const tempWordMain = "fruity";
 
 
 const SecretWord = () => {
@@ -48,31 +48,65 @@ const SecretWord = () => {
     useEffect(() => {
         handleSecretWord();
         // handleDefaultBoard();
-        setSecretWord(tempWordMain);
+        // setSecretWord(tempWordMain);
         console.log("board initial load: ", board);
     }, []);
 
-    useEffect(() => {
-        // console.log("board b4: ", board);
-        // handleDefaultBoard();
-        console.log("board on word change: ", board);
-    }, [tempWordMain])
+    // useEffect(() => {
+    //     // console.log("board b4: ", board);
+    //     // handleDefaultBoard();
+    //     console.log("board on word change: ", board);
+    // }, [tempWordMain])
 
 
-    const onSelectLetter = () => {
-
+    const onSelectLetter = (keyVal) => {
+        if (currentAttempt.letterPos > (WORD_LENGTH - 1)) return;
+        const currentBoard = [...board];
+        currentBoard[currentAttempt.round][currentAttempt.letterPos] = keyVal;
+        setBoard(currentBoard);
+        setCurrentAttempt({...currentAttempt, letterPos: currentAttempt.letterPos + 1});
     }
 
     const onDelete = () => {
-
+        if (currentAttempt.letterPos === 0) return;
+        const currentBoard = [...board];
+        currentBoard[currentAttempt.round][currentAttempt.letterPos - 1] = "";
+        setBoard(currentBoard);
+        setCurrentAttempt({...currentAttempt, letterPos: currentAttempt.letterPos - 1});
     }
 
     const onEnter = () => {
+        // below if not yet functional
+        // if (currentAttempt.letterPos === WORD_LENGTH) {
+        //     setTotalAttempts(totalAttempts+1);
+        // }
+
+        if (currentAttempt.letterPos !== WORD_LENGTH) return;
+        let currentWord = "";
+        for (let i = 0; i < WORD_LENGTH; i++) {
+            currentWord += board[currentAttempt.round][i];
+        }
+
+        // not yet functional
+        if (secretWord === currentWord) {
+            // setGameover({gameover: true, guessedWord: true});
+            console.log("a winrar is u");
+        }
+
+        setCurrentAttempt({round: currentAttempt.round + 1, letterPos: 0});
+        console.log("currentword: ", currentWord);
+        console.log("secretword: ", secretWord);
+
+        // potential error catch / ends game at 6th attempt
+        if (currentAttempt.round > BOARD_ROWS) return;
+
 
     }
 
     const handleSecretWord = () => {
-        setSecretWord(tempWordMain) // should get from a list or something?
+        const temp = tempWordMain.toUpperCase();
+        console.log("temp: ", temp);
+        setSecretWord(temp) // should get from a list or something?
     }
 
     const handleDefaultBoard = () => {
@@ -113,7 +147,8 @@ const SecretWord = () => {
                 </button>
                 {/* <Board /> */}
                 {buttonClicked ? <Board/> : undefined}
-                <Keyboard />
+                {buttonClicked ? <Keyboard/> : undefined}
+                {/* <Keyboard /> */}
             </AppContext.Provider>
         </Box>
     );

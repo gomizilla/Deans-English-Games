@@ -106,7 +106,7 @@ const Board = () => {
                                     letterPos={index2}
                                     round={index}
                                 >
-                                    {index2}
+                                    {/* {index2} */}
                                     {/* <Letter round={index} pos={index2} /> ??? */}
                                 </Letter>
                             )

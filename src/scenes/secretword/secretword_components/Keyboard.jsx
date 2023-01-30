@@ -12,7 +12,7 @@ const Keyboard = () => {
     const { onEnter, onDelete, onSelectLetter, notUsed } = useContext(AppContext);
 
     const handleKeyboard = useCallback((event) => {
-        if (event.key === "ENTER") {
+        if (event.key === "Enter") {
             onEnter();
         } else if (event.key === "Backspace") {
             onDelete();
@@ -45,10 +45,13 @@ const Keyboard = () => {
 
     return (
         <Box
+            display="grid"
+            // gridTemplateRows="repeat(3, 1fr)"
+            border="1px solid white"
             // width="700px"
             marginLeft="5em"
-            marginRight="10em"
-            height="300px"
+            marginRight="5em"
+            // height="300px"
             marginTop="20px"
             onKeyDown={handleKeyboard}
         >
@@ -60,7 +63,7 @@ const Keyboard = () => {
                 margin="5px"
             >
                 {keyboardTop.map((key) => {
-                    return <Key keyVal={key} disabled={notUsed.includes(key)} />
+                    return <Key keyVal={key} disabled={notUsed.includes(key)} id={key}/>
                 })}
             </Box>
             <Box
@@ -71,7 +74,7 @@ const Keyboard = () => {
                 margin="5px"
             >
                 {keyboardMid.map((key) => {
-                    return <Key keyVal={key} disabled={notUsed.includes(key)} />
+                    return <Key keyVal={key} disabled={notUsed.includes(key)} id={key}/>
                 })}
             </Box>
             <Box
@@ -81,11 +84,11 @@ const Keyboard = () => {
                 justifyContent="center"
                 margin="5px"
             >
-                <Key keyVal={"ENTER"} enterOrDelete />
+                <Key keyVal={"ENTER"} enterOrDelete id="ENTER"/>
                 {keyboardBot.map((key) => {
-                    return <Key keyVal={key} disabled={notUsed.includes(key)} />
+                    return <Key keyVal={key} disabled={notUsed.includes(key)} id={key}/>
                 })}
-                <Key keyVal={"DELETE"} enterOrDelete />
+                <Key keyVal={"DELETE"} enterOrDelete id="DELETE"/>
             </Box>
         </Box>
     )
