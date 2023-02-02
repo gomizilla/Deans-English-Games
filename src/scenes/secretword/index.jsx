@@ -16,6 +16,7 @@ import { nh1Vocab } from "../../data/vocabWords";
 import Board from "./secretword_components/Board";
 import Keyboard from "./secretword_components/Keyboard";
 import Letter from "./secretword_components/Letter";
+import Gameover from "./secretword_components/Gameover";
 // import gameover
 
 export const AppContext = createContext();
@@ -44,12 +45,14 @@ const SecretWord = () => {
     // const [gameover, setGameover] = useState({gameover: false, guessedWord: false});
     const [secretWord, setSecretWord] = useState("");
     const [buttonClicked, setButtonClicked] = useState(false);
+    const [totalAttempts, setTotalAttempts] = useState(0);
+    const [gameover, setGameover] = useState({gameover: false, guessWord: false});
 
     useEffect(() => {
         handleSecretWord();
         // handleDefaultBoard();
         // setSecretWord(tempWordMain);
-        console.log("board initial load: ", board);
+        // console.log("board initial load: ", board);
     }, []);
 
     // useEffect(() => {
@@ -76,12 +79,11 @@ const SecretWord = () => {
     }
 
     const onEnter = () => {
-        // below if not yet functional
-        // if (currentAttempt.letterPos === WORD_LENGTH) {
-        //     setTotalAttempts(totalAttempts+1);
-        // }
+        if (currentAttempt.letterPos === WORD_LENGTH) {
+            setTotalAttempts(totalAttempts + 1);
+        }
 
-        const currentBoard = [...board];
+        // const currentBoard = [...board];
 
         if (currentAttempt.letterPos !== WORD_LENGTH) return;
         let currentWord = "";
@@ -89,9 +91,8 @@ const SecretWord = () => {
             currentWord += board[currentAttempt.round][i];
         }
 
-        // not yet functional
         if (secretWord === currentWord) {
-            // setGameover({gameover: true, guessedWord: true});
+            setGameover({gameover: true, guessedWord: true});
             console.log("a winrar is u");
         }
 
@@ -101,7 +102,7 @@ const SecretWord = () => {
 
         // potential error catch / ends game at 6th attempt
         // if (currentAttempt.round > BOARD_ROWS) return;
-        if (currentAttempt.round === BOARD_ROWS - 1) {
+        if (currentAttempt.round === BOARD_ROWS - 1 && gameover.guessWord === false) {
             console.log("bing bong");
             setCurrentAttempt({round: 0, letterPos: 0});
             handleDefaultBoard();  
@@ -111,7 +112,7 @@ const SecretWord = () => {
 
     const handleSecretWord = () => {
         const temp = tempWordMain.toUpperCase();
-        console.log("temp: ", temp);
+        // console.log("temp: ", temp);
         setSecretWord(temp) // should get from a list or something?
     }
 
@@ -127,7 +128,7 @@ const SecretWord = () => {
         }
         setBoard(gameBoard);
         setButtonClicked(true);
-        console.log("board", board);
+        // console.log("board", board);
         return;
     }
 
@@ -144,7 +145,10 @@ const SecretWord = () => {
                     onDelete,
                     notUsed,
                     setNotUsed,
-                    secretWord
+                    secretWord,
+                    gameover,
+                    setGameover,
+                    totalAttempts
                 }}
             >
                 {/* temp fix, change to MUI or something later*/}
@@ -153,7 +157,9 @@ const SecretWord = () => {
                 </button>
                 {/* <Board /> */}
                 {buttonClicked ? <Board/> : undefined}
-                {buttonClicked ? <Keyboard/> : undefined}
+                {/* {buttonClicked ? <Keyboard/> : undefined} */}
+                {(!gameover.gameover && buttonClicked) ? <Keyboard/> : undefined}
+                {buttonClicked ? <Gameover /> : undefined}
                 {/* <Keyboard /> */}
             </AppContext.Provider>
         </Box>

@@ -34,7 +34,7 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
             sx={{
                 backgroundColor: disabled ? "#3a393c" : colors.primary[300],
                 color: colors.primary[100],
-                // border: `1px solid ${colors.greenAccent[100]}`,
+                border: `1px solid ${colors.greenAccent[100]}`,
                 borderRadius: "4px",
                 cursor: "pointer",
                 display: "flex",
@@ -44,14 +44,14 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
                 // height: "100%",
                 height: "45px",
                 // width: "35px",
-                width: keyVal === "ENTER" || keyVal === "DELETE" ? "100px" : "35px",
+                width: keyVal === "ENTER" || keyVal === "DELETE" ? "5em" : "2em",
                 margin: "5px",
                 // display: "grid",
                 // placeItem: "center",
                 fontSize: "20px",
                 fontWeight: "bolder",
-
-                
+                padding: "5px",
+                hover: "pointer"
                 // fontSize: "inherit",
                 // gridColumn: "span 2",
                 // border: "none",
