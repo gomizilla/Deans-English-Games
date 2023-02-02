@@ -8,7 +8,7 @@ const Letter = ({ letterPos, round }) => {
     const letter = board[round][letterPos]; //need to fix board UPDATE: think its working?
     // const letter = "awer";
     //test
-    const [letterColor, setLetterColor] = useState();
+    // const [letterColor, setLetterColor] = useState();
 
     const correct = secretWord[letterPos] === letter;
     const almost = !correct && letter !== "" && secretWord.includes(letter);

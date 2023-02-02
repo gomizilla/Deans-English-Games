@@ -81,6 +81,8 @@ const SecretWord = () => {
         //     setTotalAttempts(totalAttempts+1);
         // }
 
+        const currentBoard = [...board];
+
         if (currentAttempt.letterPos !== WORD_LENGTH) return;
         let currentWord = "";
         for (let i = 0; i < WORD_LENGTH; i++) {
@@ -98,9 +100,13 @@ const SecretWord = () => {
         console.log("secretword: ", secretWord);
 
         // potential error catch / ends game at 6th attempt
-        if (currentAttempt.round > BOARD_ROWS) return;
-
-
+        // if (currentAttempt.round > BOARD_ROWS) return;
+        if (currentAttempt.round === BOARD_ROWS - 1) {
+            console.log("bing bong");
+            setCurrentAttempt({round: 0, letterPos: 0});
+            handleDefaultBoard();  
+        }
+        
     }
 
     const handleSecretWord = () => {
