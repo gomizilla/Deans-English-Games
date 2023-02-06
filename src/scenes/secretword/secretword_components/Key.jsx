@@ -33,6 +33,10 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
             // alignItems="center"
             sx={{
                 backgroundColor: disabled ? "#3a393c" : colors.primary[300],
+                "&:hover": {
+                    // hover: "pointer",
+                    background: `${colors.greenAccent[500]}`
+                },
                 color: colors.primary[100],
                 border: `1px solid ${colors.greenAccent[100]}`,
                 borderRadius: "4px",
@@ -51,7 +55,7 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
                 fontSize: "20px",
                 fontWeight: "bolder",
                 padding: "5px",
-                hover: "pointer"
+                // hover: "pointer"
                 // fontSize: "inherit",
                 // gridColumn: "span 2",
                 // border: "none",

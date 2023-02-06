@@ -68,11 +68,11 @@ const Board = () => {
             gap=".25em"
             // marginBottom="1em"
             // maxWidth="75%"
-            margin="20px"
+            m="15px"
             paddingTop="20px"
             paddingBottom="20px"
             // border="1px solid yellow"
-            maxWidth="80vw"
+            // maxWidth="80vw"
         >
 
             {/* {[...Array(BOARD_ROWS*WORD_LENGTH)].map((e, index) => {

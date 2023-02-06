@@ -9,7 +9,7 @@ import { Box, Typography, useTheme, IconButton } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import { tokens } from "../../theme";
-import Header from "../../components/Header";
+// import Header from "../../components/Header";
 import WordBox from "../../components/WordBox";
 import { nh1Vocab } from "../../data/vocabWords";
 
@@ -17,6 +17,7 @@ import Board from "./secretword_components/Board";
 import Keyboard from "./secretword_components/Keyboard";
 import Letter from "./secretword_components/Letter";
 import Gameover from "./secretword_components/Gameover";
+import Header from "../../components/Header";
 // import gameover
 
 export const AppContext = createContext();
@@ -29,14 +30,8 @@ const SecretWord = () => {
     const BOARD_ROWS = 6;
     const WORD_LENGTH = tempWordMain.split("").length;
 
-    // const tempBoard = [
-    //     ["", "", "", "", ""],
-    //     ["", "", "", "", ""],
-    //     ["", "", "", "", ""],
-    //     ["", "", "", "", ""],
-    //     ["", "", "", "", ""],
-    //     ["", "", "", "", ""],
-    // ];
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
 
     const [board, setBoard] = useState([[]]);
     // const [board, setBoard] = useState(tempBoard);
@@ -50,17 +45,7 @@ const SecretWord = () => {
 
     useEffect(() => {
         handleSecretWord();
-        // handleDefaultBoard();
-        // setSecretWord(tempWordMain);
-        // console.log("board initial load: ", board);
     }, []);
-
-    // useEffect(() => {
-    //     // console.log("board b4: ", board);
-    //     // handleDefaultBoard();
-    //     console.log("board on word change: ", board);
-    // }, [tempWordMain])
-
 
     const onSelectLetter = (keyVal) => {
         if (currentAttempt.letterPos > (WORD_LENGTH - 1)) return;
@@ -132,8 +117,12 @@ const SecretWord = () => {
         return;
     }
 
+    const handleReplay = () => {
+
+    }
+
     return (
-        <Box>
+        <Box m="20px">
             <AppContext.Provider
                 value={{
                     board,
@@ -151,16 +140,36 @@ const SecretWord = () => {
                     totalAttempts
                 }}
             >
-                {/* temp fix, change to MUI or something later*/}
-                <button onClick={handleDefaultBoard}>
-                    awer
-                </button>
-                {/* <Board /> */}
+                <Box
+                    display="flex"
+                    justifyContent="space-between"
+                    alignItems="center"
+                >
+                    <Header 
+                        title="Secret Word"
+                        subtitle="Find the secret word!"
+                    />
+                    {/* temp fix, change to MUI or something later*/}
+                    <Button 
+                        sx={{
+                            // color: `${colors.primary[500]}`,
+                            backgroundColor: `${colors.blueAccent[600]}`,
+                            "&:hover": {
+                                backgroundColor: `${colors.greenAccent[500]}`
+                            }
+                        }}
+                        onClick={!buttonClicked ? handleDefaultBoard : undefined}
+                    >
+                        {/* {buttonClicked ? "Replay" : "Play"} */}
+                        Play
+                    </Button>
+                    {/* <Board /> */}
+                    {/* <Keyboard /> */}
+                </Box>
                 {buttonClicked ? <Board/> : undefined}
                 {/* {buttonClicked ? <Keyboard/> : undefined} */}
                 {(!gameover.gameover && buttonClicked) ? <Keyboard/> : undefined}
                 {buttonClicked ? <Gameover /> : undefined}
-                {/* <Keyboard /> */}
             </AppContext.Provider>
         </Box>
     );

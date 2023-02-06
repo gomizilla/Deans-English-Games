@@ -53,10 +53,10 @@ const Keyboard = () => {
             // gridTemplateRows="repeat(3, 1fr)"
             // border="1px solid white"
             // width="auto"
-            maxWidth="80vw"
+            // maxWidth="80vw"
             // width="90%"
-            marginLeft="20px"
-            marginRight="20px"
+            // marginLeft="20px"
+            // marginRight="20px"
             // height="300px"
             marginTop="20px"
             onKeyDown={handleKeyboard}

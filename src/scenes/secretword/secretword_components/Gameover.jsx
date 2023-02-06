@@ -13,7 +13,7 @@ const Gameover = () => {
                 display="flex"
                 justifyContent="center"
                 margin="10px"
-                maxWidth="80vw"
+                // maxWidth="80vw"
                 marginLeft="20px"
                 marginRight="20px"
             >
