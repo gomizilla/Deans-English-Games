@@ -9,17 +9,12 @@ const Letter = ({ letterPos, round }) => {
     const colors = tokens(theme.palette.mode);
     
     const { board, currentAttempt, secretWord, notUsed, setNotUsed } = useContext(AppContext);
-    const letter = board[round][letterPos]; //need to fix board UPDATE: think its working?
-    // const letter = "awer";
-    //test
-    // const [letterColor, setLetterColor] = useState();
-
+    const letter = board[round][letterPos];
     const correct = secretWord[letterPos] === letter;
     const almost = !correct && letter !== "" && secretWord.includes(letter);
 
     const letterState = currentAttempt.round > round && (correct ? "correct" : almost ? "almost" : "error");
 
-    //test
     const handleColor = () => {
         if (letterState === "correct") {
             return "#538d43";
@@ -36,17 +31,12 @@ const Letter = ({ letterPos, round }) => {
         if (letter !== "" && !correct && !almost) {
             setNotUsed((prev) => [...prev, letter]);
         }
-        // console.log("board in letter file: ", board);
     }, [currentAttempt.round]);
 
     return (
         <Box
             className="letter"
-            // id={letterState ? letterState : undefined}
-            // key={index2}
-            // border="1px solid black"
             border={`2px solid ${colors.gray[400]}`}
-            // borderRadius="4px"
             display="flex"
             justifyContent="center"
             alignItems="center"

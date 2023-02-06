@@ -1,5 +1,3 @@
-// import { useState, useEffect } from "react";
-// import * as React from 'react';
 import React, { useState, useEffect, createContext } from "react";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -18,7 +16,6 @@ import Keyboard from "./secretword_components/Keyboard";
 import Letter from "./secretword_components/Letter";
 import Gameover from "./secretword_components/Gameover";
 import Header from "../../components/Header";
-// import gameover
 
 export const AppContext = createContext();
 
@@ -34,10 +31,8 @@ const SecretWord = () => {
     const colors = tokens(theme.palette.mode);
 
     const [board, setBoard] = useState([[]]);
-    // const [board, setBoard] = useState(tempBoard);
     const [currentAttempt, setCurrentAttempt] = useState({round: 0, letterPos: 0});
     const [notUsed, setNotUsed] = useState([]);
-    // const [gameover, setGameover] = useState({gameover: false, guessedWord: false});
     const [secretWord, setSecretWord] = useState("");
     const [buttonClicked, setButtonClicked] = useState(false);
     const [totalAttempts, setTotalAttempts] = useState(0);
@@ -68,8 +63,6 @@ const SecretWord = () => {
             setTotalAttempts(totalAttempts + 1);
         }
 
-        // const currentBoard = [...board];
-
         if (currentAttempt.letterPos !== WORD_LENGTH) return;
         let currentWord = "";
         for (let i = 0; i < WORD_LENGTH; i++) {
@@ -85,8 +78,6 @@ const SecretWord = () => {
         console.log("currentword: ", currentWord);
         console.log("secretword: ", secretWord);
 
-        // potential error catch / ends game at 6th attempt
-        // if (currentAttempt.round > BOARD_ROWS) return;
         if (currentAttempt.round === BOARD_ROWS - 1 && gameover.guessWord === false) {
             console.log("bing bong");
             setCurrentAttempt({round: 0, letterPos: 0});
@@ -97,7 +88,6 @@ const SecretWord = () => {
 
     const handleSecretWord = () => {
         const temp = tempWordMain.toUpperCase();
-        // console.log("temp: ", temp);
         setSecretWord(temp) // should get from a list or something?
     }
 
@@ -113,7 +103,6 @@ const SecretWord = () => {
         }
         setBoard(gameBoard);
         setButtonClicked(true);
-        // console.log("board", board);
         return;
     }
 
@@ -149,10 +138,8 @@ const SecretWord = () => {
                         title="Secret Word"
                         subtitle="Find the secret word!"
                     />
-                    {/* temp fix, change to MUI or something later*/}
                     <Button 
                         sx={{
-                            // color: `${colors.primary[500]}`,
                             backgroundColor: `${colors.blueAccent[600]}`,
                             "&:hover": {
                                 backgroundColor: `${colors.greenAccent[500]}`
@@ -160,14 +147,12 @@ const SecretWord = () => {
                         }}
                         onClick={!buttonClicked ? handleDefaultBoard : undefined}
                     >
-                        {/* {buttonClicked ? "Replay" : "Play"} */}
-                        Play
+                        <Typography>
+                            Play
+                        </Typography>
                     </Button>
-                    {/* <Board /> */}
-                    {/* <Keyboard /> */}
                 </Box>
                 {buttonClicked ? <Board/> : undefined}
-                {/* {buttonClicked ? <Keyboard/> : undefined} */}
                 {(!gameover.gameover && buttonClicked) ? <Keyboard/> : undefined}
                 {buttonClicked ? <Gameover /> : undefined}
             </AppContext.Provider>

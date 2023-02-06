@@ -45,19 +45,10 @@ const Keyboard = () => {
 
     return (
         <Box
-            // display="grid"
             display="flex"
             justifyContent="center"
             alignItems="center"
             flexDirection="column"
-            // gridTemplateRows="repeat(3, 1fr)"
-            // border="1px solid white"
-            // width="auto"
-            // maxWidth="80vw"
-            // width="90%"
-            // marginLeft="20px"
-            // marginRight="20px"
-            // height="300px"
             marginTop="20px"
             onKeyDown={handleKeyboard}
         >
@@ -67,7 +58,6 @@ const Keyboard = () => {
                 flexDirection="row"
                 justifyContent="center"
                 margin="5px"
-                // width="90%"
             >
                 {keyboardTop.map((key) => {
                     return <Key keyVal={key} disabled={notUsed.includes(key)} id={key}/>
@@ -79,7 +69,6 @@ const Keyboard = () => {
                 flexDirection="row"
                 justifyContent="center"
                 margin="5px"
-                // width="90%"
             >
                 {keyboardMid.map((key) => {
                     return <Key keyVal={key} disabled={notUsed.includes(key)} id={key}/>
@@ -91,7 +80,6 @@ const Keyboard = () => {
                 flexDirection="row"
                 justifyContent="center"
                 margin="5px"
-                // width="90%"
             >
                 <Key keyVal={"ENTER"} enterOrDelete id="ENTER"/>
                 {keyboardBot.map((key) => {
