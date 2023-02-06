@@ -16,16 +16,17 @@ import Keyboard from "./secretword_components/Keyboard";
 import Letter from "./secretword_components/Letter";
 import Gameover from "./secretword_components/Gameover";
 import Header from "../../components/Header";
+import { getRandomEnglishWord } from "../../data/vocabWords";
 
 export const AppContext = createContext();
 
-export const tempWordMain = "fruity";
+// export const tempWordMain = getRandomEnglishWord(nh1Vocab);
 
 
 const SecretWord = () => {
 
     const BOARD_ROWS = 6;
-    const WORD_LENGTH = tempWordMain.split("").length;
+    // const WORD_LENGTH = tempWordMain.split("").length;
 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -37,6 +38,7 @@ const SecretWord = () => {
     const [buttonClicked, setButtonClicked] = useState(false);
     const [totalAttempts, setTotalAttempts] = useState(0);
     const [gameover, setGameover] = useState({gameover: false, guessWord: false});
+    const [WORD_LENGTH, setWORD_LENGTH] = useState(0);
 
     useEffect(() => {
         handleSecretWord();
@@ -87,6 +89,8 @@ const SecretWord = () => {
     }
 
     const handleSecretWord = () => {
+        const tempWordMain = getRandomEnglishWord(nh1Vocab);
+        setWORD_LENGTH(tempWordMain.split("").length)
         const temp = tempWordMain.toUpperCase();
         setSecretWord(temp) // should get from a list or something?
     }
@@ -126,7 +130,9 @@ const SecretWord = () => {
                     secretWord,
                     gameover,
                     setGameover,
-                    totalAttempts
+                    totalAttempts,
+                    BOARD_ROWS,
+                    WORD_LENGTH
                 }}
             >
                 <Box
