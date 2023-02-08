@@ -69,6 +69,7 @@ const WordScramble = () => {
     const handleClose1st = () => {
         setAnchorEl(null);
         setGradeLevel("first");
+        setToggled(true);
         // console.log("test: ", this);
     };
     const handleClose2nd = () => {
@@ -104,7 +105,7 @@ const WordScramble = () => {
             }
         });
         setNh1VocabTest(newWordsTest);
-        setToggled(true);
+        // setToggled(true);
     };
 
     const scrambleWord = (word) => {
@@ -128,7 +129,6 @@ const WordScramble = () => {
     };
 
     const wordBox = (word, scrambledWord, newListTest) => {
-        let correct = false;
 
         // maybe if/else here that renders the whole box based on boolean?
         // maybe get the main box elemeny by id and change display?
@@ -139,6 +139,7 @@ const WordScramble = () => {
                 gridColumn="span 3"
                 backgroundColor={colors.primary[400]}
                 display={newListTest.toggled ? "none" : "flex"}
+                // display="flex"
                 alignItems="center"
                 justifyContent="space-around"
                 flexDirection="column"
@@ -180,9 +181,9 @@ const WordScramble = () => {
                                 newListTest.toggled = true;
                                 console.log("newlsittest check: ", newListTest);
                                 console.log("asdfwaoerwuerqweropuqw: ", nh1VocabTest);
-                                setNumCorrect([...numCorrect, newListTest.en])
+                                setNumCorrect([...numCorrect, newListTest.en]);
                             } else if (e.key === "Enter" && e.target.value !== newListTest.en) {
-                                alert(`wrong ${e.target.value}`)
+                                alert(`wrong ${e.target.value}`);
                             }
                         }}
                     >
@@ -197,7 +198,7 @@ const WordScramble = () => {
                                 console.log("various checks: ", word, scrambledWord, userInput.value);
                                 userInput.value = "";
                             } else {
-                                alert(`wrong (click) ${userInput.value}`)
+                                alert(`wrong (click) ${userInput.value}`);
                             }
                         }}
                         // onKeyDown={(e) => {
@@ -315,9 +316,21 @@ const WordScramble = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
+                flexDirection="column"
                 mb="20px"
             >
-                drop list of chapter only when grade level is selected?
+                {toggled ? "Scrambled words: " : undefined}
+
+                {numCorrect.map((word)=> {
+                    return ` ${word} `
+                })}
+
+                {numCorrect.length === nh1Vocab.length ? 
+                <Typography m="20px" variant="h3">
+                    Word Scramble Complete!
+                </Typography> 
+                : undefined}
+                
             </Box>
             <Box
                 display="grid"
