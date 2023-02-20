@@ -44,6 +44,7 @@ const SidebarComponent = () => {
             sx={{
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[300]} !important`,
+                    height: "100vh"
                 },
                 //everything below has a different name due to pro-sidebar being change to sidebar
                 "& .sidebar-icon-wrapper": {
@@ -146,7 +147,7 @@ const SidebarComponent = () => {
                         />
                         <Item 
                             title="Sentence Scramble"
-                            to="/invoices"
+                            // to="/invoices"
                             icon={<ReceiptOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
@@ -160,26 +161,26 @@ const SidebarComponent = () => {
                         </Typography>
                         <Item 
                             title="Profile Form"
-                            to="/form"
+                            // to="/form"
                             icon={<PersonOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
                             title="Calendar"
-                            to="/calendar"
+                            // to="/calendar"
                             icon={<CalendarTodayOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
                             title="FAQ"
-                            to="/faq"
+                            // to="/faq"
                             icon={<HelpOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
-                        <Typography
+                        {/* <Typography
                             variant="h6"
                             color={colors.gray[300]}
                             sx={{ m: "15px 0 5px 20px"}}
@@ -213,7 +214,7 @@ const SidebarComponent = () => {
                             icon={<MapOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
-                        />
+                        /> */}
                     </Box>
                 </Menu>
             </Sidebar>
