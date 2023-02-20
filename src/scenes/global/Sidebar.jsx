@@ -146,7 +146,7 @@ const SidebarComponent = () => {
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="Sentence Scramble"
+                            title="Sentence Scramble (Not Available)"
                             to="/invoices"
                             icon={<ReceiptOutlinedIcon />}
                             selected={selected}
