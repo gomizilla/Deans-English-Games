@@ -146,8 +146,8 @@ const SidebarComponent = () => {
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="Sentence Scramble (Not Available)"
-                            to="/invoices"
+                            title="Sentence Scramble"
+                            // to="/invoices"
                             icon={<ReceiptOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
@@ -161,21 +161,21 @@ const SidebarComponent = () => {
                         </Typography>
                         <Item 
                             title="Profile Form"
-                            to="/form"
+                            // to="/form"
                             icon={<PersonOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
                             title="Calendar"
-                            to="/calendar"
+                            // to="/calendar"
                             icon={<CalendarTodayOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
                             title="FAQ"
-                            to="/faq"
+                            // to="/faq"
                             icon={<HelpOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
