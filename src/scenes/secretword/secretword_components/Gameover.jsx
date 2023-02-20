@@ -15,11 +15,11 @@ const Gameover = () => {
                 marginRight="20px"
             >
                 <Box>
-                    <Typography>
-                        Secret Word: {gameover.gameover ? secretWord : undefined}
-                    </Typography>
-                    <Typography>
+                    <Typography variant="h5">
                         Total Attempts: {totalAttempts}
+                    </Typography>
+                    <Typography variant="h5">
+                        Secret Word: {gameover.gameover ? secretWord : undefined}
                     </Typography>
                 </Box>
             </Box>

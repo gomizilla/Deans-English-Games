@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import * as React from 'react';
+
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-
-
 import { Box, Typography, useTheme, IconButton } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
+
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import WordBox from "../../components/WordBox";
@@ -35,15 +35,26 @@ const WordScramble = () => {
 
     useEffect(() => {
         scrambler();
+        // renderList();
         console.log("new words test check: ", nh1VocabTest);
     },[]);
 
     useEffect(() => {
         console.log("num correct check: ", numCorrect);
+        if (toggled) {
+            console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
+            renderList();
+        }
     }, [numCorrect])
 
     useEffect(() => {
         console.log("something changed in nh1vocabtest");
+        // wordBox();
+        // renderList();
+        // if (toggled) {
+        //     console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
+        //     renderList();
+        // }
     }, [nh1VocabTest])
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -58,6 +69,7 @@ const WordScramble = () => {
     const handleClose1st = () => {
         setAnchorEl(null);
         setGradeLevel("first");
+        setToggled(true);
         // console.log("test: ", this);
     };
     const handleClose2nd = () => {
@@ -93,6 +105,7 @@ const WordScramble = () => {
             }
         });
         setNh1VocabTest(newWordsTest);
+        // setToggled(true);
     };
 
     const scrambleWord = (word) => {
@@ -116,16 +129,17 @@ const WordScramble = () => {
     };
 
     const wordBox = (word, scrambledWord, newListTest) => {
-        let correct = false;
 
         // maybe if/else here that renders the whole box based on boolean?
         // maybe get the main box elemeny by id and change display?
+        // console.log("newlisttest check in wordbox: ", newListTest)
 
         return (
             <Box
                 gridColumn="span 3"
                 backgroundColor={colors.primary[400]}
                 display={newListTest.toggled ? "none" : "flex"}
+                // display="flex"
                 alignItems="center"
                 justifyContent="space-around"
                 flexDirection="column"
@@ -134,6 +148,7 @@ const WordScramble = () => {
             >
                 <WordBox
                     title={newListTest.scrambled}
+                    // title={newListTest.toggled ? newListTest.en : newListTest.scrambled}
                     subtitle="図書館"
                     icon="📚"
                 />
@@ -141,6 +156,7 @@ const WordScramble = () => {
                     backgroundColor={colors.primary[300]} 
                     borderRadius="3px"
                 >
+                    {/* {newListTest.toggled ? } */}
                     <InputBase 
                         sx={{ ml: 2, flex: 1}} 
                         placeholder="Search"
@@ -149,6 +165,7 @@ const WordScramble = () => {
                             // const userInput = document.getElementById(newListTest.en); //shouldnt be using vanilla js in react ?
                             // console.log("correct check b4: ", correct);
                             // console.log("hhhhhhhhmmmmmmmmmmmm: ", e.target.value);
+                            
                             if (e.key === "Enter" && e.target.value === newListTest.en) {
                                 // console.log("various checks: ", word, scrambledWord, userInput.value);
                                 // correct = true;
@@ -163,6 +180,10 @@ const WordScramble = () => {
                                 e.target.value = "";
                                 newListTest.toggled = true;
                                 console.log("newlsittest check: ", newListTest);
+                                console.log("asdfwaoerwuerqweropuqw: ", nh1VocabTest);
+                                setNumCorrect([...numCorrect, newListTest.en]);
+                            } else if (e.key === "Enter" && e.target.value !== newListTest.en) {
+                                alert(`wrong ${e.target.value}`);
                             }
                         }}
                     >
@@ -176,6 +197,8 @@ const WordScramble = () => {
                             if (userInput.value === word) {
                                 console.log("various checks: ", word, scrambledWord, userInput.value);
                                 userInput.value = "";
+                            } else {
+                                alert(`wrong (click) ${userInput.value}`);
                             }
                         }}
                         // onKeyDown={(e) => {
@@ -214,6 +237,16 @@ const WordScramble = () => {
 
     //     // userInput.value = "";
     // }
+
+    //testing 🎈🎈🎈
+    const renderList = () => {
+        return nh1Vocab.map((word, index) => {
+            // console.log("index: ", index);
+            // console.log("word: ", word.english_vocab)
+            // console.log("test: ", nh1VocabScrambleArr[index])
+            return wordBox(word.english_vocab, nh1VocabScrambleArr[index], nh1VocabTest[index]);
+        })
+    }
 
     return (
         <Box m="20px">
@@ -283,9 +316,21 @@ const WordScramble = () => {
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
+                flexDirection="column"
                 mb="20px"
             >
-                drop list of chapter only when grade level is selected?
+                {toggled ? "Scrambled words: " : undefined}
+
+                {numCorrect.map((word)=> {
+                    return ` ${word} `
+                })}
+
+                {numCorrect.length === nh1Vocab.length ? 
+                <Typography m="20px" variant="h3">
+                    Word Scramble Complete!
+                </Typography> 
+                : undefined}
+                
             </Box>
             <Box
                 display="grid"
@@ -311,12 +356,13 @@ const WordScramble = () => {
                 : undefined
                 } */}
                 {gradeLevel === "first" ? 
-                    nh1Vocab.map((word, index) => {
-                        // console.log("index: ", index);
-                        // console.log("word: ", word.english_vocab)
-                        // console.log("test: ", nh1VocabScrambleArr[index])
-                        return wordBox(word.english_vocab, nh1VocabScrambleArr[index], nh1VocabTest[index]);
-                    })
+                    // nh1Vocab.map((word, index) => {
+                    //     // console.log("index: ", index);
+                    //     // console.log("word: ", word.english_vocab)
+                    //     // console.log("test: ", nh1VocabScrambleArr[index])
+                    //     return wordBox(word.english_vocab, nh1VocabScrambleArr[index], nh1VocabTest[index]);
+                    // })
+                    renderList()
                 : undefined
                 }
                 {/* one box start*/}
@@ -345,233 +391,6 @@ const WordScramble = () => {
 
                 </Box> */}
                 {/* one box end*/}
-{/* 
-                <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box>
-
-                <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box>
-
-                <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box>
-
-                <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box>
-
-                <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box>
-
-                <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box>
-
-                <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box>
-
-                <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box>
-
-                <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box> */}
-
-
             </Box>
         </Box>
     );
