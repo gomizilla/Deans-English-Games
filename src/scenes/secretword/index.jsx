@@ -146,7 +146,7 @@ const SecretWord = () => {
                     />
                     <Button 
                         sx={{
-                            backgroundColor: `${colors.blueAccent[600]}`,
+                            backgroundColor: `${colors.blueAccent[500]}`,
                             "&:hover": {
                                 backgroundColor: `${colors.greenAccent[500]}`
                             }
