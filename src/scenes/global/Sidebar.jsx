@@ -22,7 +22,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
     return (
         <MenuItem
             active={selected === title}
-            style={{color: colors.gray[100]}}
+            style={{color: colors.gray[200]}}
             onClick={() => setSelected(title)}
             icon={icon}
             routerLink={<Link to={to} />}
@@ -74,8 +74,8 @@ const SidebarComponent = () => {
                                 alignItems="center"
                                 ml="15px"
                             >
-                                <Typography variant="h3" color={colors.gray[100]}>
-                                    Admins
+                                <Typography variant="h5" color={colors.gray[100]}>
+                                    English Games
                                 </Typography>
                                 <IconButton>
                                     <MenuOutlinedIcon 
@@ -104,10 +104,10 @@ const SidebarComponent = () => {
                                     fontWeight="bold"
                                     sx={{m: "10px 0 0 0" }}
                                 >
-                                    Herp Derp
+                                    Donald Duck
                                 </Typography>
                                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                                    Durr Hurr Hurr
+                                    Aw, phooey!
                                 </Typography>
                             </Box>
                         </Box>
@@ -145,7 +145,7 @@ const SidebarComponent = () => {
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="TBA Game Idea"
+                            title="Sentence Scramble"
                             to="/invoices"
                             icon={<ReceiptOutlinedIcon />}
                             selected={selected}
