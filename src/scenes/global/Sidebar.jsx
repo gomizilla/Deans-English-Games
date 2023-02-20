@@ -139,7 +139,7 @@ const SidebarComponent = () => {
                         />
                         <Item 
                             title="Secret Word"
-                            to="/contacts"
+                            to="/secretword"
                             icon={<ContactsOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}

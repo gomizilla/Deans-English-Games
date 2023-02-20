@@ -1,4 +1,9 @@
 
+export const getRandomEnglishWord = (list) => {
+    const randomNum = Math.floor(Math.random() * list.length);
+    return list[randomNum].english_vocab;
+}
+
 export const nh1Vocab = [
     {
         english_vocab: "call",
