@@ -18,7 +18,7 @@ const WordScramble = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
-    const [gradeLevel, setGradeLevel] = useState();
+    const [gradeLevel, setGradeLevel] = useState({ grade: "", unit: ""});
     const [nh1VocabScrambleArr, setNh1VocabScrambleArr] = useState();
     const [numCorrect, setNumCorrect] = useState([]);
     const [nh1VocabTest, setNh1VocabTest] = useState({});
@@ -49,12 +49,6 @@ const WordScramble = () => {
 
     useEffect(() => {
         console.log("something changed in nh1vocabtest");
-        // wordBox();
-        // renderList();
-        // if (toggled) {
-        //     console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
-        //     renderList();
-        // }
     }, [nh1VocabTest])
 
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -68,7 +62,8 @@ const WordScramble = () => {
     };
     const handleClose1st = () => {
         setAnchorEl(null);
-        setGradeLevel("first");
+        // setGradeLevel("first");
+        setGradeLevel({grade: "first"})
         setToggled(true);
         // console.log("test: ", this);
     };
@@ -149,8 +144,8 @@ const WordScramble = () => {
                 <WordBox
                     title={newListTest.scrambled}
                     // title={newListTest.toggled ? newListTest.en : newListTest.scrambled}
-                    subtitle="図書館"
-                    icon="📚"
+                    // subtitle="図書館"
+                    // icon="📚"
                 />
                 <Box 
                     backgroundColor={colors.primary[300]} 
@@ -159,7 +154,7 @@ const WordScramble = () => {
                     {/* {newListTest.toggled ? } */}
                     <InputBase 
                         sx={{ ml: 2, flex: 1}} 
-                        placeholder="Search"
+                        placeholder="Enter Guess Here"
                         id={word}
                         onKeyDown={(e) => {
                             // const userInput = document.getElementById(newListTest.en); //shouldnt be using vanilla js in react ?
@@ -197,6 +192,8 @@ const WordScramble = () => {
                             if (userInput.value === word) {
                                 console.log("various checks: ", word, scrambledWord, userInput.value);
                                 userInput.value = "";
+                                newListTest.toggled = true;
+                                setNumCorrect([...numCorrect, newListTest.en]);
                             } else {
                                 alert(`wrong (click) ${userInput.value}`);
                             }
@@ -217,35 +214,23 @@ const WordScramble = () => {
         );
     };
 
-
-    // const handleUserInput = (e) => {
-    //     e.preventDefault();
-    //     console.log("test: ", e);
-    //     // const userInput = document.getElementById("ws-guess");
-    //     // const test = this.value
-    //     // console.log("hello?", userInput.value)
-    //     // console.log("test: ", test);
-    //     // ifnot workingbecause originally it used object whereas this is using array
-    //     // if (nh1VocabScrambleArr[userInput.value]) {
-    //     //     // document.getElementById(`${nh1VocabScrambleArr[userInput.value]}`).className = "correct";
-    //     //     document.getElementById(`${nh1VocabScrambleArr[userInput.value]}`).innerHTML = `${userInput.value} ✅`;
-    //     //     // setSubmittedWords([...submittedWords, userInput.value]);
-    //     //     console.log("testing");
-    //     // }
-    //     // if (userInput.value === )
-
-
-    //     // userInput.value = "";
-    // }
-
     //testing 🎈🎈🎈
     const renderList = () => {
-        return nh1Vocab.map((word, index) => {
-            // console.log("index: ", index);
-            // console.log("word: ", word.english_vocab)
-            // console.log("test: ", nh1VocabScrambleArr[index])
-            return wordBox(word.english_vocab, nh1VocabScrambleArr[index], nh1VocabTest[index]);
-        })
+        if (gradeLevel.grade === "first") {
+            // return nh1Vocab.map((word, index) => {
+            //     // console.log("index: ", index);
+            //     // console.log("word: ", word.english_vocab)
+            //     // console.log("test: ", nh1VocabScrambleArr[index])
+            //     return wordBox(word.english_vocab, nh1VocabScrambleArr[index], nh1VocabTest[index]);
+            // });
+            return nh1VocabTest.map((word, index) => {
+                return wordBox(word.en, word.scrambled, nh1VocabTest[index]);
+            });
+        } else if (gradeLevel === "second") {
+
+        } else if (gradeLevel === "third") {
+            
+        }
     }
 
     return (
@@ -338,59 +323,11 @@ const WordScramble = () => {
                 gridAutoRows="140px"
                 gap="20px"
             >
-                {/* {nh1Vocab.map((word) => {
-                    return wordBox(word.english_vocab)
-                })} */}
-                {/* {nh1VocabScrambleArr.map((word) => {
-                    return wordBox(word)
-                })} */}
-                {/* {!gradeLevel ? undefined 
-                : 
-                nh1VocabScrambleArr.map((word) => {
-                    return wordBox(word);
-                })} */}
-                {/* {gradeLevel === "first" ? 
-                    nh1VocabScrambleArr.map((word) => {
-                        return wordBox(word);
-                    })
-                : undefined
-                } */}
-                {gradeLevel === "first" ? 
-                    // nh1Vocab.map((word, index) => {
-                    //     // console.log("index: ", index);
-                    //     // console.log("word: ", word.english_vocab)
-                    //     // console.log("test: ", nh1VocabScrambleArr[index])
-                    //     return wordBox(word.english_vocab, nh1VocabScrambleArr[index], nh1VocabTest[index]);
-                    // })
+                {gradeLevel.grade === "first" ? 
                     renderList()
                 : undefined
                 }
-                {/* one box start*/}
-                {/* <Box
-                    gridColumn="span 3"
-                    backgroundColor={colors.primary[400]}
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="space-around"
-                    flexDirection="column"
-                >
-                    <WordBox
-                        title="Library"
-                        subtitle="図書館"
-                        icon="📚"
-                    />
-                     <Box 
-                        backgroundColor={colors.primary[300]} 
-                        borderRadius="3px"
-                    >
-                        <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                        <IconButton type="button" sx={{ p: 1}}>
-                            <SearchIcon />
-                        </IconButton>
-                    </Box>
-
-                </Box> */}
-                {/* one box end*/}
+                
             </Box>
         </Box>
     );

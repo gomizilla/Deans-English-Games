@@ -145,7 +145,7 @@ const SidebarComponent = () => {
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="TBA Game Idea"
+                            title="Sentence Scramble"
                             to="/invoices"
                             icon={<ReceiptOutlinedIcon />}
                             selected={selected}
