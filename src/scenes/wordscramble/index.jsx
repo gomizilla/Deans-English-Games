@@ -31,6 +31,9 @@ const WordScramble = () => {
         // console.log("test: ", gradeLevel)
         // console.log("state check: ", nh1VocabScrambleArr);
         console.log("grade select vocabtest check: ", nh1VocabTest)
+
+        //TODO: unit options rendered on useeffect? idk
+
     },[gradeLevel]);
 
     useEffect(() => {
@@ -58,25 +61,32 @@ const WordScramble = () => {
     };
     const handleClose = () => {
         setAnchorEl(null);
+        console.log("🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔")
         // console.log("test: ", this);
     };
-    const handleClose1st = () => {
+    // const handleClose1st = () => {
+    //     setAnchorEl(null);
+    //     // setGradeLevel("first");
+    //     setGradeLevel({grade: "first"})
+    //     setToggled(true);
+    //     // console.log("test: ", this);
+    // };
+    // const handleClose2nd = () => {
+    //     setAnchorEl(null);
+    //     setGradeLevel("second");
+    //     // console.log("test: ", this);
+    // };
+    // const handleClose3rd = () => {
+    //     setAnchorEl(null);
+    //     setGradeLevel("third");
+    //     // console.log("test: ", this);
+    // };
+    const handleCloseGradeSelection = (selected) => {
         setAnchorEl(null);
-        // setGradeLevel("first");
-        setGradeLevel({grade: "first"})
+        setGradeLevel({grade: selected});
         setToggled(true);
-        // console.log("test: ", this);
-    };
-    const handleClose2nd = () => {
-        setAnchorEl(null);
-        setGradeLevel("second");
-        // console.log("test: ", this);
-    };
-    const handleClose3rd = () => {
-        setAnchorEl(null);
-        setGradeLevel("third");
-        // console.log("test: ", this);
-    };
+        console.log("new function called 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕");
+    }
 
     const scrambler = () => {
         let nh1VocabArray = nh1Vocab.map((word) => {
@@ -245,6 +255,9 @@ const WordScramble = () => {
                     subtitle="Unscramble the words!"
                 />
                 <Box
+                    display="flex"
+                    flexDirection="column"
+                    gap="10px"
                     sx={{
                         "& .MuiButton-root": {
                             background: `${colors.blueAccent[500]}`
@@ -271,7 +284,8 @@ const WordScramble = () => {
                         onClick={handleClick}
                     >
                         <Typography color={colors.gray[900]}>
-                            Select Your Grade Level
+                            {/* Select Your Grade Level */}
+                            {gradeLevel.grade === "" ? "Select Your Grade Level" : gradeLevel.grade + " grade"}
                         </Typography>
                     </Button>
                     <Menu
@@ -289,12 +303,48 @@ const WordScramble = () => {
                             horizontal: 'left',
                         }}
                     >
-                        <MenuItem onClick={handleClose1st}>First Year</MenuItem>
-                        <MenuItem onClick={handleClose2nd}>Second Year</MenuItem>
-                        <MenuItem onClick={handleClose3rd}>Third Year</MenuItem>
+                        <MenuItem onClick={() => handleCloseGradeSelection("first")}>First Year</MenuItem>
+                        <MenuItem onClick={() => handleCloseGradeSelection("second")}>Second Year</MenuItem>
+                        <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
                     </Menu>
+                    {/* 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕 */}
+                    {/* {gradeLevel.grade !== "" ? 
+                        <>
+                            <Button
+                                id="demo-positioned-button"
+                                aria-controls={open ? 'demo-positioned-menu' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={open ? 'true' : undefined}
+                                onClick={handleClick}
+                            >
+                                <Typography color={colors.gray[900]}>
+                                    Select your unit
+                                </Typography>
+                            </Button>
+                            <Menu
+                                id="demo-positioned-menu"
+                                aria-labelledby="demo-positioned-button"
+                                anchorEl={anchorEl}
+                                open={open}
+                                onClose={handleClose}
+                                anchorOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                }}
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                }}
+                            >
+                                <MenuItem onClick={() => handleCloseGradeSelection("first")}>First Year</MenuItem>
+                                <MenuItem onClick={() => handleCloseGradeSelection("second")}>Second Year</MenuItem>
+                                <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
+                            </Menu>
+                        </> 
+                    : undefined} */}
                 </Box>
             </Box>
+            
             {/* row 1 */}
             {/* TODO: data for words and method to map(?) words instead of hard coded */}
             <Box
@@ -304,6 +354,9 @@ const WordScramble = () => {
                 flexDirection="column"
                 mb="20px"
             >
+                <Box>
+                    {toggled ? `${numCorrect.length}/${nh1Vocab.length} found` : undefined}
+                </Box>
                 {toggled ? "Scrambled words: " : undefined}
 
                 {numCorrect.map((word)=> {
