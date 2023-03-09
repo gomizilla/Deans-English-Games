@@ -308,7 +308,7 @@ const WordScramble = () => {
                         <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
                     </Menu>
                     {/* 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕 */}
-                    {/* {gradeLevel.grade !== "" ? 
+                    {gradeLevel.grade !== "" ? 
                         <>
                             <Button
                                 id="demo-positioned-button"
@@ -341,7 +341,7 @@ const WordScramble = () => {
                                 <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
                             </Menu>
                         </> 
-                    : undefined} */}
+                    : undefined}
                 </Box>
             </Box>
             
