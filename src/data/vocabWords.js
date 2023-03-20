@@ -40,69 +40,74 @@ unit1: {
 
 export const nhYear1 = {
     unit1: {
-        part1KeySentence: {
-            1: "I am Meg Brown.",
-            2: "I like Japanese Food.",
+        part1: {
+            keySentence: {
+                1: "I am Meg Brown.",
+                2: "I like Japanese Food.",
+            },
+            vocab: [
+                {
+                    english_vocab: "call",
+                    japanese_vocab: "...を（～と）呼ぶ、名づける",
+                },
+                {
+                    english_vocab: "often",
+                    japanese_vocab: "",
+                },
+            ]
         },
-        part1Vocab: [
-            {
-                english_vocab: "call",
-                japanese_vocab: "...を（～と）呼ぶ、名づける",
+        part2: {
+            keySentence: {
+                1: "Are you fromt Sydney? --Yes, I am. [No, I am not.]",
+                2: "Do you play cricket? --Yes, I do. [No, I do not. I do not play cricket.]",
             },
-            {
-                english_vocab: "often",
-                japanese_vocab: "",
-            },
-            
-        ],
-        part2KeySentence: {
-            1: "Are you fromt Sydney? --Yes, I am. [No, I am not.]",
-            2: "Do you play cricket? --Yes, I do. [No, I do not. I do not play cricket.]",
+            vocab: [
+                {
+                    english_vocab: "so",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "fan",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "cricket",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "just",
+                    japanese_vocab: "",
+                },
+            ]
         },
-        part2Vocab: [
-            {
-                english_vocab: "so",
-                japanese_vocab: "",
+        part3: {
+            keySentence: {
+                1: "I can read hiragana. I cannot read kanji.",
+                2: "Can you read kanji? --Yes, I can. [No, I cannot].",
             },
-            {
-                english_vocab: "fan",
-                japanese_vocab: "",
-            },
-            {
-                english_vocab: "cricket",
-                japanese_vocab: "",
-            },
-            {
-                english_vocab: "just",
-                japanese_vocab: "",
-            },
-        ],
-        part3KeySentence: {
-            1: "I can read hiragana. I cannot read kanji.",
-            2: "Can you read kanji? --Yes, I can. [No, I cannot].",
+            vocab: [
+                {
+                    english_vocab: "there",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "little",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "every",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "but",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "cannot",
+                    japanese_vocab: "",
+                },
+            ]
         },
-        part3Vocab: [
-            {
-                english_vocab: "there",
-                japanese_vocab: "",
-            },
-            {
-                english_vocab: "little",
-                japanese_vocab: "",
-            },
-            {
-                english_vocab: "every",
-                japanese_vocab: "",
-            },
-            {
-                english_vocab: "but",
-                japanese_vocab: "",
-            },
-            {
-                english_vocab: "cannot",
-                japanese_vocab: "",
-            },
-        ],  
     },
     unit2: {
         part1KeySentence: {

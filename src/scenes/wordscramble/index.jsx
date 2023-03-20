@@ -12,6 +12,7 @@ import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import WordBox from "../../components/WordBox";
 import { nh1Vocab } from "../../data/vocabWords";
+import ModalComponent from "../../components/Modal";
 
 const WordScramble = () => {
 
@@ -22,6 +23,7 @@ const WordScramble = () => {
     const [nh1VocabScrambleArr, setNh1VocabScrambleArr] = useState();
     const [numCorrect, setNumCorrect] = useState([]);
     const [nh1VocabTest, setNh1VocabTest] = useState({});
+    const [openModal, setOpenModal] = useState(false);
 
     //test
     const [toggled, setToggled] = useState(false);
@@ -254,6 +256,20 @@ const WordScramble = () => {
                     title="Word Scramble"
                     subtitle="Unscramble the words!"
                 />
+                {/* <Box>
+                    <Button
+                        position="fixed"
+                        top="40%"
+                        left="50%"
+                        p="12px 24px"
+                        z-index="-1"
+                        backgroundColor="white"
+                        onClick={() => setOpenModal(!openModal)}
+                    >
+                        Modal
+                    </Button>
+                    <Modal open={openModal} onClose={() => setOpenModal(false)} />
+                </Box> */}
                 <Box
                     display="flex"
                     flexDirection="column"
@@ -275,8 +291,26 @@ const WordScramble = () => {
                     // backgroundColor={colors.blueAccent[600]}
                     borderRadius="5%"
                 >
+
+                    <Box>
+                        <Button
+                            position="fixed"
+                            onClick={() => setOpenModal(!openModal)}
+                        >
+                            Modal
+                        </Button>
+                        <ModalComponent 
+                            open={openModal} 
+                            onClose={() => setOpenModal(false)}
+                            grade={gradeLevel}
+                            setGrade={setGradeLevel}
+                        />
+                    </Box>
+
+                    {/* OG CODE 🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈*/}
+                    
                     {/* drop list of grade level? */}
-                    <Button
+                    {/* <Button
                         id="demo-positioned-button"
                         aria-controls={open ? 'demo-positioned-menu' : undefined}
                         aria-haspopup="true"
@@ -284,11 +318,11 @@ const WordScramble = () => {
                         onClick={handleClick}
                     >
                         <Typography color={colors.gray[900]}>
-                            {/* Select Your Grade Level */}
                             {gradeLevel.grade === "" ? "Select Your Grade Level" : gradeLevel.grade + " grade"}
                         </Typography>
-                    </Button>
-                    <Menu
+                    </Button> */}
+
+                    {/* <Menu
                         id="demo-positioned-menu"
                         aria-labelledby="demo-positioned-button"
                         anchorEl={anchorEl}
@@ -306,9 +340,9 @@ const WordScramble = () => {
                         <MenuItem onClick={() => handleCloseGradeSelection("first")}>First Year</MenuItem>
                         <MenuItem onClick={() => handleCloseGradeSelection("second")}>Second Year</MenuItem>
                         <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
-                    </Menu>
+                    </Menu> */}
                     {/* 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕 */}
-                    {gradeLevel.grade !== "" ? 
+                    {/* {gradeLevel.grade !== "" ? 
                         <>
                             <Button
                                 id="demo-positioned-button"
@@ -341,7 +375,9 @@ const WordScramble = () => {
                                 <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
                             </Menu>
                         </> 
-                    : undefined}
+                    : undefined} */}
+                    {/* OG CODE 🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈*/}
+
                 </Box>
             </Box>
             
