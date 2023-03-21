@@ -1152,6 +1152,10 @@ export const nhYear1 = {
     },
 };
 
+export const nhYear2 = {};
+
+export const nhYear3 = {};
+
 export const nh1Vocab = [
     {
         english_vocab: "call",

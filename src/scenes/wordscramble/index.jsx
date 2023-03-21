@@ -14,7 +14,7 @@ import WordBox from "../../components/WordBox";
 import { nh1Vocab } from "../../data/vocabWords";
 import ModalComponent from "../../components/Modal";
 
-import { nhYear1 } from "../../data/vocabWords";
+import { nhYear1, nhYear2, nhYear3 } from "../../data/vocabWords";
 
 const WordScramble = () => {
 
@@ -39,7 +39,10 @@ const WordScramble = () => {
         console.log("grade select vocabtest check: ", nh1VocabTest)
 
         //TODO: unit options rendered on useeffect? idk
+
+        // new 🎈🎈🎈🎈
         scramblerNew();
+        // console.log("🎇🎇🎇🎇🎇🎇🎇new vocab list check: ", vocabList);
     },[gradeLevel]);
 
     useEffect(() => {
@@ -121,17 +124,9 @@ const WordScramble = () => {
 
     const scramblerNew = () => {
         if (gradeLevel.grade === "first") {
-            // let firstGradeVocabArr = [];
-            let wat = [];
+            let vocabArr = [];
             for (let part in nhYear1[`${gradeLevel.unit}`]) {
-                // console.log("part: ", nhYear1[`${gradeLevel.unit}`][part].vocab)
-                // part.vocab.map((word) => {
-                //     firstGradeVocabArr.push(word.english_vocab);
-                // });
-                // nhYear1[`${gradeLevel.unit}`][part].vocab.map((word) => {
-                //     firstGradeVocabArr.push(word.english_vocab);
-                // });
-                let test = nhYear1[`${gradeLevel.unit}`][part].vocab.map((word) => {
+                let vocabObj = nhYear1[`${gradeLevel.unit}`][part].vocab.map((word) => {
                     return {
                         en: word.english_vocab,
                         scrambled: scrambleWord(word.english_vocab),
@@ -139,22 +134,41 @@ const WordScramble = () => {
                         toggled: false
                     };
                 });
-                wat = wat.concat(test);
-            }
-            // console.log("🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱🐱", firstGradeVocabArr);
-            // console.log("🎭🎭🎭🎭🎭🎭🎭🎭🎭🎭🎭🎭🎭🎭🎭🎭🎭🎭")
-            // const firstGradeVocabArrScrambled = firstGradeVocabArr.map((word) => {
-            //     return scrambleWord(word);
-            // });
-            // console.log("🦺🦺🦺🦺🦺🦺🦺🦺🦺🦺🦺🦺 newscrambled array: ", firstGradeVocabArrScrambled)
-            console.log("🎁🎁🎁🎁🎁🎁 wat: ", wat)
+                vocabArr = vocabArr.concat(vocabObj);
+            };
+            setVocabList(vocabArr);
         };
 
+        if (gradeLevel.grade === "second") {
+            let vocabArr = [];
+            for (let part in nhYear2[`${gradeLevel.unit}`]) {
+                let vocabObj = nhYear2[`${gradeLevel.unit}`][part].vocab.map((word) => {
+                    return {
+                        en: word.english_vocab,
+                        scrambled: scrambleWord(word.english_vocab),
+                        jp: word.japanese_vocab,
+                        toggled: false
+                    };
+                });
+                vocabArr = vocabArr.concat(vocabObj);
+            }
+        };
 
-        // if (gradeLevel.unit !== "") {
-        //     console.log("🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄🎄", );
-        //     console.log("🎈🎈🎈🎈🎈 gradeLevel check: ", gradeLevel)
-        // }
+        if (gradeLevel.grade === "third") {
+            let vocabArr = [];
+            for (let part in nhYear3[`${gradeLevel.unit}`]) {
+                let vocabObj = nhYear3[`${gradeLevel.unit}`][part].vocab.map((word) => {
+                    return {
+                        en: word.english_vocab,
+                        scrambled: scrambleWord(word.english_vocab),
+                        jp: word.japanese_vocab,
+                        toggled: false
+                    };
+                });
+                vocabArr = vocabArr.concat(vocabObj);
+            }
+        };
+
     };
 
     const scrambleWord = (word) => {
