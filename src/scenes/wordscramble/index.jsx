@@ -45,19 +45,19 @@ const WordScramble = () => {
         console.log("🎇🎇🎇🎇🎇🎇🎇new vocab list check: ", vocabList);
     },[gradeLevel]);
 
-    useEffect(() => {
-        // scrambler();
-        // renderList();
-        console.log("new words test check: ", nh1VocabTest);
-    },[]);
+    // useEffect(() => {
+    //     // scrambler();
+    //     // renderList();
+    //     console.log("new words test check: ", nh1VocabTest);
+    // },[]);
 
-    useEffect(() => {
-        console.log("num correct check: ", numCorrect);
-        if (toggled) {
-            console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
-            renderList();
-        }
-    }, [numCorrect])
+    // useEffect(() => {
+    //     console.log("num correct check: ", numCorrect);
+    //     if (toggled) {
+    //         console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
+    //         renderList();
+    //     }
+    // }, [numCorrect])
 
     // useEffect(() => {
     //     console.log("something changed in nh1vocabtest");
