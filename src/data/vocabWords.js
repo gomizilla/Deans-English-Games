@@ -1,7 +1,9 @@
 
 export const getRandomEnglishWord = (list) => {
+    // console.log("list check: ", list);
     const randomNum = Math.floor(Math.random() * list.length);
-    return list[randomNum].english_vocab;
+    // return list[randomNum].english_vocab;
+    return list[randomNum].en;
 };
 
 /* template
