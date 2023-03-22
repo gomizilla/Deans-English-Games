@@ -42,11 +42,11 @@ const WordScramble = () => {
 
         // new 🎈🎈🎈🎈
         scramblerNew();
-        // console.log("🎇🎇🎇🎇🎇🎇🎇new vocab list check: ", vocabList);
+        console.log("🎇🎇🎇🎇🎇🎇🎇new vocab list check: ", vocabList);
     },[gradeLevel]);
 
     useEffect(() => {
-        scrambler();
+        // scrambler();
         // renderList();
         console.log("new words test check: ", nh1VocabTest);
     },[]);
@@ -59,9 +59,9 @@ const WordScramble = () => {
         }
     }, [numCorrect])
 
-    useEffect(() => {
-        console.log("something changed in nh1vocabtest");
-    }, [nh1VocabTest])
+    // useEffect(() => {
+    //     console.log("something changed in nh1vocabtest");
+    // }, [nh1VocabTest])
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -284,20 +284,20 @@ const WordScramble = () => {
 
     //testing 🎈🎈🎈
     const renderList = () => {
-        if (gradeLevel.grade === "first") {
-            // return nh1Vocab.map((word, index) => {
-            //     // console.log("index: ", index);
-            //     // console.log("word: ", word.english_vocab)
-            //     // console.log("test: ", nh1VocabScrambleArr[index])
-            //     return wordBox(word.english_vocab, nh1VocabScrambleArr[index], nh1VocabTest[index]);
-            // });
-            return nh1VocabTest.map((word, index) => {
-                return wordBox(word.en, word.scrambled, nh1VocabTest[index]);
-            });
-        } else if (gradeLevel === "second") {
+        // if (gradeLevel.grade === "first") {
+        //     return nh1VocabTest.map((word, index) => {
+        //         return wordBox(word.en, word.scrambled, nh1VocabTest[index]);
+        //     });
+        // } else if (gradeLevel === "second") {
 
-        } else if (gradeLevel === "third") {
+        // } else if (gradeLevel === "third") {
             
+        // }
+        console.log("🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃vocabList check: ", vocabList)
+        if (gradeLevel.grade !== "" && gradeLevel.unit !== "") {
+            return vocabList.map((word, index) => {
+                return wordBox(word.en, word.scrambled, vocabList[index]);
+            });
         }
     }
 
@@ -446,21 +446,29 @@ const WordScramble = () => {
                 flexDirection="column"
                 mb="20px"
             >
-                <Box>
+                {/* fix later 🚧🚧🚧*/}
+
+                {/* <Box>
                     {toggled ? `${numCorrect.length}/${nh1Vocab.length} found` : undefined}
                 </Box>
-                {toggled ? "Scrambled words: " : undefined}
+                {toggled ? "Scrambled words: " : undefined} */}
+
+                {/* fix later 🚧🚧🚧*/}
 
                 {numCorrect.map((word)=> {
                     return ` ${word} `
                 })}
 
-                {numCorrect.length === nh1Vocab.length ? 
+                {/* fix later 🚧🚧🚧*/}
+
+                {/* {numCorrect.length === nh1Vocab.length ? 
                 <Typography m="20px" variant="h3">
                     Word Scramble Complete!
                 </Typography> 
-                : undefined}
-                
+                : undefined} */}
+
+                {/* fix later 🚧🚧🚧*/}
+
             </Box>
             <Box
                 display="grid"
@@ -468,10 +476,11 @@ const WordScramble = () => {
                 gridAutoRows="140px"
                 gap="20px"
             >
-                {gradeLevel.grade === "first" ? 
+                {/* {gradeLevel.grade === "first" ? 
                     renderList()
                 : undefined
-                }
+                } */}
+                {(gradeLevel.grade !== "" && gradeLevel.unit !== "") && renderList()}
                 
             </Box>
         </Box>

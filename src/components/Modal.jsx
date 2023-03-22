@@ -23,12 +23,14 @@ function ModalComponent({open, onClose, grade, setGrade}) {
         console.log("event check: ", event.target.value);
         // setGrade({grade: event.target.value});
         setCurrentGrade(event.target.value);
+        setGrade({grade: event.target.value, unit: currentUnit});
     };
 
     const handleChangeUnit = (e) => {
         console.log("event unit check: ", e.target.value);
         // setGrade({unit: e.target.value});
         setCurrentUnit(e.target.value);
+        setGrade({grade: currentGrade, unit: e.target.value})
     };
 
     const handleGradeAndUnit = () => {
@@ -168,7 +170,7 @@ function ModalComponent({open, onClose, grade, setGrade}) {
                     <Button
                         variant="outlined"
                         color="primary"
-                        onClick={handleGradeAndUnit}
+                        // onClick={handleGradeAndUnit}
                     >
                         Play!
                     </Button>
