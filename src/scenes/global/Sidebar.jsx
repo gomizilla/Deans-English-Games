@@ -38,13 +38,14 @@ const SidebarComponent = () => {
     // const [ isCollapsed, setIsCollapsed ] = useState(false);
     const [ selected, setSelected ] = useState("Dashboard"); // highlights dashboard on reloads even if diff page
     const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
-
+    
     return (
         <Box
             sx={{
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[300]} !important`,
-                    height: "100vh"
+                    // height: "100vh"
+                    height: window.outerHeight
                 },
                 //everything below has a different name due to pro-sidebar being change to sidebar
                 "& .sidebar-icon-wrapper": {
