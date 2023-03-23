@@ -8,7 +8,7 @@ import FormLabel from '@mui/material/FormLabel';
 import { tokens } from '../theme';
 import { nhYear1 } from '../data/vocabWords';
 
-function ModalComponent({open, onClose, grade, setGrade}) {
+function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
 
     const [currentGrade, setCurrentGrade] = useState("");
     const [currentUnit, setCurrentUnit] = useState("");
@@ -171,6 +171,7 @@ function ModalComponent({open, onClose, grade, setGrade}) {
                         variant="outlined"
                         color="primary"
                         // onClick={handleGradeAndUnit}
+                        onClick={() => setPlayPressed(true)}
                     >
                         Play!
                     </Button>

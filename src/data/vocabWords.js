@@ -215,10 +215,10 @@ export const nhYear1 = {
                     english_vocab: "trumpet",
                     japanese_vocab: "",
                 },
-                {
-                    english_vocab: "brass band", // need to fix
-                    japanese_vocab: "",
-                },
+                // {
+                //     english_vocab: "brass band", // need to fix
+                //     japanese_vocab: "",
+                // },
                 {
                     english_vocab: "before",
                     japanese_vocab: "",
@@ -394,10 +394,10 @@ export const nhYear1 = {
                     english_vocab: "during",
                     japanese_vocab: "",
                 },
-                {
-                    english_vocab: "o'clock", // figure out how to remove this from wordle
-                    japanese_vocab: "",
-                },
+                // {
+                //     english_vocab: "o'clock", // figure out how to remove this from wordle
+                //     japanese_vocab: "",
+                // },
             ],
         },
         part3: {
@@ -578,10 +578,10 @@ export const nhYear1 = {
                     english_vocab: "weekend",
                     japanese_vocab: "",
                 },
-                {
-                    english_vocab: "scuba diving", // space, remove from wordle
-                    japanese_vocab: "",
-                },
+                // {
+                //     english_vocab: "scuba diving", // space, remove from wordle
+                //     japanese_vocab: "",
+                // },
                 {
                     english_vocab: "has",
                     japanese_vocab: "",
@@ -799,10 +799,10 @@ export const nhYear1 = {
                     english_vocab: "free",
                     japanese_vocab: "",
                 },
-                {
-                    english_vocab: "video game", // remove, wordle
-                    japanese_vocab: "",
-                },
+                // {
+                //     english_vocab: "video game", // remove, wordle
+                //     japanese_vocab: "",
+                // },
                 {
                     english_vocab: "forward",
                     japanese_vocab: "",

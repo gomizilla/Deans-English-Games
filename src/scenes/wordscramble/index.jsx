@@ -28,6 +28,7 @@ const WordScramble = () => {
     const [openModal, setOpenModal] = useState(false);
 
     const [vocabList, setVocabList] = useState({});
+    const [playPressed, setPlayPressed] = useState(false);
 
     //test
     const [toggled, setToggled] = useState(false);
@@ -360,6 +361,7 @@ const WordScramble = () => {
                             open={openModal} 
                             grade={gradeLevel}
                             setGrade={setGradeLevel}
+                            setPlayPressed={setPlayPressed}
                         />
                     </Box>
 
@@ -480,7 +482,8 @@ const WordScramble = () => {
                     renderList()
                 : undefined
                 } */}
-                {(gradeLevel.grade !== "" && gradeLevel.unit !== "") && renderList()}
+                {/* {(gradeLevel.grade !== "" && gradeLevel.unit !== "") && renderList()} */}
+                {playPressed ? renderList() : undefined}
                 
             </Box>
         </Box>

@@ -46,6 +46,7 @@ const SecretWord = () => {
     const [gradeLevel, setGradeLevel] = useState({ grade: "", unit: ""});
     const [openModal, setOpenModal] = useState(false);
     const [vocabList, setVocabList] = useState({});
+    const [playPressed, setPlayPressed] = useState(false);
 
 
     useEffect(() => {
@@ -278,13 +279,17 @@ const SecretWord = () => {
                                 open={openModal} 
                                 grade={gradeLevel}
                                 setGrade={setGradeLevel}
+                                setPlayPressed={setPlayPressed}
                             />
                         </Box>
                     </Box>
                 </Box>
-                {buttonClicked ? <Board/> : undefined}
-                {(!gameover.gameover && buttonClicked) ? <Keyboard/> : undefined}
-                {buttonClicked ? <Gameover /> : undefined}
+                {/* {buttonClicked ? <Board/> : undefined} */}
+                {playPressed ? <Board/> : undefined}
+                {/* {(!gameover.gameover && buttonClicked) ? <Keyboard/> : undefined} */}
+                {(!gameover.gameover && playPressed) ? <Keyboard/> : undefined}
+                {/* {buttonClicked ? <Gameover /> : undefined} */}
+                {playPressed ? <Gameover /> : undefined}
             </AppContext.Provider>
         </Box>
     );
