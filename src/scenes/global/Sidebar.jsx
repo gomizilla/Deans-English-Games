@@ -4,8 +4,8 @@ import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
-import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
-import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+import AbcOutlinedIcon from "@mui/icons-material/AbcOutlined";
+import PsychologyAltOutlinedIcon from "@mui/icons-material/PsychologyAltOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
@@ -135,14 +135,14 @@ const SidebarComponent = () => {
                         <Item 
                             title="Word Scramble"
                             to="/wordscramble"
-                            icon={<PeopleOutlinedIcon />}
+                            icon={<AbcOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
                             title="Secret Word"
                             to="/secretword"
-                            icon={<ContactsOutlinedIcon />}
+                            icon={<PsychologyAltOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />

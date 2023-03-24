@@ -165,7 +165,8 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                     onClick={onClose}
                     // border="1px solid pink"
                     textAlign="center"
-                    pr="5px"
+                    // pr="5px"
+                    pt="10px"
                 >
                     <Button
                         variant="outlined"

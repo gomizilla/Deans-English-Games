@@ -274,7 +274,7 @@ const SecretWord = () => {
                                     handleDefaultBoard();
                                 }}
                             >
-                                Modal
+                                Click Here To Play
                             </Button>
                             <ModalComponent 
                                 onClose={() => setOpenModal(false)}
