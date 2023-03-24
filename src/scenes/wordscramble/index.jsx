@@ -152,7 +152,8 @@ const WordScramble = () => {
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
-            }
+            };
+            setVocabList(vocabArr);
         };
 
         if (gradeLevel.grade === "third") {
@@ -167,7 +168,8 @@ const WordScramble = () => {
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
-            }
+            };
+            setVocabList(vocabArr);
         };
 
     };
@@ -354,7 +356,7 @@ const WordScramble = () => {
                             position="fixed"
                             onClick={() => setOpenModal(!openModal)}
                         >
-                            Modal
+                            Click Here To Play
                         </Button>
                         <ModalComponent 
                             onClose={() => setOpenModal(false)}

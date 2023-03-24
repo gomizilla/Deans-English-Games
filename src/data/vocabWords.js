@@ -1215,9 +1215,1206 @@ export const nhYear1 = {
     },
 };
 
-export const nhYear2 = {};
+export const nhYear2 = {
+    unit1: {
+        part1: {
+            keySentence: {
+                1: "I am going to visit Singapore next week.",
+                2: "Are you going to visit Singapore next week?"
+            },
+            vocab: [
+               {
+                english_vocab: "golden",
+                japanese_vocab: "",
+               },
+               {
+                english_vocab: "holiday",
+                japanese_vocab: "",
+               },
+               {
+                english_vocab: "abroad",
+                japanese_vocab: "",
+               },
+               {
+                english_vocab: "aunt",
+                japanese_vocab: "",
+               },
+               {
+                english_vocab: "uncle",
+                japanese_vocab: "",
+               },
+               {
+                english_vocab: "husband",
+                japanese_vocab: "",
+               },
+               {
+                english_vocab: "wife",
+                japanese_vocab: "",
+               },
+            ]
+        },
+        part2: {
+            keySentence: {
+                1: "I will make a reservation."
+            },
+            vocab: [
+                {
+                    english_vocab: "far",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "will",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "seafood",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "reservation",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part3: {
+            keySentence: {
+                1: "I will show you the Merlion.",
+                2: "People call it the Singapore Flyer."
+            },
+            vocab: [
+                {
+                    english_vocab: "meter",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "tall",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "weigh",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "ton",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "gift",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "cookie",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "rode",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "scary",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "communicate",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "culture",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+    },
+    unit2: {
+        part1: {
+            keySentence: {
+                1: "When I watch TV, I see many interesting dishes."
+            },
+            vocab: [
+                {
+                    english_vocab: "kind",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "recipe",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "pilaf",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "even",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "heard",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "hear",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part2: {
+            keySentence: {
+                1: "If you have time, we can go.",
+            },
+            vocab: [
+                {
+                    english_vocab: "sometime",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "if",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "originally",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "India",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part3: {
+            keySentence: {
+                1: "I think (that) curry came to Japan from India.",
+                2: "I do not eat sushi because I do not like raw fish.",
+            },
+            vocab: [
+                {
+                    english_vocab: "directly",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "century",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "spice",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "British",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "company",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "produce",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "powder",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sale",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "chef",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "flour",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "thick",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "blend",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "create",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sauce",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "roll",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "because",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "raw",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "avocado",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "wrap",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "seaweed",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "Italy",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "Naples",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+    },
+    unit3: {
+        part1: {
+            keySentence: {
+                1: "We use computers to do many things.",
+            },
+            vocab: [
+                {
+                    english_vocab: "learn",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "progress",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "lives",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "disappear",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "appear",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "should",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part2: {
+            keySentence: {
+                1: "I am surprised to see this",
+            },
+            vocab: [
+                {
+                    english_vocab: "article",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "translator",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "surprised",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "according",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "translation",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "career",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "advice",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part3: {
+            keySentence: {
+                1: "We have various things to translate.",
+                2: "It is important to use AI effectively.",
+            },
+            vocab: [
+                {
+                    english_vocab: "explain",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "translate",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sentence",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "knew",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "deep",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "knowledge",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "develop",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sense",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "various",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "general",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "specific",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "continue",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "strength",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "misunderstand",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "meaning",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "moreover",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "writer",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "feeling",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "catch",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "human",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "necessary",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "effectively",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "relationship",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "connect",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "everything",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "reason",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "between",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "through",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+    },
+    unit4: {
+        part1: {
+            keySentence: {
+                1: "You have to speak English.",
+                2: "You do not have to speak perfect English.",
+            },
+            vocab: [
+                {
+                    english_vocab: "member",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "follow",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "rule",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "host",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "perfect",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part2: {
+            keySentence: {
+                1: "You must come home early.",
+                2: "You must not go out alone.",
+            },
+            vocab: [
+                {
+                    english_vocab: "must",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "alone",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "safe",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "young",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part3: {
+            keySentence: {
+                1: "I finished using the bathroom.",
+                2: "Playing games was fun.",
+            },
+            vocab: [
+                {
+                    english_vocab: "case",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "finish",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "bathroom",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "such",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "save",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "plate",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "hurt",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "elderly",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "couple",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "bored",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "hobby",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "hobbies",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "kept",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "keep",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "carefully",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "both",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+    },
+    unit5: {
+        part1: {
+            keySentence: {
+                1: "I know how to use these products.",
+            },
+            vocab: [
+                {
+                    english_vocab: "product",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "exhibition",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "facility",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "facilities",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part2: {
+            keySentence: {
+                1: "I can show you how to use these products.",
+            },
+            vocab: [
+                {
+                    english_vocab: "staff",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "jar",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "bump",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "braille",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "helpful",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "feature",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part3: {
+            keySentence: {
+                1: "I am sure that these ideas help many people.",
+            },
+            vocab: [
+                {
+                    english_vocab: "plastic",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "hold",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "common",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "glad",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "handrail",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "finger",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "ramp",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "stair",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "pull",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "luggage",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "baby",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "babies",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "American",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "professor",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "childhood",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "better",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "society",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "disabled",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "remove",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "barrier",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "found",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "center",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "spread",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+    },
+    unit6: {
+        part1: {
+            keySentence: {
+                1: "This movie is older than that one.",
+                2: "This movie is the oldest of the three.",
+            },
+            vocab: [
+                {
+                    english_vocab: "trivia",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "quiz",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "than",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "neighbor",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part2: {
+            keySentence: {
+                1: "This movie is more interesting than that one.",
+                2: "This movie is the most interesting this year.",
+            },
+            vocab: [
+                {
+                    english_vocab: "action",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "comedy",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "animated",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "fiction",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "more",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "most",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "answer",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part3: {
+            keySentence: {
+                1: "I like animated movies the best of all.",
+                2: "This movie is as popular as that one.",
+            },
+            vocab: [
+                {
+                    english_vocab: "graph",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "percent",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "story",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "stories",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "horror",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "feedback",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "speaker",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "content",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "delivery",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "contact",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "spoke",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "clearly",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "data",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "slide",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "letter",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "row",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+    },
+    unit7: {
+        part1: {
+            keySentence: {
+                1: "This place is selected as a World Heritage site.",
+            },
+            vocab: [
+                {
+                    english_vocab: "unique",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "precious",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "select",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "own",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "type",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "natural",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "cultural",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "mixed",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "selection",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "standard",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "decide",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "conference",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part2: {
+            keySentence: {
+                1: "The mountains are listed as a natural heritage site.",
+                2: "Are the mountains listed as a natural heritage site?"
+            },
+            vocab: [
+                {
+                    english_vocab: "list",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "oily",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "mist",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "leaves",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "leaf",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "forest",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "beauty",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "preserved",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+        part3: {
+            keySentence: {
+                1: "The city is visited by too many tourists.",
+                2: "Mt. Fuji can be sen from different angles.",
+            },
+            vocab: [
+                {
+                    english_vocab: "canal",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "gondola",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "built",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "across",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "grand",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sight",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "attractive",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "serious",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "citizen",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sink",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "cruise",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "wave",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "damage",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "known",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "worldwide",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "similar",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sacred",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "inspiration",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "print",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "influence",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "seen",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "angle",
+                    japanese_vocab: "",
+                },
+            ]
+        },
+    },
+};
 
-export const nhYear3 = {};
+export const nhYear3 = {
+    unit1: {
+        part1: {
+            keySentence: {
+            },
+            vocab: [
+               
+            ]
+        },
+        part2: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+        part3: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+    },
+    unit2: {
+        part1: {
+            keySentence: {
+            },
+            vocab: [
+               
+            ]
+        },
+        part2: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+        part3: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+    },
+    unit3: {
+        part1: {
+            keySentence: {
+            },
+            vocab: [
+               
+            ]
+        },
+        part2: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+        part3: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+    },
+    unit4: {
+        part1: {
+            keySentence: {
+            },
+            vocab: [
+               
+            ]
+        },
+        part2: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+        part3: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+    },
+    unit5: {
+        part1: {
+            keySentence: {
+            },
+            vocab: [
+               
+            ]
+        },
+        part2: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+        part3: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+    },
+    unit6: {
+        part1: {
+            keySentence: {
+            },
+            vocab: [
+               
+            ]
+        },
+        part2: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+        part3: {
+            keySentence: {
+            },
+            vocab: [
+                
+            ]
+        },
+    },
+};
 
 export const nh1Vocab = [
     {

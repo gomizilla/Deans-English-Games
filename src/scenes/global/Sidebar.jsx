@@ -45,7 +45,7 @@ const SidebarComponent = () => {
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[300]} !important`,
                     // height: "100vh"
-                    height: window.outerHeight
+                    // height: window.outerHeight
                 },
                 //everything below has a different name due to pro-sidebar being change to sidebar
                 "& .sidebar-icon-wrapper": {
