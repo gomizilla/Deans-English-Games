@@ -154,7 +154,8 @@ const SecretWord = () => {
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
-            }
+            };
+            setVocabList(vocabArr);
         };
 
         if (gradeLevel.grade === "third") {
@@ -169,7 +170,8 @@ const SecretWord = () => {
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
-            }
+            };
+            setVocabList(vocabArr);
         };
 
     };
