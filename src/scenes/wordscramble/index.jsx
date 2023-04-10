@@ -35,8 +35,6 @@ const WordScramble = () => {
     //test
 
     useEffect(() => {
-        // console.log("test: ", gradeLevel)
-        // console.log("state check: ", nh1VocabScrambleArr);
         console.log("grade select vocabtest check: ", nh1VocabTest)
 
         //TODO: unit options rendered on useeffect? idk
@@ -45,24 +43,6 @@ const WordScramble = () => {
         scramblerNew();
         console.log("🎇🎇🎇🎇🎇🎇🎇new vocab list check: ", vocabList);
     },[gradeLevel]);
-
-    // useEffect(() => {
-    //     // scrambler();
-    //     // renderList();
-    //     console.log("new words test check: ", nh1VocabTest);
-    // },[]);
-
-    // useEffect(() => {
-    //     console.log("num correct check: ", numCorrect);
-    //     if (toggled) {
-    //         console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
-    //         renderList();
-    //     }
-    // }, [numCorrect])
-
-    // useEffect(() => {
-    //     console.log("something changed in nh1vocabtest");
-    // }, [nh1VocabTest])
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -74,23 +54,7 @@ const WordScramble = () => {
         console.log("🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔")
         // console.log("test: ", this);
     };
-    // const handleClose1st = () => {
-    //     setAnchorEl(null);
-    //     // setGradeLevel("first");
-    //     setGradeLevel({grade: "first"})
-    //     setToggled(true);
-    //     // console.log("test: ", this);
-    // };
-    // const handleClose2nd = () => {
-    //     setAnchorEl(null);
-    //     setGradeLevel("second");
-    //     // console.log("test: ", this);
-    // };
-    // const handleClose3rd = () => {
-    //     setAnchorEl(null);
-    //     setGradeLevel("third");
-    //     // console.log("test: ", this);
-    // };
+
     const handleCloseGradeSelection = (selected) => {
         setAnchorEl(null);
         setGradeLevel({grade: selected});
@@ -194,7 +158,7 @@ const WordScramble = () => {
         return scrambledWord;
     };
 
-    const wordBox = (word, scrambledWord, newListTest) => {
+    const wordBox = (word, scrambledWord, newListTest, num) => {
 
         // maybe if/else here that renders the whole box based on boolean?
         // maybe get the main box elemeny by id and change display?
@@ -202,25 +166,31 @@ const WordScramble = () => {
 
         return (
             <Box
-                gridColumn="span 3"
-                backgroundColor={colors.primary[400]}
-                display={newListTest.toggled ? "none" : "flex"}
-                // display="flex"
+                // gridColumn="span 1"
+                // backgroundColor={colors.primary[400]}
+                // display={newListTest.toggled ? "none" : "flex"}
+                backgroundColor={newListTest.toggled ? colors.greenAccent[600] : colors.primary[400]}
+                display="flex"
                 alignItems="center"
                 justifyContent="space-around"
                 flexDirection="column"
                 key={newListTest.en}
+                // minWidth="50px"
                 // id={word}
             >
                 <WordBox
-                    title={newListTest.scrambled}
+                    title={newListTest.toggled ? (num+1 + ". " + newListTest.en) : (num+1 + ". " + newListTest.scrambled)}
                     // title={newListTest.toggled ? newListTest.en : newListTest.scrambled}
                     // subtitle="図書館"
+                    // subtitle={"wat"}
                     // icon="📚"
                 />
                 <Box 
                     backgroundColor={colors.primary[300]} 
                     borderRadius="3px"
+                    display={newListTest.toggled ? "none" : "flex"}
+                    ml="10px"
+                    mr="10px"
                 >
                     {/* {newListTest.toggled ? } */}
                     <InputBase 
@@ -228,21 +198,7 @@ const WordScramble = () => {
                         placeholder="Enter Guess Here"
                         id={word}
                         onKeyDown={(e) => {
-                            // const userInput = document.getElementById(newListTest.en); //shouldnt be using vanilla js in react ?
-                            // console.log("correct check b4: ", correct);
-                            // console.log("hhhhhhhhmmmmmmmmmmmm: ", e.target.value);
-                            
                             if (e.key === "Enter" && e.target.value === newListTest.en) {
-                                // console.log("various checks: ", word, scrambledWord, userInput.value);
-                                // correct = true;
-                                // setNumCorrect([...numCorrect, userInput.value])
-                                // userInput.value = "";
-                                // console.log("correct check after: ", correct);
-                                // console.log("check: ", this.display);
-                                // e.target.display = "none";
-                                // setToggled(true);
-                                // e.target.backgroundColor = "green";
-                                // console.log("check: ", e.target);
                                 e.target.value = "";
                                 newListTest.toggled = true;
                                 console.log("newlsittest check: ", newListTest);
@@ -269,13 +225,6 @@ const WordScramble = () => {
                                 alert(`wrong (click) ${userInput.value}`);
                             }
                         }}
-                        // onKeyDown={(e) => {
-                        //     const userInput = document.getElementById(word);
-                        //     if (userInput.value === word) {
-                        //     console.log("various checks: ", word, scrambledWord, userInput.value);
-                        //     userInput.value = "";
-                        //     }
-                        // }}
                     >
                         <SearchIcon />
                     </IconButton>
@@ -285,21 +234,10 @@ const WordScramble = () => {
         );
     };
 
-    //testing 🎈🎈🎈
     const renderList = () => {
-        // if (gradeLevel.grade === "first") {
-        //     return nh1VocabTest.map((word, index) => {
-        //         return wordBox(word.en, word.scrambled, nh1VocabTest[index]);
-        //     });
-        // } else if (gradeLevel === "second") {
-
-        // } else if (gradeLevel === "third") {
-            
-        // }
-        console.log("🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃vocabList check: ", vocabList)
         if (gradeLevel.grade !== "" && gradeLevel.unit !== "") {
             return vocabList.map((word, index) => {
-                return wordBox(word.en, word.scrambled, vocabList[index]);
+                return wordBox(word.en, word.scrambled, vocabList[index], index);
             });
         }
     }
@@ -308,12 +246,13 @@ const WordScramble = () => {
         <Box m="20px">
             <Box
                 display="flex"
-                justifyContent="space-between"
+                justifyContent="center"
                 alignItems="center"
+                textAlign="center"
             >
                 <Header 
                     title="Word Scramble"
-                    subtitle="Unscramble the words!"
+                    subtitle="❌ plape → 👍🏼 apple"
                 />
                 {/* <Box>
                     <Button
@@ -329,7 +268,7 @@ const WordScramble = () => {
                     </Button>
                     <Modal open={openModal} onClose={() => setOpenModal(false)} />
                 </Box> */}
-                <Box
+                {/* <Box
                     display="flex"
                     flexDirection="column"
                     gap="10px"
@@ -366,83 +305,61 @@ const WordScramble = () => {
                             setPlayPressed={setPlayPressed}
                         />
                     </Box>
-
-                    {/* OG CODE 🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈*/}
-                    
-                    {/* drop list of grade level? */}
-                    {/* <Button
-                        id="demo-positioned-button"
-                        aria-controls={open ? 'demo-positioned-menu' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
-                    >
-                        <Typography color={colors.gray[900]}>
-                            {gradeLevel.grade === "" ? "Select Your Grade Level" : gradeLevel.grade + " grade"}
-                        </Typography>
-                    </Button> */}
-
-                    {/* <Menu
-                        id="demo-positioned-menu"
-                        aria-labelledby="demo-positioned-button"
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'left',
+                </Box> */}
+            </Box>
+            <Box
+                display="flex"
+                // flexDirection="column"
+                // alignItems="center"
+                justifyContent="center"
+                gap="10px"
+                sx={{
+                    "& .MuiButton-root": {
+                        background: `${colors.blueAccent[500]}`
+                    },
+                    "& .MuiButton-root:hover": {
+                        background: `${colors.greenAccent[500]}`
+                    },
+                    "& .MuiTypography-root:hover": {
+                        color: `${colors.gray[100]}`
+                    },
+                    "& .MuiTypography-root:active": {
+                        color: `${colors.gray[900]}`
+                    },
+                }}
+                // backgroundColor={colors.blueAccent[600]}
+                border="2px solid white"
+                borderRadius="5%"
+            >
+                <Box
+                    height="250px"
+                    // width="auto"
+                    // display="flex"
+                    // justifyContent="center"
+                    // alignContent="center"
+                    border="2px solid yellow"
+                >
+                    <Button
+                        // position="fixed"
+                        // height="250px"
+                        onClick={() => setOpenModal(!openModal)}
+                        sx={{
+                            width: "250px",
+                            height: "250px",
+                            fontSize: "50px"
                         }}
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'left',
-                        }}
                     >
-                        <MenuItem onClick={() => handleCloseGradeSelection("first")}>First Year</MenuItem>
-                        <MenuItem onClick={() => handleCloseGradeSelection("second")}>Second Year</MenuItem>
-                        <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
-                    </Menu> */}
-                    {/* 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕 */}
-                    {/* {gradeLevel.grade !== "" ? 
-                        <>
-                            <Button
-                                id="demo-positioned-button"
-                                aria-controls={open ? 'demo-positioned-menu' : undefined}
-                                aria-haspopup="true"
-                                aria-expanded={open ? 'true' : undefined}
-                                onClick={handleClick}
-                            >
-                                <Typography color={colors.gray[900]}>
-                                    Select your unit
-                                </Typography>
-                            </Button>
-                            <Menu
-                                id="demo-positioned-menu"
-                                aria-labelledby="demo-positioned-button"
-                                anchorEl={anchorEl}
-                                open={open}
-                                onClose={handleClose}
-                                anchorOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                            >
-                                <MenuItem onClick={() => handleCloseGradeSelection("first")}>First Year</MenuItem>
-                                <MenuItem onClick={() => handleCloseGradeSelection("second")}>Second Year</MenuItem>
-                                <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
-                            </Menu>
-                        </> 
-                    : undefined} */}
-                    {/* OG CODE 🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈*/}
-
+                        Play
+                    </Button>
+                    <ModalComponent 
+                        onClose={() => setOpenModal(false)}
+                        open={openModal} 
+                        grade={gradeLevel}
+                        setGrade={setGradeLevel}
+                        setPlayPressed={setPlayPressed}
+                    />
                 </Box>
             </Box>
-            
-            {/* row 1 */}
-            {/* TODO: data for words and method to map(?) words instead of hard coded */}
             <Box
                 display="flex"
                 justifyContent="center"
@@ -459,9 +376,9 @@ const WordScramble = () => {
 
                 {/* fix later 🚧🚧🚧*/}
 
-                {numCorrect.map((word)=> {
+                {/* {numCorrect.map((word)=> {
                     return ` ${word} `
-                })}
+                })} */}
 
                 {/* fix later 🚧🚧🚧*/}
 
@@ -476,9 +393,11 @@ const WordScramble = () => {
             </Box>
             <Box
                 display="grid"
-                gridTemplateColumns="repeat(3, 1fr)"
+                // gridTemplateColumns="repeat(3, 1fr)"
+                gridTemplateColumns="repeat(auto-fit, minmax(325px, 3fr))"
                 gridAutoRows="140px"
                 gap="20px"
+                border="2px solid purple"
             >
                 {/* {gradeLevel.grade === "first" ? 
                     renderList()
