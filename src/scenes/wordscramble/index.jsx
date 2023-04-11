@@ -4,7 +4,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { Box, Typography, useTheme, IconButton } from "@mui/material";
+import { Box, Typography, useTheme, IconButton, Switch, FormGroup, FormControlLabel} from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -32,6 +32,7 @@ const WordScramble = () => {
 
     //test
     const [toggled, setToggled] = useState(false);
+    const [hintsUsed, setHintsUsed] = useState(0);
     //test
 
     useEffect(() => {
@@ -43,6 +44,10 @@ const WordScramble = () => {
         scramblerNew();
         console.log("🎇🎇🎇🎇🎇🎇🎇new vocab list check: ", vocabList);
     },[gradeLevel]);
+
+    useEffect(() => {
+        console.log("hints used check useeffet: ", hintsUsed)
+    }, [hintsUsed])
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -61,6 +66,26 @@ const WordScramble = () => {
         setToggled(true);
         console.log("new function called 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕");
     }
+
+    const handleHintToggle = (currentVocab) => {
+        // if (currentVocab.hint === "true") {
+        //     const newNum = hintsUsed - 1;
+        //     setHintsUsed(newNum);
+        // }
+        console.log("💥💥💥💥💥💥hint handler toggled: ", currentVocab)
+        currentVocab.hint = !currentVocab.hint;
+        console.log("💢💢💢💢💢hint handler toggled: ", currentVocab)
+        let newNum = hintsUsed;
+        if (!currentVocab.hint) {
+            newNum++;
+            setHintsUsed(newNum);
+        }
+        if (currentVocab.hint) {
+            newNum--;
+            setHintsUsed(newNum);
+        }
+        console.log("hints used: ", hintsUsed);
+    };
 
     const scrambler = () => {
         let nh1VocabArray = nh1Vocab.map((word) => {
@@ -96,7 +121,8 @@ const WordScramble = () => {
                         en: word.english_vocab,
                         scrambled: scrambleWord(word.english_vocab),
                         jp: word.japanese_vocab,
-                        toggled: false
+                        toggled: false,
+                        hint: false,
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
@@ -112,7 +138,8 @@ const WordScramble = () => {
                         en: word.english_vocab,
                         scrambled: scrambleWord(word.english_vocab),
                         jp: word.japanese_vocab,
-                        toggled: false
+                        toggled: false,
+                        hint: false
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
@@ -128,7 +155,8 @@ const WordScramble = () => {
                         en: word.english_vocab,
                         scrambled: scrambleWord(word.english_vocab),
                         jp: word.japanese_vocab,
-                        toggled: false
+                        toggled: false,
+                        hint: false
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
@@ -178,10 +206,60 @@ const WordScramble = () => {
                 // minWidth="50px"
                 // id={word}
             >
+                <Box
+                    // dispaly="flex"
+                    // flexDirection="row"
+                    // border="2px solid yellow"
+                    width="95%"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="right"
+                    m="0"
+                    p="0"
+                >
+                    <FormGroup>
+                        <FormControlLabel
+                            control={<Switch
+                                // defaultChecked={newListTest.hint}
+                                color="secondary"
+                                onChange={(e) => {
+                                    // newListTest.hint = e.target.checked;
+                                    console.log("awerawerawrawer: ", newListTest.hint);
+                                    console.log("event: ", e.target.checked);
+                                    // handleHintToggle(newListTest);
+                                    newListTest.hint = e.target.checked;
+                                    console.log("awerawerawrawer: ", newListTest.hint);
+                                    // if (newListTest.hint === true) {
+                                    //     const newHintNum = hintsUsed + 1;
+                                    //     setHintsUsed(newHintNum);
+                                    // }
+                                    // if (newListTest.hint === false) {
+                                    //     const newHintNum = hintsUsed - 1;
+                                    //     setHintsUsed(newHintNum);
+                                    // }
+                                    if (newListTest.hint) {
+                                        let addHint = hintsUsed;
+                                        addHint++;
+                                        setHintsUsed(addHint);
+                                    }
+                                    if (!newListTest.hint) {
+                                        let subHint = hintsUsed;
+                                        subHint--;
+                                        setHintsUsed(subHint);
+                                    }
+                                    // console.log("hints used check: ", hintsUsed);
+                                }}
+                            />}
+                            label="Hint: "
+                            labelPlacement="start"
+                        >
+                        </FormControlLabel>
+                    </FormGroup>
+                </Box>
                 <WordBox
                     title={newListTest.toggled ? (num+1 + ". " + newListTest.en) : (num+1 + ". " + newListTest.scrambled)}
                     // title={newListTest.toggled ? newListTest.en : newListTest.scrambled}
-                    // subtitle="図書館"
+                    subtitle={newListTest.hint ? newListTest.jp : undefined}
                     // subtitle={"wat"}
                     // icon="📚"
                 />
@@ -202,7 +280,7 @@ const WordScramble = () => {
                                 e.target.value = "";
                                 newListTest.toggled = true;
                                 console.log("newlsittest check: ", newListTest);
-                                console.log("asdfwaoerwuerqweropuqw: ", nh1VocabTest);
+                                // console.log("asdfwaoerwuerqweropuqw: ", nh1VocabTest);
                                 setNumCorrect([...numCorrect, newListTest.en]);
                             } else if (e.key === "Enter" && e.target.value !== newListTest.en) {
                                 alert(`wrong ${e.target.value}`);
@@ -328,7 +406,7 @@ const WordScramble = () => {
                     },
                 }}
                 // backgroundColor={colors.blueAccent[600]}
-                border="2px solid white"
+                // border="2px solid white"
                 borderRadius="5%"
             >
                 <Box
@@ -337,7 +415,7 @@ const WordScramble = () => {
                     // display="flex"
                     // justifyContent="center"
                     // alignContent="center"
-                    border="2px solid yellow"
+                    // border="2px solid yellow"
                 >
                     <Button
                         // position="fixed"
@@ -397,7 +475,7 @@ const WordScramble = () => {
                 gridTemplateColumns="repeat(auto-fit, minmax(325px, 3fr))"
                 gridAutoRows="140px"
                 gap="20px"
-                border="2px solid purple"
+                // border="2px solid purple"
             >
                 {/* {gradeLevel.grade === "first" ? 
                     renderList()

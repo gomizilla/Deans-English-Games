@@ -59,8 +59,9 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                 // position="absolute"
                 // top="25%"
                 // left="40%"
-                backgroundColor={colors.greenAccent[600]}
-                border="1px solid blue"
+                backgroundColor={colors.primary[300]}
+                border="5px solid"
+                // border={`5px solid ${colors.redAccent[700]}`}
                 display="flex"
                 flexDirection="column"
                 p="5px"
@@ -94,6 +95,8 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                             <Box
                                 display="grid"
                                 gridTemplateColumns="repeat(3, 1fr)"
+                                // border="2px solid yellow"
+                                // justifyItems="center"
                             >
                                 <FormControlLabel value="first" control={<Radio/>} label="Grade 1"/>
                                 <FormControlLabel value="second" control={<Radio/>} label="Grade 2"/>
@@ -119,6 +122,7 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                             <Box
                                 display="grid"
                                 gridTemplateColumns="repeat(3, 1fr)"
+                                // justifyItems="center"
                             >
                                 <FormControlLabel value="unit1" control={<Radio/>} label="Unit 1" />
                                 <FormControlLabel value="unit2" control={<Radio/>} label="Unit 2" />
@@ -171,6 +175,14 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                     textAlign="center"
                     // pr="5px"
                     pt="10px"
+                    sx={{
+                        "& .MuiButton-root": {
+                            background: `${colors.redAccent[500]}`
+                        },
+                        "& .MuiButton-root:hover": {
+                            background: `${colors.greenAccent[500]}`
+                        },
+                    }}
                 >
                     <Button
                         variant="outlined"

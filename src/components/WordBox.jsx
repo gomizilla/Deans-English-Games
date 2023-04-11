@@ -40,7 +40,7 @@ const WordBox = ({ title, subtitle, icon }) => {
             >
                 <Typography
                     variant="h5"
-                    sx={{ color: colors.greenAccent[500] }}
+                    sx={{ color: colors.greenAccent[200] }}
                 >
                     {subtitle}
                 </Typography>
