@@ -205,6 +205,9 @@ const WordScramble = () => {
                 key={newListTest.en}
                 // minWidth="50px"
                 // id={word}
+                // border="2px solid yellow"
+                // p="20px"
+                // m="20px"
             >
                 <Box
                     // dispaly="flex"
