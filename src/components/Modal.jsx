@@ -20,14 +20,14 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
 
     const handleChangeGrade = (event) => {
         // setValue(event.target.value);
-        console.log("event check: ", event.target.value);
+        // console.log("event check: ", event.target.value);
         // setGrade({grade: event.target.value});
         setCurrentGrade(event.target.value);
         setGrade({grade: event.target.value, unit: currentUnit});
     };
 
     const handleChangeUnit = (e) => {
-        console.log("event unit check: ", e.target.value);
+        // console.log("event unit check: ", e.target.value);
         // setGrade({unit: e.target.value});
         setCurrentUnit(e.target.value);
         setGrade({grade: currentGrade, unit: e.target.value})
@@ -44,19 +44,24 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
         onClose={onClose}
     >
         <Box
-            // position="absolute"
-            // top="25%"
-            // left="45%"
+            position="absolute"
+            top="20%"
+            left="40%"
             // border="1px solid yellow"
             // backgroundColor={colors.primary[400]}
             textAlign="center"
+            display="flex"
+            justifyContent="center"
+            // alignContent="center"
+            // mt="15%"
         >
             <Box
-                position="absolute"
-                top="25%"
-                left="45%"
-                backgroundColor={colors.greenAccent[600]}
-                border="1px solid blue"
+                // position="absolute"
+                // top="25%"
+                // left="40%"
+                backgroundColor={colors.primary[300]}
+                border="5px solid"
+                // border={`5px solid ${colors.redAccent[700]}`}
                 display="flex"
                 flexDirection="column"
                 p="5px"
@@ -90,6 +95,8 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                             <Box
                                 display="grid"
                                 gridTemplateColumns="repeat(3, 1fr)"
+                                // border="2px solid yellow"
+                                // justifyItems="center"
                             >
                                 <FormControlLabel value="first" control={<Radio/>} label="Grade 1"/>
                                 <FormControlLabel value="second" control={<Radio/>} label="Grade 2"/>
@@ -115,6 +122,7 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                             <Box
                                 display="grid"
                                 gridTemplateColumns="repeat(3, 1fr)"
+                                // justifyItems="center"
                             >
                                 <FormControlLabel value="unit1" control={<Radio/>} label="Unit 1" />
                                 <FormControlLabel value="unit2" control={<Radio/>} label="Unit 2" />
@@ -167,6 +175,14 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                     textAlign="center"
                     // pr="5px"
                     pt="10px"
+                    sx={{
+                        "& .MuiButton-root": {
+                            background: `${colors.redAccent[500]}`
+                        },
+                        "& .MuiButton-root:hover": {
+                            background: `${colors.greenAccent[500]}`
+                        },
+                    }}
                 >
                     <Button
                         variant="outlined"

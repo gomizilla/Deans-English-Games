@@ -4,7 +4,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { Box, Typography, useTheme, IconButton } from "@mui/material";
+import { Box, Typography, useTheme, IconButton, Switch, FormGroup, FormControlLabel} from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -22,9 +22,9 @@ const WordScramble = () => {
     const colors = tokens(theme.palette.mode);
 
     const [gradeLevel, setGradeLevel] = useState({ grade: "", unit: ""});
-    const [nh1VocabScrambleArr, setNh1VocabScrambleArr] = useState();
+    // const [nh1VocabScrambleArr, setNh1VocabScrambleArr] = useState();
     const [numCorrect, setNumCorrect] = useState([]);
-    const [nh1VocabTest, setNh1VocabTest] = useState({});
+    // const [nh1VocabTest, setNh1VocabTest] = useState({});
     const [openModal, setOpenModal] = useState(false);
 
     const [vocabList, setVocabList] = useState({});
@@ -32,37 +32,19 @@ const WordScramble = () => {
 
     //test
     const [toggled, setToggled] = useState(false);
+    const [hintsUsed, setHintsUsed] = useState(0);
+    const [wrongNum, setWrongNum] = useState(0);
     //test
 
     useEffect(() => {
-        // console.log("test: ", gradeLevel)
-        // console.log("state check: ", nh1VocabScrambleArr);
-        console.log("grade select vocabtest check: ", nh1VocabTest)
-
-        //TODO: unit options rendered on useeffect? idk
-
-        // new 🎈🎈🎈🎈
+        // console.log("grade select vocabtest check: ", nh1VocabTest)
         scramblerNew();
-        console.log("🎇🎇🎇🎇🎇🎇🎇new vocab list check: ", vocabList);
+        // console.log("🎇🎇🎇🎇🎇🎇🎇new vocab list check: ", vocabList);
     },[gradeLevel]);
 
     // useEffect(() => {
-    //     // scrambler();
-    //     // renderList();
-    //     console.log("new words test check: ", nh1VocabTest);
-    // },[]);
-
-    // useEffect(() => {
-    //     console.log("num correct check: ", numCorrect);
-    //     if (toggled) {
-    //         console.log("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH")
-    //         renderList();
-    //     }
-    // }, [numCorrect])
-
-    // useEffect(() => {
-    //     console.log("something changed in nh1vocabtest");
-    // }, [nh1VocabTest])
+    //     console.log("hints used check useeffet: ", hintsUsed)
+    // }, [hintsUsed])
 
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
@@ -74,54 +56,13 @@ const WordScramble = () => {
         console.log("🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔")
         // console.log("test: ", this);
     };
-    // const handleClose1st = () => {
-    //     setAnchorEl(null);
-    //     // setGradeLevel("first");
-    //     setGradeLevel({grade: "first"})
-    //     setToggled(true);
-    //     // console.log("test: ", this);
-    // };
-    // const handleClose2nd = () => {
-    //     setAnchorEl(null);
-    //     setGradeLevel("second");
-    //     // console.log("test: ", this);
-    // };
-    // const handleClose3rd = () => {
-    //     setAnchorEl(null);
-    //     setGradeLevel("third");
-    //     // console.log("test: ", this);
-    // };
+
     const handleCloseGradeSelection = (selected) => {
         setAnchorEl(null);
         setGradeLevel({grade: selected});
         setToggled(true);
         console.log("new function called 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕");
     }
-
-    const scrambler = () => {
-        let nh1VocabArray = nh1Vocab.map((word) => {
-            return word.english_vocab;
-        });
-        // console.log("vocab array check: ", nh1VocabArray);
-        let nh1VocabScrambled = nh1VocabArray.map((word) => {
-            return scrambleWord(word);
-        });
-        // console.log("scramble check: ", nh1VocabScrambled);
-        setNh1VocabScrambleArr(nh1VocabScrambled);
-
-        //test
-
-        let newWordsTest = nh1Vocab.map((word) => {
-            return {
-                en: word.english_vocab,
-                scrambled: scrambleWord(word.english_vocab),
-                jp: "",
-                toggled: false
-            }
-        });
-        setNh1VocabTest(newWordsTest);
-        // setToggled(true);
-    };
 
     const scramblerNew = () => {
         if (gradeLevel.grade === "first") {
@@ -132,7 +73,9 @@ const WordScramble = () => {
                         en: word.english_vocab,
                         scrambled: scrambleWord(word.english_vocab),
                         jp: word.japanese_vocab,
-                        toggled: false
+                        toggled: false,
+                        hint: false,
+                        wrongToggle: false,
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
@@ -148,7 +91,8 @@ const WordScramble = () => {
                         en: word.english_vocab,
                         scrambled: scrambleWord(word.english_vocab),
                         jp: word.japanese_vocab,
-                        toggled: false
+                        toggled: false,
+                        hint: false
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
@@ -164,7 +108,8 @@ const WordScramble = () => {
                         en: word.english_vocab,
                         scrambled: scrambleWord(word.english_vocab),
                         jp: word.japanese_vocab,
-                        toggled: false
+                        toggled: false,
+                        hint: false
                     };
                 });
                 vocabArr = vocabArr.concat(vocabObj);
@@ -194,7 +139,7 @@ const WordScramble = () => {
         return scrambledWord;
     };
 
-    const wordBox = (word, scrambledWord, newListTest) => {
+    const wordBox = (word, scrambledWord, newListTest, num) => {
 
         // maybe if/else here that renders the whole box based on boolean?
         // maybe get the main box elemeny by id and change display?
@@ -202,25 +147,112 @@ const WordScramble = () => {
 
         return (
             <Box
-                gridColumn="span 3"
-                backgroundColor={colors.primary[400]}
-                display={newListTest.toggled ? "none" : "flex"}
-                // display="flex"
+                // gridColumn="span 1"
+                // backgroundColor={colors.primary[400]}
+                // display={newListTest.toggled ? "none" : "flex"}
+                backgroundColor={newListTest.toggled ? colors.greenAccent[600] : colors.primary[400]}
+                display="flex"
                 alignItems="center"
-                justifyContent="space-around"
+                // justifyContent="space-around"
+                justifyContent="center"
                 flexDirection="column"
                 key={newListTest.en}
+                // minWidth="50px"
                 // id={word}
+                // border="2px solid yellow"
+                // p="20px"
+                // m="20px"
             >
+                <Box
+                    // dispaly="flex"
+                    // flexDirection="row"
+                    // border="2px solid yellow"
+                    width="95%"
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="right"
+                    m="0"
+                    p="0"
+                >
+                    <FormGroup>
+                        <FormControlLabel
+                            control={<Switch
+                                // defaultChecked={newListTest.hint}
+                                color="secondary"
+                                onChange={(e) => {
+
+                                    newListTest.hint = e.target.checked;
+
+                                    if (newListTest.hint) {
+                                        let addHint = hintsUsed;
+                                        addHint++;
+                                        setHintsUsed(addHint);
+                                    }
+                                    if (!newListTest.hint) {
+                                        let subHint = hintsUsed;
+                                        subHint--;
+                                        setHintsUsed(subHint);
+                                    }
+                                    // console.log("hints used check: ", hintsUsed);
+                                }}
+                            />}
+                            label="Hint: "
+                            labelPlacement="start"
+                        >
+                        </FormControlLabel>
+                    </FormGroup>
+                </Box>
                 <WordBox
-                    title={newListTest.scrambled}
+                    title={newListTest.toggled ? (num+1 + ". " + newListTest.en) : (num+1 + ". " + newListTest.scrambled)}
                     // title={newListTest.toggled ? newListTest.en : newListTest.scrambled}
-                    // subtitle="図書館"
+                    subtitle={newListTest.hint ? newListTest.jp : undefined}
+                    // subtitle={"wat"}
                     // icon="📚"
                 />
                 <Box 
                     backgroundColor={colors.primary[300]} 
                     borderRadius="3px"
+                    display={newListTest.toggled ? "none" : "flex"}
+                    ml="10px"
+                    // making each key random forces makes react thinks each is different
+                    // thus replaying the animation
+                    key={Math.random()}
+                    // mr="10px"
+                    // border="2px solid white"
+                    sx={
+                        newListTest.wrongToggle ? 
+                        {
+                        "@keyframes shake": {
+                            "0%, 100%": {
+                                transform: "translateX(0)",
+                                // backgroundColor: "white"
+                            },
+                            "25%, 75%": {
+                                transform: "translateX(5px)",
+                                backgroundColor: `${colors.redAccent[500]}`
+                            },
+                            "50%": {
+                                transform: "translateX(-5px)",
+                                backgroundColor: `${colors.redAccent[500]}`
+                            },
+                            // "75%": {
+                            //     transform: "translateX(12px)",
+                            //     backgroundColor: "blue"
+                            // },
+                            // "100%": {
+                            //     transform: "translateX(0px)",
+                            //     // backgroundColor: "orange"
+                            // }
+                        },
+                        // width: "100px",
+                        // height: "50px",
+                        // backgroundColor: "red",
+                        animation: "shake 0.5s linear 1",                        
+                        } : {}
+                    }
+                    // onAnimationEnd={() => {
+                    //     newListTest.wrongToggle = false;
+                    // }}
                 >
                     {/* {newListTest.toggled ? } */}
                     <InputBase 
@@ -228,28 +260,27 @@ const WordScramble = () => {
                         placeholder="Enter Guess Here"
                         id={word}
                         onKeyDown={(e) => {
-                            // const userInput = document.getElementById(newListTest.en); //shouldnt be using vanilla js in react ?
-                            // console.log("correct check b4: ", correct);
-                            // console.log("hhhhhhhhmmmmmmmmmmmm: ", e.target.value);
-                            
                             if (e.key === "Enter" && e.target.value === newListTest.en) {
-                                // console.log("various checks: ", word, scrambledWord, userInput.value);
-                                // correct = true;
-                                // setNumCorrect([...numCorrect, userInput.value])
-                                // userInput.value = "";
-                                // console.log("correct check after: ", correct);
-                                // console.log("check: ", this.display);
-                                // e.target.display = "none";
-                                // setToggled(true);
-                                // e.target.backgroundColor = "green";
-                                // console.log("check: ", e.target);
                                 e.target.value = "";
                                 newListTest.toggled = true;
-                                console.log("newlsittest check: ", newListTest);
-                                console.log("asdfwaoerwuerqweropuqw: ", nh1VocabTest);
+                                // console.log("newlsittest check: ", newListTest);
+                                // console.log("asdfwaoerwuerqweropuqw: ", nh1VocabTest);
                                 setNumCorrect([...numCorrect, newListTest.en]);
                             } else if (e.key === "Enter" && e.target.value !== newListTest.en) {
-                                alert(`wrong ${e.target.value}`);
+                                // alert(`wrong ${e.target.value}`);
+                                // console.log("triggered")
+                                // console.log("wrong toggle check before key down: ", newListTest.wrongToggle);
+                                newListTest.wrongToggle = true;
+                                // console.log("wrong toggle check before key after: ", newListTest.wrongToggle)
+                                // newListTest.wrongToggle++;
+                                let newWrongNum = wrongNum;
+                                newWrongNum++
+                                setWrongNum(newWrongNum);
+                                // newListTest.wrongToggle = false;
+                                setTimeout(() => {
+                                    newListTest.wrongToggle = false;
+                                    // console.log("wrong toggle check after timeout?: ", newListTest.wrongToggle);
+                                }, 100)
                             }
                         }}
                     >
@@ -261,21 +292,25 @@ const WordScramble = () => {
                         onClick={()=>{
                             const userInput = document.getElementById(word);
                             if (userInput.value === word) {
-                                console.log("various checks: ", word, scrambledWord, userInput.value);
+                                // console.log("various checks: ", word, scrambledWord, userInput.value);
                                 userInput.value = "";
                                 newListTest.toggled = true;
                                 setNumCorrect([...numCorrect, newListTest.en]);
                             } else {
-                                alert(`wrong (click) ${userInput.value}`);
+                                // alert(`wrong (click) ${userInput.value}`);
+                                newListTest.wrongToggle = true;
+                                // console.log("wrong toggle check before key after: ", newListTest.wrongToggle)
+                                // newListTest.wrongToggle++;
+                                let newWrongNum = wrongNum;
+                                newWrongNum++
+                                setWrongNum(newWrongNum);
+                                // newListTest.wrongToggle = false;
+                                setTimeout(() => {
+                                    newListTest.wrongToggle = false;
+                                    // console.log("wrong toggle check after timeout?: ", newListTest.wrongToggle);
+                                }, 100)
                             }
                         }}
-                        // onKeyDown={(e) => {
-                        //     const userInput = document.getElementById(word);
-                        //     if (userInput.value === word) {
-                        //     console.log("various checks: ", word, scrambledWord, userInput.value);
-                        //     userInput.value = "";
-                        //     }
-                        // }}
                     >
                         <SearchIcon />
                     </IconButton>
@@ -285,21 +320,10 @@ const WordScramble = () => {
         );
     };
 
-    //testing 🎈🎈🎈
     const renderList = () => {
-        // if (gradeLevel.grade === "first") {
-        //     return nh1VocabTest.map((word, index) => {
-        //         return wordBox(word.en, word.scrambled, nh1VocabTest[index]);
-        //     });
-        // } else if (gradeLevel === "second") {
-
-        // } else if (gradeLevel === "third") {
-            
-        // }
-        console.log("🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃🎃vocabList check: ", vocabList)
         if (gradeLevel.grade !== "" && gradeLevel.unit !== "") {
             return vocabList.map((word, index) => {
-                return wordBox(word.en, word.scrambled, vocabList[index]);
+                return wordBox(word.en, word.scrambled, vocabList[index], index);
             });
         }
     }
@@ -308,141 +332,68 @@ const WordScramble = () => {
         <Box m="20px">
             <Box
                 display="flex"
-                justifyContent="space-between"
+                justifyContent="center"
                 alignItems="center"
+                textAlign="center"
             >
                 <Header 
                     title="Word Scramble"
-                    subtitle="Unscramble the words!"
+                    subtitle="❌ plape → 👍🏼 apple"
                 />
-                {/* <Box>
-                    <Button
-                        position="fixed"
-                        top="40%"
-                        left="50%"
-                        p="12px 24px"
-                        z-index="-1"
-                        backgroundColor="white"
-                        onClick={() => setOpenModal(!openModal)}
-                    >
-                        Modal
-                    </Button>
-                    <Modal open={openModal} onClose={() => setOpenModal(false)} />
-                </Box> */}
+            </Box>
+            <Box
+                display="flex"
+                // flexDirection="column"
+                // alignItems="center"
+                justifyContent="center"
+                gap="10px"
+                sx={{
+                    "& .MuiButton-root": {
+                        background: `${colors.blueAccent[500]}`
+                    },
+                    "& .MuiButton-root:hover": {
+                        background: `${colors.greenAccent[500]}`
+                    },
+                    "& .MuiTypography-root:hover": {
+                        color: `${colors.gray[100]}`
+                    },
+                    "& .MuiTypography-root:active": {
+                        color: `${colors.gray[900]}`
+                    },
+                }}
+                // backgroundColor={colors.blueAccent[600]}
+                // border="2px solid white"
+                borderRadius="5%"
+            >
                 <Box
-                    display="flex"
-                    flexDirection="column"
-                    gap="10px"
-                    sx={{
-                        "& .MuiButton-root": {
-                            background: `${colors.blueAccent[500]}`
-                        },
-                        "& .MuiButton-root:hover": {
-                            background: `${colors.greenAccent[500]}`
-                        },
-                        "& .MuiTypography-root:hover": {
-                            color: `${colors.gray[100]}`
-                        },
-                        "& .MuiTypography-root:active": {
-                            color: `${colors.gray[900]}`
-                        },
-                    }}
-                    // backgroundColor={colors.blueAccent[600]}
-                    borderRadius="5%"
+                    height="250px"
+                    // width="auto"
+                    // display="flex"
+                    // justifyContent="center"
+                    // alignContent="center"
+                    // border="2px solid yellow"
                 >
-
-                    <Box>
-                        <Button
-                            position="fixed"
-                            onClick={() => setOpenModal(!openModal)}
-                        >
-                            Click Here To Play
-                        </Button>
-                        <ModalComponent 
-                            onClose={() => setOpenModal(false)}
-                            open={openModal} 
-                            grade={gradeLevel}
-                            setGrade={setGradeLevel}
-                            setPlayPressed={setPlayPressed}
-                        />
-                    </Box>
-
-                    {/* OG CODE 🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈*/}
-                    
-                    {/* drop list of grade level? */}
-                    {/* <Button
-                        id="demo-positioned-button"
-                        aria-controls={open ? 'demo-positioned-menu' : undefined}
-                        aria-haspopup="true"
-                        aria-expanded={open ? 'true' : undefined}
-                        onClick={handleClick}
-                    >
-                        <Typography color={colors.gray[900]}>
-                            {gradeLevel.grade === "" ? "Select Your Grade Level" : gradeLevel.grade + " grade"}
-                        </Typography>
-                    </Button> */}
-
-                    {/* <Menu
-                        id="demo-positioned-menu"
-                        aria-labelledby="demo-positioned-button"
-                        anchorEl={anchorEl}
-                        open={open}
-                        onClose={handleClose}
-                        anchorOrigin={{
-                            vertical: 'top',
-                            horizontal: 'left',
-                        }}
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'left',
+                    <Button
+                        // position="fixed"
+                        // height="250px"
+                        onClick={() => setOpenModal(!openModal)}
+                        sx={{
+                            width: "250px",
+                            height: "250px",
+                            fontSize: "50px"
                         }}
                     >
-                        <MenuItem onClick={() => handleCloseGradeSelection("first")}>First Year</MenuItem>
-                        <MenuItem onClick={() => handleCloseGradeSelection("second")}>Second Year</MenuItem>
-                        <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
-                    </Menu> */}
-                    {/* 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕 */}
-                    {/* {gradeLevel.grade !== "" ? 
-                        <>
-                            <Button
-                                id="demo-positioned-button"
-                                aria-controls={open ? 'demo-positioned-menu' : undefined}
-                                aria-haspopup="true"
-                                aria-expanded={open ? 'true' : undefined}
-                                onClick={handleClick}
-                            >
-                                <Typography color={colors.gray[900]}>
-                                    Select your unit
-                                </Typography>
-                            </Button>
-                            <Menu
-                                id="demo-positioned-menu"
-                                aria-labelledby="demo-positioned-button"
-                                anchorEl={anchorEl}
-                                open={open}
-                                onClose={handleClose}
-                                anchorOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                            >
-                                <MenuItem onClick={() => handleCloseGradeSelection("first")}>First Year</MenuItem>
-                                <MenuItem onClick={() => handleCloseGradeSelection("second")}>Second Year</MenuItem>
-                                <MenuItem onClick={() => handleCloseGradeSelection("third")}>Third Year</MenuItem>
-                            </Menu>
-                        </> 
-                    : undefined} */}
-                    {/* OG CODE 🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈🎈*/}
-
+                        Play
+                    </Button>
+                    <ModalComponent 
+                        onClose={() => setOpenModal(false)}
+                        open={openModal} 
+                        grade={gradeLevel}
+                        setGrade={setGradeLevel}
+                        setPlayPressed={setPlayPressed}
+                    />
                 </Box>
             </Box>
-            
-            {/* row 1 */}
-            {/* TODO: data for words and method to map(?) words instead of hard coded */}
             <Box
                 display="flex"
                 justifyContent="center"
@@ -450,43 +401,17 @@ const WordScramble = () => {
                 flexDirection="column"
                 mb="20px"
             >
-                {/* fix later 🚧🚧🚧*/}
-
-                {/* <Box>
-                    {toggled ? `${numCorrect.length}/${nh1Vocab.length} found` : undefined}
-                </Box>
-                {toggled ? "Scrambled words: " : undefined} */}
-
-                {/* fix later 🚧🚧🚧*/}
-
-                {numCorrect.map((word)=> {
-                    return ` ${word} `
-                })}
-
-                {/* fix later 🚧🚧🚧*/}
-
-                {/* {numCorrect.length === nh1Vocab.length ? 
-                <Typography m="20px" variant="h3">
-                    Word Scramble Complete!
-                </Typography> 
-                : undefined} */}
-
-                {/* fix later 🚧🚧🚧*/}
 
             </Box>
             <Box
                 display="grid"
-                gridTemplateColumns="repeat(3, 1fr)"
+                // gridTemplateColumns="repeat(3, 1fr)"
+                gridTemplateColumns="repeat(auto-fit, minmax(325px, 3fr))"
                 gridAutoRows="140px"
                 gap="20px"
+                // border="2px solid purple"
             >
-                {/* {gradeLevel.grade === "first" ? 
-                    renderList()
-                : undefined
-                } */}
-                {/* {(gradeLevel.grade !== "" && gradeLevel.unit !== "") && renderList()} */}
                 {playPressed ? renderList() : undefined}
-                
             </Box>
         </Box>
     );
