@@ -18,6 +18,9 @@ import Gameover from "./secretword_components/Gameover";
 import Header from "../../components/Header";
 import { getRandomEnglishWord } from "../../data/vocabWords";
 
+import ModalComponent from "../../components/Modal";
+import { nhYear1, nhYear2, nhYear3 } from "../../data/vocabWords";
+
 export const AppContext = createContext();
 
 // export const tempWordMain = getRandomEnglishWord(nh1Vocab);
@@ -40,9 +43,43 @@ const SecretWord = () => {
     const [gameover, setGameover] = useState({gameover: false, guessWord: false});
     const [WORD_LENGTH, setWORD_LENGTH] = useState(0);
 
+    const [gradeLevel, setGradeLevel] = useState({ grade: "", unit: ""});
+    const [openModal, setOpenModal] = useState(false);
+    const [vocabList, setVocabList] = useState({});
+    const [playPressed, setPlayPressed] = useState(false);
+
+
     useEffect(() => {
-        handleSecretWord();
+        // handleSecretWord();
     }, []);
+
+    useEffect(() => {
+        // scramblerNew();
+        // handleSecretWord();
+        // if (gradeLevel.grade !== "" && gradeLevel.unit !== "") {
+        //     handleSecretWord();
+        // }
+        // console.log("gradelevel check: ", gradeLevel);
+        if (gradeLevel.grade !== "" && gradeLevel.unit !== "") {
+            scramblerNew();
+        }
+    },[gradeLevel]);
+
+    useEffect(() => {
+        // handleSecretWord();
+        // console.log("aweraiwlueahs");
+        // console.log("vocab list ", vocabList)
+        // if (vocabList.length === 0) {
+        //     console.log("test")
+        // }
+        if (vocabList.length > 0) {
+            handleSecretWord();
+        }
+    }, [vocabList])
+
+    // useEffect(() => {
+    //     console.log("vocab list: ", vocabList);
+    // })
 
     const onSelectLetter = (keyVal) => {
         if (currentAttempt.letterPos > (WORD_LENGTH - 1)) return;
@@ -88,8 +125,59 @@ const SecretWord = () => {
         
     }
 
+    const scramblerNew = () => {
+        if (gradeLevel.grade === "first") {
+            let vocabArr = [];
+            for (let part in nhYear1[`${gradeLevel.unit}`]) {
+                let vocabObj = nhYear1[`${gradeLevel.unit}`][part].vocab.map((word) => {
+                    return {
+                        en: word.english_vocab,
+                        // scrambled: scrambleWord(word.english_vocab),
+                        jp: word.japanese_vocab,
+                        // toggled: false
+                    };
+                });
+                vocabArr = vocabArr.concat(vocabObj);
+            };
+            setVocabList(vocabArr);
+        };
+
+        if (gradeLevel.grade === "second") {
+            let vocabArr = [];
+            for (let part in nhYear2[`${gradeLevel.unit}`]) {
+                let vocabObj = nhYear2[`${gradeLevel.unit}`][part].vocab.map((word) => {
+                    return {
+                        en: word.english_vocab,
+                        // scrambled: scrambleWord(word.english_vocab),
+                        jp: word.japanese_vocab,
+                        // toggled: false
+                    };
+                });
+                vocabArr = vocabArr.concat(vocabObj);
+            };
+            setVocabList(vocabArr);
+        };
+
+        if (gradeLevel.grade === "third") {
+            let vocabArr = [];
+            for (let part in nhYear3[`${gradeLevel.unit}`]) {
+                let vocabObj = nhYear3[`${gradeLevel.unit}`][part].vocab.map((word) => {
+                    return {
+                        en: word.english_vocab,
+                        // scrambled: scrambleWord(word.english_vocab),
+                        jp: word.japanese_vocab,
+                        // toggled: false
+                    };
+                });
+                vocabArr = vocabArr.concat(vocabObj);
+            };
+            setVocabList(vocabArr);
+        };
+
+    };
+
     const handleSecretWord = () => {
-        const tempWordMain = getRandomEnglishWord(nh1Vocab);
+        const tempWordMain = getRandomEnglishWord(vocabList);
         setWORD_LENGTH(tempWordMain.split("").length)
         const temp = tempWordMain.toUpperCase();
         setSecretWord(temp) // should get from a list or something?
@@ -144,7 +232,7 @@ const SecretWord = () => {
                         title="Secret Word"
                         subtitle="Find the secret word!"
                     />
-                    <Button 
+                    {/* <Button 
                         sx={{
                             backgroundColor: `${colors.blueAccent[500]}`,
                             "&:hover": {
@@ -156,11 +244,54 @@ const SecretWord = () => {
                         <Typography>
                             Play
                         </Typography>
-                    </Button>
+                    </Button> */}
+                    <Box
+                        display="flex"
+                        flexDirection="column"
+                        gap="10px"
+                        sx={{
+                            "& .MuiButton-root": {
+                                background: `${colors.blueAccent[500]}`
+                            },
+                            "& .MuiButton-root:hover": {
+                                background: `${colors.greenAccent[500]}`
+                            },
+                            "& .MuiTypography-root:hover": {
+                                color: `${colors.gray[100]}`
+                            },
+                            "& .MuiTypography-root:active": {
+                                color: `${colors.gray[900]}`
+                            },
+                        }}
+                        borderRadius="5%"
+                    >
+                        <Box>
+                            <Button
+                                position="fixed"
+                                // onClick={() => setOpenModal(!openModal)}
+                                onClick={() => {
+                                    setOpenModal(!openModal);
+                                    handleDefaultBoard();
+                                }}
+                            >
+                                Click Here To Play
+                            </Button>
+                            <ModalComponent 
+                                onClose={() => setOpenModal(false)}
+                                open={openModal} 
+                                grade={gradeLevel}
+                                setGrade={setGradeLevel}
+                                setPlayPressed={setPlayPressed}
+                            />
+                        </Box>
+                    </Box>
                 </Box>
-                {buttonClicked ? <Board/> : undefined}
-                {(!gameover.gameover && buttonClicked) ? <Keyboard/> : undefined}
-                {buttonClicked ? <Gameover /> : undefined}
+                {/* {buttonClicked ? <Board/> : undefined} */}
+                {playPressed ? <Board/> : undefined}
+                {/* {(!gameover.gameover && buttonClicked) ? <Keyboard/> : undefined} */}
+                {(!gameover.gameover && playPressed) ? <Keyboard/> : undefined}
+                {/* {buttonClicked ? <Gameover /> : undefined} */}
+                {playPressed ? <Gameover /> : undefined}
             </AppContext.Provider>
         </Box>
     );

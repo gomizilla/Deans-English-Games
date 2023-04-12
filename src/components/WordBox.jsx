@@ -14,6 +14,7 @@ const WordBox = ({ title, subtitle, icon }) => {
             <Box
                 display="flex"
                 justifyContent="center"
+                mt="-20px"
             >
                 <Box
                     display="flex"
@@ -30,26 +31,28 @@ const WordBox = ({ title, subtitle, icon }) => {
                         {title}
                     </Typography>
                 </Box>
-                <Box>
+                {/* <Box>
 
-                </Box>
+                </Box> */}
             </Box>
             <Box
                 display="flex"
                 justifyContent="center"
+                minHeight="22px"
+                // border="2px solid white"
             >
                 <Typography
                     variant="h5"
-                    sx={{ color: colors.greenAccent[500] }}
+                    sx={{ color: colors.greenAccent[200] }}
                 >
                     {subtitle}
                 </Typography>
-                <Typography
+                {/* <Typography
                     variant="h5"
                     fontStyle="italic"
                     sx={{ color: colors.greenAccent[600] }}
                 >
-                </Typography>
+                </Typography> */}
             </Box>
         </Box>
     );
