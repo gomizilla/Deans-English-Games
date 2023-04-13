@@ -43,6 +43,7 @@ const Letter = ({ letterPos, round }) => {
             height="5em"
             width="5em"
             backgroundColor={handleColor}
+            color="#fff"
         >
             {letter}
         </Box>

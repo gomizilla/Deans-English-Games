@@ -48,7 +48,6 @@ const SecretWord = () => {
     const [vocabList, setVocabList] = useState({});
     const [playPressed, setPlayPressed] = useState(false);
 
-
     useEffect(() => {
         // handleSecretWord();
     }, []);
@@ -199,8 +198,13 @@ const SecretWord = () => {
     }
 
     const handleReplay = () => {
-
-    }
+        
+        setGameover({gameover: false, guessWord: false});
+        setNotUsed([]);
+        setCurrentAttempt({round: 0, letterPos: 0});
+        setTotalAttempts(0);
+    
+    };
 
     return (
         <Box m="20px">
@@ -225,6 +229,76 @@ const SecretWord = () => {
             >
                 <Box
                     display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    textAlign="center"
+                >
+                    <Header 
+                        title="Secret Word"
+                        subtitle="⬜⬜⬜⬜⬜🤔→⬛🟨⬛🟩🟨🤨→🟩🟩🟩🟩🟩😄🎉"
+                    />
+                </Box>
+                <Box
+                    display="flex"
+                    // flexDirection="column"
+                    // alignItems="center"
+                    justifyContent="center"
+                    gap="10px"
+                    sx={{
+                        "& .MuiButton-root": {
+                            background: `${colors.blueAccent[500]}`
+                        },
+                        "& .MuiButton-root:hover": {
+                            background: `${colors.greenAccent[500]}`
+                        },
+                        "& .MuiTypography-root:hover": {
+                            color: `${colors.gray[100]}`
+                        },
+                        "& .MuiTypography-root:active": {
+                            color: `${colors.gray[900]}`
+                        },
+                    }}
+                    // backgroundColor={colors.blueAccent[600]}
+                    // border="2px solid white"
+                    borderRadius="5%"
+                >
+                    <Box
+                        height="250px"
+                        // width="auto"
+                        // display="flex"
+                        // justifyContent="center"
+                        // alignContent="center"
+                        // border="2px solid yellow"
+                    >
+                        <Button
+                            // position="fixed"
+                            // height="250px"
+                            onClick={() => {
+                                if (gameover.gameover === true) {
+                                    handleReplay();
+                                }
+                                setOpenModal(!openModal)
+                                handleDefaultBoard();
+                            }}
+                            sx={{
+                                width: "250px",
+                                height: "250px",
+                                fontSize: "50px"
+                            }}
+                        >
+                            {gameover.gameover ? "Replay" : "Play"}
+                        </Button>
+                        <ModalComponent 
+                            onClose={() => setOpenModal(false)}
+                            open={openModal} 
+                            grade={gradeLevel}
+                            setGrade={setGradeLevel}
+                            setPlayPressed={setPlayPressed}
+                        />
+                    </Box>
+                </Box>
+                {/* <Box
+                    display="flex"
                     justifyContent="space-between"
                     alignItems="center"
                 >
@@ -232,19 +306,6 @@ const SecretWord = () => {
                         title="Secret Word"
                         subtitle="Find the secret word!"
                     />
-                    {/* <Button 
-                        sx={{
-                            backgroundColor: `${colors.blueAccent[500]}`,
-                            "&:hover": {
-                                backgroundColor: `${colors.greenAccent[500]}`
-                            }
-                        }}
-                        onClick={!buttonClicked ? handleDefaultBoard : undefined}
-                    >
-                        <Typography>
-                            Play
-                        </Typography>
-                    </Button> */}
                     <Box
                         display="flex"
                         flexDirection="column"
@@ -285,7 +346,7 @@ const SecretWord = () => {
                             />
                         </Box>
                     </Box>
-                </Box>
+                </Box> */}
                 {/* {buttonClicked ? <Board/> : undefined} */}
                 {playPressed ? <Board/> : undefined}
                 {/* {(!gameover.gameover && buttonClicked) ? <Keyboard/> : undefined} */}
