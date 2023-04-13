@@ -33,7 +33,6 @@ const Keyboard = () => {
                 };
             });
         }
-        console.log(`${event.key} pressed`);
     });
 
     useEffect(() => {
