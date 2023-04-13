@@ -44,16 +44,16 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
         onClose={onClose}
     >
         <Box
-            position="absolute"
-            top="20%"
-            left="40%"
+            // position="absolute"
+            // top="20%"
+            // left="40%"
             // border="1px solid yellow"
             // backgroundColor={colors.primary[400]}
             textAlign="center"
             display="flex"
             justifyContent="center"
             // alignContent="center"
-            // mt="15%"
+            mt="15%"
         >
             <Box
                 // position="absolute"
