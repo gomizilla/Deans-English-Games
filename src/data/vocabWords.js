@@ -2279,68 +2279,425 @@ export const nhYear3 = {
     unit1: {
         part1: {
             keySentence: {
+                1: "I saw wheelchair tennis last year.",
+                2: "I have seen wheelchair tennis once.",
+                3: "Josh has seen wheelchair tennis many times.",
+                4: "Asami has never seen wheelchair tennis."
             },
             vocab: [
-               
+                {
+                    english_vocab: "apply",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "Paralympic",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "somewhere",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "below",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "above",
+                    japanese_vocab: "",
+                },
+                // {
+                //     english_vocab: "sitting volleyball",
+                //     japanese_vocab: "",
+                // },
+                {
+                    english_vocab: "triathlon",
+                    japanese_vocab: "",
+                },
             ]
         },
         part2: {
             keySentence: {
+                1: "I have seen the Paralympic Games once.",
+                2: "Have you ever seen the Paralympic Games?",
             },
             vocab: [
-                
+                {
+                    english_vocab: "ever",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "been",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "match",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "athlete",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "internet",
+                    japanese_vocab: "",
+                },
             ]
         },
         part3: {
             keySentence: {
+                1: "Playing sports makes me happy.",
+                2: "Athletes show us great performances.",
+                3: "Athletes show us that anything is possible."
             },
             vocab: [
-                
+                {
+                    english_vocab: "championship",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "amazed",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "speed",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "amazing",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "uncomfortable",
+                    japanese_vocab: "",
+                },
+                // {
+                //     english_vocab: "well-known",
+                //     japanese_vocab: "",
+                // },
+                {
+                    english_vocab: "winner",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "positive",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "possible",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "establish",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "user",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "satisfy",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "ordinary",
+                    japanese_vocab: "",
+                },
+                // {
+                //     english_vocab: "custom-made",
+                //     japanese_vocab: "",
+                // },
+                {
+                    english_vocab: "sporty",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "functional",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "stylish",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "opinion",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "support",
+                    japanese_vocab: "",
+                },
             ]
         },
     },
     unit2: {
         part1: {
             keySentence: {
+                1: "I have just finished my homework.",
+                2: "Have you finished your homework yet?",
+                3: "Yes, I have. I have already finished it."
             },
             vocab: [
-               
+                {
+                    english_vocab: "yet",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "read",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sleep",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "already",
+                    japanese_vocab: "",
+                },
             ]
         },
         part2: {
             keySentence: {
+                1: "I have lived in Japan for five years.",
+                2: "How long have you lived in Japan? -For five years."
             },
             vocab: [
-                
+                {
+                    english_vocab: "poet",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "since",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "image",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "curious",
+                    japanese_vocab: "",
+                },
             ]
         },
         part3: {
             keySentence: {
+                1: "I am reading a book now.",
+                2: "I have been reading a book since 10 a.m.",
             },
             vocab: [
-                
+                {
+                    english_vocab: "poem",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "written",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "rhyme",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "seasonal",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "include",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "rhythm",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "syllable",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "become",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "quite",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "less",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "strict",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "either",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "actually",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "website",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "pop",
+                    japanese_vocab: "",
+                },
             ]
         },
     },
     unit3: {
         part1: {
             keySentence: {
+                1: "It is important for us to understand the problem.",
             },
             vocab: [
+                {
+                    english_vocab: "danger",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "extinction",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "climate",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "survive",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "condition",
+                    japanese_vocab: "",
+                },
                
             ]
         },
         part2: {
             keySentence: {
+                1: "I want everyone to know this fact.",
             },
             vocab: [
-                
+                {
+                    english_vocab: "cheetah",
+                    japanese_vocab: "",
+                },
             ]
         },
         part3: {
             keySentence: {
+                1: "Let us give you one example.",
+                2: "People helped toki live safely.",
             },
             vocab: [
+                {
+                    english_vocab: "let",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "until",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "era",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "population",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "rapidly",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "feather",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "development",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "destroy",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "environment",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "capture",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "breed",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "safely",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "die",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "government",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "fly",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "logging",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "mining",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "surprisingly",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "electornic",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "device",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "mental",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "ecosystem",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "species",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "affect",
+                    japanese_vocab: "",
+                },
+                // {
+                //     english_vocab: "human being",
+                //     japanese_vocab: "",
+                // },
+                {
+                    english_vocab: "relate",
+                    japanese_vocab: "",
+                },
                 
             ]
         },
@@ -2348,69 +2705,463 @@ export const nhYear3 = {
     unit4: {
         part1: {
             keySentence: {
+                1: "Where is the local shelter?",
+                2: "I know where the local shelter is.",
             },
             vocab: [
-               
+                {
+                    english_vocab: "shelter",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "store",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "extinguisher",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "survey",
+                    japanese_vocab: "",
+                },
             ]
         },
         part2: {
             keySentence: {
+                1: "What have you dont?",
+                2: "Tell me what you have done.",
             },
             vocab: [
-                
+                {
+                    english_vocab: "done",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "emergency",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "kit",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "link",
+                    japanese_vocab: "",
+                },
             ]
         },
         part3: {
             keySentence: {
+                1: "We spoke to a police officer passing by.",
+                2: "They followed instructions given in English.",
             },
             vocab: [
-                
+                {
+                    english_vocab: "earthquake",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "terrible",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "shaking",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "drove",
+                    japanese_vocab: "",
+                },
+                // {
+                //     english_vocab: "parking lot",
+                //     japanese_vocab: "",
+                // },
+                {
+                    english_vocab: "scared",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "finally",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "announcement",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "latest",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "fortunately",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "traveler",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "evacuation",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "drill",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "resident",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "visitor",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "simulation",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "themselves",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "instruction",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "given",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "simple",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "interview",
+                    japanese_vocab: "",
+                },
             ]
         },
     },
     unit5: {
         part1: {
             keySentence: {
+                1: "I found a picture on the internet.",
+                2: "This is a picture I found on the internet.",
             },
             vocab: [
-               
+                {
+                    english_vocab: "person",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "respect",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "greatly",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "born",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "international",
+                    japanese_vocab: "",
+                },
+                // {
+                //     english_vocab: "non-violence",
+                //     japanese_vocab: "",
+                // },
+                {
+                    english_vocab: "Mahatma",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "Indian",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "rupee",
+                    japanese_vocab: "",
+                },
             ]
         },
         part2: {
             keySentence: {
+                1: "Gandhi is a man who has influenced a lot of people.",
             },
             vocab: [
+                {
+                    english_vocab: "independence",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "violence",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "fight",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "protest",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "tough",
+                    japanese_vocab: "",
+                },
                 
             ]
         },
         part3: {
             keySentence: {
+                1: "This is a movie that [which] makes people happy.",
+                2: "This is a picture that [which] I found on the internet.",
             },
             vocab: [
-                
+                {
+                    english_vocab: "lawyer",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "discrimination",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "freely",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sidewalk",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "accept",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "unfair",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "angry",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "lead",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "movement",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "arrest",
+                    japanese_vocab: "",
+                },
+                // {
+                //     english_vocab: "non-violent",
+                //     japanese_vocab: "",
+                // },
+                // {
+                //     english_vocab: "South Africa",
+                //     japanese_vocab: "",
+                // },
+                {
+                    english_vocab: "colony",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "salt",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "tax",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "expensive",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "follower",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "almost",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "kilometer",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "reach",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "march",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "news",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "peaceful",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "leader",
+                    japanese_vocab: "",
+                },
             ]
         },
     },
     unit6: {
         part1: {
             keySentence: {
+                1: "I can't go to school.",
+                2: "I wish I could go to school.",
+                3: "I don't have pens and notebooks.",
+                4: "I wish I had pens and notebooks.",
             },
             vocab: [
-               
+                {
+                    english_vocab: "backpack",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "campaign",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "unused",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "supply",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "donate",
+                    japanese_vocab: "",
+                },
             ]
         },
         part2: {
             keySentence: {
+                1: "If I were you, I would ask my friends for help.",
             },
             vocab: [
-                
+                {
+                    english_vocab: "definitely",
+                    japanese_vocab: "",
+                },
             ]
         },
         part3: {
             keySentence: {
+                1: "If I had a school backpack, I would donate it.",
+                2: "Many things that we see every day come from overseas."
             },
             vocab: [
-                
+                {
+                    english_vocab: "imagine",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "illiterate",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "receive",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "encourage",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "son",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "daughter",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "ready",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "building",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "air",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "service",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "globe",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "exchange",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "depend",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "trade",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "survival",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "import",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "pork",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "coat",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "sold",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "exception",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "surround",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "daily",
+                    japanese_vocab: "",
+                },
+                {
+                    english_vocab: "interdependent",
+                    japanese_vocab: "",
+                },
             ]
         },
     },
