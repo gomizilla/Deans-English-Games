@@ -13,13 +13,10 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
     const selectedLetter = () => {
         if (keyVal === "ENTER") {
             onEnter();
-            console.log(`${keyVal} clicked`)
         } else if (keyVal === "DELETE") {
             onDelete();
-            console.log(`${keyVal} clicked`)
         } else {
             onSelectLetter(keyVal);
-            console.log(`${keyVal} clicked`)
         }
     }
 
