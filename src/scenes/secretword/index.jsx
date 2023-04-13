@@ -48,9 +48,6 @@ const SecretWord = () => {
     const [vocabList, setVocabList] = useState({});
     const [playPressed, setPlayPressed] = useState(false);
 
-    // test
-    const [replayed, setReplayed] = useState(false);
-
     useEffect(() => {
         // handleSecretWord();
     }, []);
@@ -202,7 +199,6 @@ const SecretWord = () => {
 
     const handleReplay = () => {
         
-        // setReplayed(true);
         setGameover({gameover: false, guessWord: false});
         setNotUsed([]);
         setCurrentAttempt({round: 0, letterPos: 0});
@@ -239,7 +235,7 @@ const SecretWord = () => {
                 >
                     <Header 
                         title="Secret Word"
-                        subtitle="⬜⬜⬜⬜⬜→⬛🟨⬛🟩🟨→🟩🟩🟩🟩🟩"
+                        subtitle="⬜⬜⬜⬜⬜🤔→⬛🟨⬛🟩🟨🤨→🟩🟩🟩🟩🟩😄🎉"
                     />
                 </Box>
                 <Box
@@ -279,16 +275,9 @@ const SecretWord = () => {
                             // height="250px"
                             onClick={() => {
                                 if (gameover.gameover === true) {
-                                    console.log("🎂🎂🎂🎂🎂🎂")
                                     handleReplay();
                                 }
                                 setOpenModal(!openModal)
-                                // check if replay or not then handledefaultboard?
-                                // if (replayed === true) {
-                                //     console.log("🍕🍕🍕🍕")
-                                //     handleReplay();
-                                //     setReplayed(false);
-                                // }
                                 handleDefaultBoard();
                             }}
                             sx={{
