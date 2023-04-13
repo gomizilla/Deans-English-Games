@@ -1,44 +1,8 @@
 
 export const getRandomEnglishWord = (list) => {
-    // console.log("list check: ", list);
     const randomNum = Math.floor(Math.random() * list.length);
-    // return list[randomNum].english_vocab;
     return list[randomNum].en;
 };
-
-/* template
-
-unit1: {
-        part1KeySentence: {
-            1: "",
-        },
-        part1Vocab: [
-            {
-                english_vocab: "",
-                japanese_vocab: "",
-            },
-        ],
-        part2KeySentence: {
-
-        },
-        part2Vocab: [
-            {
-                english_vocab: "",
-                japanese_vocab: "",
-            },
-        ],
-        part3KeySentence: {
-
-        },
-        part3Vocab: [
-            {
-                english_vocab: "",
-                japanese_vocab: "",
-            },
-        ]
-    },
-
-*/
 
 export const nhYear1 = {
     unit1: {

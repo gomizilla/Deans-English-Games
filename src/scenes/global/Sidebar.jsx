@@ -10,11 +10,7 @@ import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
 import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined";
-import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
-import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutlined";
-import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
-import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();
@@ -35,8 +31,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const SidebarComponent = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    // const [ isCollapsed, setIsCollapsed ] = useState(false);
-    const [ selected, setSelected ] = useState("Dashboard"); // highlights dashboard on reloads even if diff page
+    const [ selected, setSelected ] = useState("Dashboard");
     const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
     
     return (
@@ -44,16 +39,10 @@ const SidebarComponent = () => {
             sx={{
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[300]} !important`,
-                    // height: "100vh"
-                    // height: window.outerHeight
                 },
-                //everything below has a different name due to pro-sidebar being change to sidebar
                 "& .sidebar-icon-wrapper": {
                     backgroundColor: "transparent !important",
                 },
-                // "& .ps-menuitem-root": {
-                //     padding: "5px 35px 5px 20px !important",
-                // },
                 "& .ps-menu-button:hover": {
                     color: "#868dfb !important",
                 },
@@ -114,8 +103,6 @@ const SidebarComponent = () => {
                             </Box>
                         </Box>
                     )}
-
-                    {/* menu stuff */}
                     <Box>
                         <Item 
                             title="Home"
@@ -181,41 +168,6 @@ const SidebarComponent = () => {
                             selected={selected}
                             setSelected={setSelected}
                         />
-                        {/* <Typography
-                            variant="h6"
-                            color={colors.gray[300]}
-                            sx={{ m: "15px 0 5px 20px"}}
-                        >
-                            Charts
-                        </Typography>
-                        <Item 
-                            title="Bar Chart"
-                            to="/bar"
-                            icon={<BarChartOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="Pie Chart"
-                            to="/pie"
-                            icon={<PieChartOutlineOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="Line Chart"
-                            to="/line"
-                            icon={<TimelineOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        />
-                        <Item 
-                            title="Geography"
-                            to="/geography"
-                            icon={<MapOutlinedIcon />}
-                            selected={selected}
-                            setSelected={setSelected}
-                        /> */}
                     </Box>
                 </Menu>
             </Sidebar>

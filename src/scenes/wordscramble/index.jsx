@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import * as React from 'react';
 
 import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import { Box, Typography, useTheme, IconButton, Switch, FormGroup, FormControlLabel} from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
@@ -11,7 +9,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import WordBox from "../../components/WordBox";
-import { nh1Vocab } from "../../data/vocabWords";
 import ModalComponent from "../../components/Modal";
 
 import { nhYear1, nhYear2, nhYear3 } from "../../data/vocabWords";
@@ -22,9 +19,7 @@ const WordScramble = () => {
     const colors = tokens(theme.palette.mode);
 
     const [gradeLevel, setGradeLevel] = useState({ grade: "", unit: ""});
-    // const [nh1VocabScrambleArr, setNh1VocabScrambleArr] = useState();
     const [numCorrect, setNumCorrect] = useState([]);
-    // const [nh1VocabTest, setNh1VocabTest] = useState({});
     const [openModal, setOpenModal] = useState(false);
 
     const [vocabList, setVocabList] = useState({});
@@ -37,32 +32,8 @@ const WordScramble = () => {
     //test
 
     useEffect(() => {
-        // console.log("grade select vocabtest check: ", nh1VocabTest)
         scramblerNew();
-        // console.log("🎇🎇🎇🎇🎇🎇🎇new vocab list check: ", vocabList);
     },[gradeLevel]);
-
-    // useEffect(() => {
-    //     console.log("hints used check useeffet: ", hintsUsed)
-    // }, [hintsUsed])
-
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-        console.log("🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔🍔")
-        // console.log("test: ", this);
-    };
-
-    const handleCloseGradeSelection = (selected) => {
-        setAnchorEl(null);
-        setGradeLevel({grade: selected});
-        setToggled(true);
-        console.log("new function called 🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕");
-    }
 
     const scramblerNew = () => {
         if (gradeLevel.grade === "first") {
@@ -147,26 +118,14 @@ const WordScramble = () => {
 
         return (
             <Box
-                // gridColumn="span 1"
-                // backgroundColor={colors.primary[400]}
-                // display={newListTest.toggled ? "none" : "flex"}
                 backgroundColor={newListTest.toggled ? colors.greenAccent[600] : colors.primary[400]}
                 display="flex"
                 alignItems="center"
-                // justifyContent="space-around"
                 justifyContent="center"
                 flexDirection="column"
                 key={newListTest.en}
-                // minWidth="50px"
-                // id={word}
-                // border="2px solid yellow"
-                // p="20px"
-                // m="20px"
             >
                 <Box
-                    // dispaly="flex"
-                    // flexDirection="row"
-                    // border="2px solid yellow"
                     width="95%"
                     display="flex"
                     alignItems="center"
@@ -177,7 +136,6 @@ const WordScramble = () => {
                     <FormGroup>
                         <FormControlLabel
                             control={<Switch
-                                // defaultChecked={newListTest.hint}
                                 color="secondary"
                                 onChange={(e) => {
 
@@ -193,7 +151,6 @@ const WordScramble = () => {
                                         subHint--;
                                         setHintsUsed(subHint);
                                     }
-                                    // console.log("hints used check: ", hintsUsed);
                                 }}
                             />}
                             label="Hint: "
@@ -204,9 +161,7 @@ const WordScramble = () => {
                 </Box>
                 <WordBox
                     title={newListTest.toggled ? (num+1 + ". " + newListTest.en) : (num+1 + ". " + newListTest.scrambled)}
-                    // title={newListTest.toggled ? newListTest.en : newListTest.scrambled}
                     subtitle={newListTest.hint ? newListTest.jp : undefined}
-                    // subtitle={"wat"}
                     // icon="📚"
                 />
                 <Box 
@@ -217,15 +172,12 @@ const WordScramble = () => {
                     // making each key random forces makes react thinks each is different
                     // thus replaying the animation
                     key={Math.random()}
-                    // mr="10px"
-                    // border="2px solid white"
                     sx={
                         newListTest.wrongToggle ? 
                         {
                         "@keyframes shake": {
                             "0%, 100%": {
                                 transform: "translateX(0)",
-                                // backgroundColor: "white"
                             },
                             "25%, 75%": {
                                 transform: "translateX(5px)",
@@ -235,26 +187,11 @@ const WordScramble = () => {
                                 transform: "translateX(-5px)",
                                 backgroundColor: `${colors.redAccent[500]}`
                             },
-                            // "75%": {
-                            //     transform: "translateX(12px)",
-                            //     backgroundColor: "blue"
-                            // },
-                            // "100%": {
-                            //     transform: "translateX(0px)",
-                            //     // backgroundColor: "orange"
-                            // }
                         },
-                        // width: "100px",
-                        // height: "50px",
-                        // backgroundColor: "red",
                         animation: "shake 0.5s linear 1",                        
                         } : {}
                     }
-                    // onAnimationEnd={() => {
-                    //     newListTest.wrongToggle = false;
-                    // }}
                 >
-                    {/* {newListTest.toggled ? } */}
                     <InputBase 
                         sx={{ ml: 2, flex: 1}} 
                         placeholder="Enter Guess Here"
@@ -263,23 +200,14 @@ const WordScramble = () => {
                             if (e.key === "Enter" && e.target.value === newListTest.en) {
                                 e.target.value = "";
                                 newListTest.toggled = true;
-                                // console.log("newlsittest check: ", newListTest);
-                                // console.log("asdfwaoerwuerqweropuqw: ", nh1VocabTest);
                                 setNumCorrect([...numCorrect, newListTest.en]);
                             } else if (e.key === "Enter" && e.target.value !== newListTest.en) {
-                                // alert(`wrong ${e.target.value}`);
-                                // console.log("triggered")
-                                // console.log("wrong toggle check before key down: ", newListTest.wrongToggle);
                                 newListTest.wrongToggle = true;
-                                // console.log("wrong toggle check before key after: ", newListTest.wrongToggle)
-                                // newListTest.wrongToggle++;
                                 let newWrongNum = wrongNum;
                                 newWrongNum++
                                 setWrongNum(newWrongNum);
-                                // newListTest.wrongToggle = false;
                                 setTimeout(() => {
                                     newListTest.wrongToggle = false;
-                                    // console.log("wrong toggle check after timeout?: ", newListTest.wrongToggle);
                                 }, 100)
                             }
                         }}
@@ -292,22 +220,16 @@ const WordScramble = () => {
                         onClick={()=>{
                             const userInput = document.getElementById(word);
                             if (userInput.value === word) {
-                                // console.log("various checks: ", word, scrambledWord, userInput.value);
                                 userInput.value = "";
                                 newListTest.toggled = true;
                                 setNumCorrect([...numCorrect, newListTest.en]);
                             } else {
-                                // alert(`wrong (click) ${userInput.value}`);
                                 newListTest.wrongToggle = true;
-                                // console.log("wrong toggle check before key after: ", newListTest.wrongToggle)
-                                // newListTest.wrongToggle++;
                                 let newWrongNum = wrongNum;
                                 newWrongNum++
                                 setWrongNum(newWrongNum);
-                                // newListTest.wrongToggle = false;
                                 setTimeout(() => {
                                     newListTest.wrongToggle = false;
-                                    // console.log("wrong toggle check after timeout?: ", newListTest.wrongToggle);
                                 }, 100)
                             }
                         }}
@@ -343,8 +265,6 @@ const WordScramble = () => {
             </Box>
             <Box
                 display="flex"
-                // flexDirection="column"
-                // alignItems="center"
                 justifyContent="center"
                 gap="10px"
                 sx={{
@@ -361,21 +281,12 @@ const WordScramble = () => {
                         color: `${colors.gray[900]}`
                     },
                 }}
-                // backgroundColor={colors.blueAccent[600]}
-                // border="2px solid white"
                 borderRadius="5%"
             >
                 <Box
                     height="250px"
-                    // width="auto"
-                    // display="flex"
-                    // justifyContent="center"
-                    // alignContent="center"
-                    // border="2px solid yellow"
                 >
                     <Button
-                        // position="fixed"
-                        // height="250px"
                         onClick={() => setOpenModal(!openModal)}
                         sx={{
                             width: "250px",
@@ -405,11 +316,9 @@ const WordScramble = () => {
             </Box>
             <Box
                 display="grid"
-                // gridTemplateColumns="repeat(3, 1fr)"
                 gridTemplateColumns="repeat(auto-fit, minmax(325px, 3fr))"
                 gridAutoRows="140px"
                 gap="20px"
-                // border="2px solid purple"
             >
                 {playPressed ? renderList() : undefined}
             </Box>

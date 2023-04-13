@@ -1,35 +1,20 @@
 import React, { useState, useEffect, createContext } from "react";
 import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-
 import { Box, Typography, useTheme, IconButton } from "@mui/material";
-import InputBase from "@mui/material/InputBase";
-import SearchIcon from "@mui/icons-material/Search";
 import { tokens } from "../../theme";
-// import Header from "../../components/Header";
-import WordBox from "../../components/WordBox";
-import { nh1Vocab } from "../../data/vocabWords";
-
 import Board from "./secretword_components/Board";
 import Keyboard from "./secretword_components/Keyboard";
-import Letter from "./secretword_components/Letter";
 import Gameover from "./secretword_components/Gameover";
 import Header from "../../components/Header";
-import { getRandomEnglishWord } from "../../data/vocabWords";
-
 import ModalComponent from "../../components/Modal";
+import { getRandomEnglishWord } from "../../data/vocabWords";
 import { nhYear1, nhYear2, nhYear3 } from "../../data/vocabWords";
 
 export const AppContext = createContext();
 
-// export const tempWordMain = getRandomEnglishWord(nh1Vocab);
-
-
 const SecretWord = () => {
 
     const BOARD_ROWS = 6;
-    // const WORD_LENGTH = tempWordMain.split("").length;
 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -49,36 +34,16 @@ const SecretWord = () => {
     const [playPressed, setPlayPressed] = useState(false);
 
     useEffect(() => {
-        // handleSecretWord();
-    }, []);
-
-    useEffect(() => {
-        // scramblerNew();
-        // handleSecretWord();
-        // if (gradeLevel.grade !== "" && gradeLevel.unit !== "") {
-        //     handleSecretWord();
-        // }
-        // console.log("gradelevel check: ", gradeLevel);
         if (gradeLevel.grade !== "" && gradeLevel.unit !== "") {
             scramblerNew();
         }
     },[gradeLevel]);
 
     useEffect(() => {
-        // handleSecretWord();
-        // console.log("aweraiwlueahs");
-        // console.log("vocab list ", vocabList)
-        // if (vocabList.length === 0) {
-        //     console.log("test")
-        // }
         if (vocabList.length > 0) {
             handleSecretWord();
         }
     }, [vocabList])
-
-    // useEffect(() => {
-    //     console.log("vocab list: ", vocabList);
-    // })
 
     const onSelectLetter = (keyVal) => {
         if (currentAttempt.letterPos > (WORD_LENGTH - 1)) return;
@@ -109,15 +74,11 @@ const SecretWord = () => {
 
         if (secretWord === currentWord) {
             setGameover({gameover: true, guessedWord: true});
-            console.log("a winrar is u");
         }
 
         setCurrentAttempt({round: currentAttempt.round + 1, letterPos: 0});
-        console.log("currentword: ", currentWord);
-        console.log("secretword: ", secretWord);
 
         if (currentAttempt.round === BOARD_ROWS - 1 && gameover.guessWord === false) {
-            console.log("bing bong");
             setCurrentAttempt({round: 0, letterPos: 0});
             handleDefaultBoard();  
         }
@@ -240,8 +201,6 @@ const SecretWord = () => {
                 </Box>
                 <Box
                     display="flex"
-                    // flexDirection="column"
-                    // alignItems="center"
                     justifyContent="center"
                     gap="10px"
                     sx={{
@@ -258,21 +217,12 @@ const SecretWord = () => {
                             color: `${colors.gray[900]}`
                         },
                     }}
-                    // backgroundColor={colors.blueAccent[600]}
-                    // border="2px solid white"
                     borderRadius="5%"
                 >
                     <Box
                         height="250px"
-                        // width="auto"
-                        // display="flex"
-                        // justifyContent="center"
-                        // alignContent="center"
-                        // border="2px solid yellow"
                     >
                         <Button
-                            // position="fixed"
-                            // height="250px"
                             onClick={() => {
                                 if (gameover.gameover === true) {
                                     handleReplay();
@@ -297,61 +247,8 @@ const SecretWord = () => {
                         />
                     </Box>
                 </Box>
-                {/* <Box
-                    display="flex"
-                    justifyContent="space-between"
-                    alignItems="center"
-                >
-                    <Header 
-                        title="Secret Word"
-                        subtitle="Find the secret word!"
-                    />
-                    <Box
-                        display="flex"
-                        flexDirection="column"
-                        gap="10px"
-                        sx={{
-                            "& .MuiButton-root": {
-                                background: `${colors.blueAccent[500]}`
-                            },
-                            "& .MuiButton-root:hover": {
-                                background: `${colors.greenAccent[500]}`
-                            },
-                            "& .MuiTypography-root:hover": {
-                                color: `${colors.gray[100]}`
-                            },
-                            "& .MuiTypography-root:active": {
-                                color: `${colors.gray[900]}`
-                            },
-                        }}
-                        borderRadius="5%"
-                    >
-                        <Box>
-                            <Button
-                                position="fixed"
-                                // onClick={() => setOpenModal(!openModal)}
-                                onClick={() => {
-                                    setOpenModal(!openModal);
-                                    handleDefaultBoard();
-                                }}
-                            >
-                                Click Here To Play
-                            </Button>
-                            <ModalComponent 
-                                onClose={() => setOpenModal(false)}
-                                open={openModal} 
-                                grade={gradeLevel}
-                                setGrade={setGradeLevel}
-                                setPlayPressed={setPlayPressed}
-                            />
-                        </Box>
-                    </Box>
-                </Box> */}
-                {/* {buttonClicked ? <Board/> : undefined} */}
                 {playPressed ? <Board/> : undefined}
-                {/* {(!gameover.gameover && buttonClicked) ? <Keyboard/> : undefined} */}
                 {(!gameover.gameover && playPressed) ? <Keyboard/> : undefined}
-                {/* {buttonClicked ? <Gameover /> : undefined} */}
                 {playPressed ? <Gameover /> : undefined}
             </AppContext.Provider>
         </Box>
