@@ -16,6 +16,8 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 
+import { useTranslation } from 'react-i18next';
+
 const Item = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
@@ -39,6 +41,8 @@ const SidebarComponent = () => {
     const [ selected, setSelected ] = useState("Dashboard"); // highlights dashboard on reloads even if diff page
     const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
     
+    const { t } = useTranslation();
+
     return (
         <Box
             sx={{
@@ -77,7 +81,8 @@ const SidebarComponent = () => {
                                 ml="15px"
                             >
                                 <Typography variant="h5" color={colors.gray[100]}>
-                                    English Games
+                                    {/* English Games */}
+                                    {t('english-apps')}
                                 </Typography>
                                 <IconButton>
                                     <MenuOutlinedIcon 
@@ -118,7 +123,8 @@ const SidebarComponent = () => {
                     {/* menu stuff */}
                     <Box>
                         <Item 
-                            title="Home"
+                            // title="Home"
+                            title={t('home')}
                             to="/"
                             icon={<HomeOutlinedIcon />}
                             selected={selected}
@@ -130,24 +136,25 @@ const SidebarComponent = () => {
                             color={colors.gray[300]}
                             sx={{ m: "15px 0 5px 20px"}}
                         >
-                            Games
+                            {/* Games */}
+                            {t('apps')}
                         </Typography>
                         <Item 
-                            title="Word Scramble"
+                            title={t('word-scramble')}
                             to="/wordscramble"
                             icon={<AbcOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="Secret Word"
+                            title={t('secret-word')}
                             to="/secretword"
                             icon={<PsychologyAltOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="Sentence Scramble"
+                            title={t('sentence-scramble')}
                             // to="/invoices"
                             icon={<ReceiptOutlinedIcon />}
                             selected={selected}

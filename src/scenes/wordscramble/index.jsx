@@ -8,6 +8,8 @@ import { Box, Typography, useTheme, IconButton, Switch, FormGroup, FormControlLa
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 
+import { useTranslation } from 'react-i18next';
+
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import WordBox from "../../components/WordBox";
@@ -20,6 +22,7 @@ const WordScramble = () => {
 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const { t } = useTranslation();
 
     const [gradeLevel, setGradeLevel] = useState({ grade: "", unit: ""});
     // const [nh1VocabScrambleArr, setNh1VocabScrambleArr] = useState();
@@ -337,7 +340,7 @@ const WordScramble = () => {
                 textAlign="center"
             >
                 <Header 
-                    title="Word Scramble"
+                    title={t('word-scramble')}
                     subtitle="❌ plape → 👍🏼 apple"
                 />
             </Box>
