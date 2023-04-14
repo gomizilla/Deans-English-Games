@@ -4,6 +4,7 @@ import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
+import { useTranslation } from 'react-i18next';
 import FormLabel from '@mui/material/FormLabel';
 import { tokens } from '../theme';
 import { nhYear1 } from '../data/vocabWords';
@@ -15,6 +16,7 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const { t } = useTranslation();
 
     // if (!open) return null;
 
@@ -82,7 +84,7 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                     <Typography
                         variant="h2"
                     >
-                        Choose your grade
+                        {t('choose-your-grade')}
                     </Typography>
                     <FormControl>
                         {/* <FormLabel>Grade</FormLabel> */}
@@ -98,9 +100,9 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                                 // border="2px solid yellow"
                                 // justifyItems="center"
                             >
-                                <FormControlLabel value="first" control={<Radio/>} label="Grade 1"/>
-                                <FormControlLabel value="second" control={<Radio/>} label="Grade 2"/>
-                                <FormControlLabel value="third" control={<Radio/>} label="Grade 3"/>
+                                <FormControlLabel value="first" control={<Radio/>} label={t('grade-1')}/>
+                                <FormControlLabel value="second" control={<Radio/>} label={t('grade-2')}/>
+                                <FormControlLabel value="third" control={<Radio/>} label={t('grade-3')}/>
                             </Box>
                         </RadioGroup>
                     </FormControl>
@@ -109,7 +111,7 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                     <Typography
                         variant="h3"
                     >
-                        Choose your unit
+                        {t('choose-your-unit')}
                     </Typography>
 
                     <RadioGroup
@@ -124,17 +126,17 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                                 gridTemplateColumns="repeat(3, 1fr)"
                                 // justifyItems="center"
                             >
-                                <FormControlLabel value="unit1" control={<Radio/>} label="Unit 1" />
-                                <FormControlLabel value="unit2" control={<Radio/>} label="Unit 2" />
-                                <FormControlLabel value="unit3" control={<Radio/>} label="Unit 3" />
-                                <FormControlLabel value="unit4" control={<Radio/>} label="Unit 4" />
-                                <FormControlLabel value="unit5" control={<Radio/>} label="Unit 5" />
-                                <FormControlLabel value="unit6" control={<Radio/>} label="Unit 6" />
-                                <FormControlLabel value="unit7" control={<Radio/>} label="Unit 7" />
-                                <FormControlLabel value="unit8" control={<Radio/>} label="Unit 8" />
-                                <FormControlLabel value="unit9" control={<Radio/>} label="Unit 9" />
-                                <FormControlLabel value="unit10" control={<Radio/>} label="Unit 10" />
-                                <FormControlLabel value="unit11" control={<Radio/>} label="Unit 11" />
+                                <FormControlLabel value="unit1" control={<Radio/>} label={t('unit-1')} />
+                                <FormControlLabel value="unit2" control={<Radio/>} label={t('unit-2')} />
+                                <FormControlLabel value="unit3" control={<Radio/>} label={t('unit-3')} />
+                                <FormControlLabel value="unit4" control={<Radio/>} label={t('unit-4')} />
+                                <FormControlLabel value="unit5" control={<Radio/>} label={t('unit-5')} />
+                                <FormControlLabel value="unit6" control={<Radio/>} label={t('unit-6')} />
+                                <FormControlLabel value="unit7" control={<Radio/>} label={t('unit-7')} />
+                                <FormControlLabel value="unit8" control={<Radio/>} label={t('unit-8')} />
+                                <FormControlLabel value="unit9" control={<Radio/>} label={t('unit-9')} />
+                                <FormControlLabel value="unit10" control={<Radio/>} label={t('unit-10')} />
+                                <FormControlLabel value="unit11" control={<Radio/>} label={t('unit-11')} />
                             </Box>
                         }
                         {currentGrade === "second" && 
@@ -142,13 +144,13 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                                 display="grid"
                                 gridTemplateColumns="repeat(3, 1fr)"
                             >
-                                <FormControlLabel value="unit1" control={<Radio/>} label="Unit 1" />
-                                <FormControlLabel value="unit2" control={<Radio/>} label="Unit 2" />
-                                <FormControlLabel value="unit3" control={<Radio/>} label="Unit 3" />
-                                <FormControlLabel value="unit4" control={<Radio/>} label="Unit 4" />
-                                <FormControlLabel value="unit5" control={<Radio/>} label="Unit 5" />
-                                <FormControlLabel value="unit6" control={<Radio/>} label="Unit 6" />
-                                <FormControlLabel value="unit7" control={<Radio/>} label="Unit 7" />
+                                <FormControlLabel value="unit1" control={<Radio/>} label={t('unit-1')} />
+                                <FormControlLabel value="unit2" control={<Radio/>} label={t('unit-2')} />
+                                <FormControlLabel value="unit3" control={<Radio/>} label={t('unit-3')} />
+                                <FormControlLabel value="unit4" control={<Radio/>} label={t('unit-4')} />
+                                <FormControlLabel value="unit5" control={<Radio/>} label={t('unit-5')} />
+                                <FormControlLabel value="unit6" control={<Radio/>} label={t('unit-6')} />
+                                <FormControlLabel value="unit7" control={<Radio/>} label={t('unit-7')} />
                             </Box>
                         }
                         {currentGrade === "third" && 
@@ -156,12 +158,12 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                                 display="grid"
                                 gridTemplateColumns="repeat(3, 1fr)"
                             >
-                                <FormControlLabel value="unit1" control={<Radio/>} label="Unit 1" />
-                                <FormControlLabel value="unit2" control={<Radio/>} label="Unit 2" />
-                                <FormControlLabel value="unit3" control={<Radio/>} label="Unit 3" />
-                                <FormControlLabel value="unit4" control={<Radio/>} label="Unit 4" />
-                                <FormControlLabel value="unit5" control={<Radio/>} label="Unit 5" />
-                                <FormControlLabel value="unit6" control={<Radio/>} label="Unit 6" />
+                                <FormControlLabel value="unit1" control={<Radio/>} label={t('unit-1')} />
+                                <FormControlLabel value="unit2" control={<Radio/>} label={t('unit-2')} />
+                                <FormControlLabel value="unit3" control={<Radio/>} label={t('unit-3')} />
+                                <FormControlLabel value="unit4" control={<Radio/>} label={t('unit-4')} />
+                                <FormControlLabel value="unit5" control={<Radio/>} label={t('unit-5')} />
+                                <FormControlLabel value="unit6" control={<Radio/>} label={t('unit-6')} />
                             </Box>
                         }
 

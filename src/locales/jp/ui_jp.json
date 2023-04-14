@@ -5,5 +5,21 @@
     "apps": "アプリ",
     "word-scramble": "文字の並び替え",
     "secret-word": "秘密の言葉",
-    "sentence-scramble": "文章の並び替え"
+    "sentence-scramble": "文章の並び替え",
+    "choose-your-grade": "学年を選ぶ",
+    "grade-1": "1年",
+    "grade-2": "２年",
+    "grade-3": "３年",
+    "choose-your-unit": "ユニットを選ぶ",
+    "unit-1": "ユニット１",
+    "unit-2": "ユニット2",
+    "unit-3": "ユニット3",
+    "unit-4": "ユニット4",
+    "unit-5": "ユニット5",
+    "unit-6": "ユニット6",
+    "unit-7": "ユニット7",
+    "unit-8": "ユニット8",
+    "unit-9": "ユニット9",
+    "unit-10": "ユニット10",
+    "unit-11": "ユニット11"
 }
