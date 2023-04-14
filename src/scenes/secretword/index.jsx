@@ -3,6 +3,8 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
+import { useTranslation } from "react-i18next";
+
 import { Box, Typography, useTheme, IconButton } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
@@ -33,6 +35,7 @@ const SecretWord = () => {
 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const { t } = useTranslation();
 
     const [board, setBoard] = useState([[]]);
     const [currentAttempt, setCurrentAttempt] = useState({round: 0, letterPos: 0});
@@ -234,7 +237,7 @@ const SecretWord = () => {
                     textAlign="center"
                 >
                     <Header 
-                        title="Secret Word"
+                        title={t('secret-word')}
                         subtitle="⬜⬜⬜⬜⬜🤔→⬛🟨⬛🟩🟨🤨→🟩🟩🟩🟩🟩😄🎉"
                     />
                 </Box>

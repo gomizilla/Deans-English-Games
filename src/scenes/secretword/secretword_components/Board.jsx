@@ -27,6 +27,8 @@ const Board = () => {
             m="15px"
             paddingTop="20px"
             paddingBottom="20px"
+            border="2px solid yellow" // new
+            maxWidth="70vw" // sets block to certain width but not centered
         >
 
             {[...Array(BOARD_ROWS)].map((e, index) => {
