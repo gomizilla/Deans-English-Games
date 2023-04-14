@@ -199,7 +199,8 @@ const WordScramble = () => {
                                     // console.log("hints used check: ", hintsUsed);
                                 }}
                             />}
-                            label="Hint: "
+                            // label="Hint: "
+                            label={t('hint')}
                             labelPlacement="start"
                         >
                         </FormControlLabel>
@@ -260,7 +261,7 @@ const WordScramble = () => {
                     {/* {newListTest.toggled ? } */}
                     <InputBase 
                         sx={{ ml: 2, flex: 1}} 
-                        placeholder="Enter Guess Here"
+                        placeholder={t('answer')}
                         id={word}
                         onKeyDown={(e) => {
                             if (e.key === "Enter" && e.target.value === newListTest.en) {
