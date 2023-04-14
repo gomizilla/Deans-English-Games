@@ -50,11 +50,11 @@ export const nhYear1 = {
             vocab: [
                 {
                     english_vocab: "call",
-                    japanese_vocab: "...を（～と）呼ぶ、名づける",
+                    japanese_vocab: "...を（～と）呼ぶ、名づける", // 動
                 },
                 {
                     english_vocab: "often",
-                    japanese_vocab: "",
+                    japanese_vocab: "しばしば、よく", // 副
                 },
             ]
         },
@@ -66,19 +66,19 @@ export const nhYear1 = {
             vocab: [
                 {
                     english_vocab: "so",
-                    japanese_vocab: "",
+                    japanese_vocab: "だから、それで、では", // 接
                 },
                 {
                     english_vocab: "fan",
-                    japanese_vocab: "",
+                    japanese_vocab: "ファン", // 名
                 },
                 {
                     english_vocab: "cricket",
-                    japanese_vocab: "",
+                    japanese_vocab: "クリケット", // 名
                 },
                 {
                     english_vocab: "just",
-                    japanese_vocab: "",
+                    japanese_vocab: "ただ・・・だけ、ほんの、ちょっと", // 副
                 },
             ]
         },
@@ -90,23 +90,23 @@ export const nhYear1 = {
             vocab: [
                 {
                     english_vocab: "there",
-                    japanese_vocab: "",
+                    japanese_vocab: "そこに［で、へ］", // 副
                 },
                 {
                     english_vocab: "little",
-                    japanese_vocab: "",
+                    japanese_vocab: "少し", // 副
                 },
                 {
                     english_vocab: "every",
-                    japanese_vocab: "",
+                    japanese_vocab: "毎・・・、・・・ごとに", // 形
                 },
                 {
                     english_vocab: "but",
-                    japanese_vocab: "",
+                    japanese_vocab: "しかし、けれども", // 接
                 },
                 {
                     english_vocab: "cannot",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・できない", // 助
                 },
             ]
         },
@@ -121,23 +121,23 @@ export const nhYear1 = {
             vocab: [
                 {
                     english_vocab: "America", // not sure if needed
-                    japanese_vocab: "",
+                    japanese_vocab: "アメリカ", // 名
                 },
                 {
                     english_vocab: "market",
-                    japanese_vocab: "",
+                    japanese_vocab: "市場", // 名
                 },
                 {
                     english_vocab: "wow",
-                    japanese_vocab: "",
+                    japanese_vocab: "うわあ、わあ", // 間
                 },
                 {
                     english_vocab: "popular",
-                    japanese_vocab: "",
+                    japanese_vocab: "人気のある", // 形
                 },
                 {
                     english_vocab: "crowded",
-                    japanese_vocab: "",
+                    japanese_vocab: "こみ合った、満員の", // 形
                 },
             ]
         },
@@ -149,19 +149,19 @@ export const nhYear1 = {
             vocab: [
                 {
                     english_vocab: "symbol",
-                    japanese_vocab: "",
+                    japanese_vocab: "シンボル、象徴、記号", // 名
                 },
                 {
                     english_vocab: "picnic",
-                    japanese_vocab: "",
+                    japanese_vocab: "ピクニック、遠足", // 名
                 },
                 {
                     english_vocab: "area",
-                    japanese_vocab: "",
+                    japanese_vocab: "区域、場所、地域", // 名
                 },
                 {
                     english_vocab: "hey",
-                    japanese_vocab: "",
+                    japanese_vocab: "やあ、おい、ちょっと", // 間
                 },
             ],
 
@@ -174,31 +174,31 @@ export const nhYear1 = {
             vocab: [
                 {
                     english_vocab: "around",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・の近く", // 前
                 },
                 {
                     english_vocab: "come",
-                    japanese_vocab: "",
+                    japanese_vocab: "来る", // 動
                 },
                 {
                     english_vocab: "toast",
-                    japanese_vocab: "",
+                    japanese_vocab: "トースト", // 名
                 },
                 {
                     english_vocab: "yogurt",
-                    japanese_vocab: "",
+                    japanese_vocab: "ヨーグルト", // 名
                 },
                 {
                     english_vocab: "also",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・もまた、そのうえ", // 副
                 },
                 {
                     english_vocab: "an",
-                    japanese_vocab: "",
+                    japanese_vocab: "１つの", // 冠
                 },
                 {
                     english_vocab: "sound",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・に聞こえる、思える", // 動
                 },
             ]
         },
@@ -221,7 +221,7 @@ export const nhYear1 = {
                 // },
                 {
                     english_vocab: "before",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・の前に［の］", // 前
                 },
                 {
                     english_vocab: "concert",
