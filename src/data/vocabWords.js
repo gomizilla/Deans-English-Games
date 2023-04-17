@@ -865,7 +865,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "course",
-                    japanese_vocab: "もちろん", // 名
+                    japanese_vocab: "of _____ / もちろん", // 名
                 },
             ]
         },
