@@ -1,5 +1,7 @@
 import React, { useEffect, useContext, useCallback } from "react";
 import { Box, Button } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import { AppContext } from "../index";
 import Key from "./Key";
 
@@ -8,6 +10,8 @@ const Keyboard = () => {
     const keyboardTop = ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"];
     const keyboardMid = ["A", "S", "D", "F", "G", "H", "J", "K","L"];
     const keyboardBot = ["Z", "X", "C", "V", "B", "N", "M"];
+
+    const matches = useMediaQuery('(min-width: 600px)');
 
     const { onEnter, onDelete, onSelectLetter, notUsed } = useContext(AppContext);
 
@@ -49,8 +53,10 @@ const Keyboard = () => {
             justifyContent="center"
             alignItems="center"
             flexDirection="column"
-            marginTop="20px"
+            // marginTop="20px"
+            marginTop={matches ? "20px" : "5px"}
             onKeyDown={handleKeyboard}
+            border="2px solid pink"
         >
             <Box
                 display="flex"

@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Box, Typography, useTheme, IconButton } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 import { AppContext } from "../index";
 import { tokens } from "../../../theme";
 
@@ -7,6 +9,8 @@ const Letter = ({ letterPos, round }) => {
 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const matches = useMediaQuery('(min-width: 600px)');
+
     
     const { board, currentAttempt, secretWord, notUsed, setNotUsed } = useContext(AppContext);
     const letter = board[round][letterPos];
@@ -40,8 +44,8 @@ const Letter = ({ letterPos, round }) => {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            height="5em"
-            width="5em"
+            height={matches ? "5em" : "3.5em"}
+            width={matches ? "5em" : "3.5em"}
             backgroundColor={handleColor}
             color="#fff"
         >

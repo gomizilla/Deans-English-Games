@@ -212,9 +212,9 @@ const SecretWord = () => {
     return (
         <Box m="20px"
             // added 4/14/23
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
+            // display="flex"
+            // flexDirection="column"
+            // alignItems="center"
             // added 4/14/23
         >
             <AppContext.Provider

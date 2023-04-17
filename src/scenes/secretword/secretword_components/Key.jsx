@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
 import { AppContext } from "../index";
 import { Box, Button, useTheme } from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { tokens } from "../../../theme";
 
 const Key = ({ keyVal, enterOrDelete, disabled }) => {
 
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const matches = useMediaQuery('(min-width: 600px)');
 
     const { onEnter, onDelete, onSelectLetter } = useContext(AppContext);
 
@@ -39,8 +41,10 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
                 alignItems: "center",
                 flex: "33%",
                 width: keyVal === "ENTER" || keyVal === "DELETE" ? "5em" : "2em",
-                margin: "5px",
-                fontSize: "20px",
+                // margin: "5px",
+                margin: matches ? "5px" : "3px",
+                // fontSize: "20px",
+                fontSize: matches ? "20px" : "13px",
                 fontWeight: "bolder",
                 padding: "5px",
                 }}
