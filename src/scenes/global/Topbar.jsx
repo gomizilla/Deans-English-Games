@@ -1,5 +1,9 @@
 import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
+
+import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
+import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+
 import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
@@ -18,6 +22,9 @@ const Topbar = () => {
 
     const { i18n } = useTranslation();
 
+    const { collapseSidebar, toggleSidebar, collapsed, toggled, broken, rtl } = useProSidebar();
+
+
     const changeLanguage = (e) => {
         i18n.changeLanguage(e.target.value);
     }
@@ -27,13 +34,27 @@ const Topbar = () => {
             {/* search bar */}
             <Box 
                 display="flex" 
-                backgroundColor={colors.primary[400]} 
-                borderRadius="3px"
+                // backgroundColor={colors.primary[400]} 
+                // borderRadius="3px"
             >
-                <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                <IconButton type="button" sx={{ p: 1}}>
-                    <SearchIcon />
-                </IconButton>
+                {broken && (
+                    <Box>
+                        <IconButton type="button" sx={{m: "0 10px 0 5px"}} onClick={() => toggleSidebar()}>
+                            <MenuOutlinedIcon />
+                        </IconButton>
+                    </Box>
+                )}
+                <Box
+                    display="flex" 
+                    backgroundColor={colors.primary[400]} 
+                    borderRadius="3px"
+                >
+                    <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
+                    <IconButton type="button" sx={{ p: 1}}>
+                        <SearchIcon />
+                    </IconButton>    
+                </Box>
+                
             </Box>
 
             {/* Icons */}

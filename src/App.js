@@ -1,7 +1,5 @@
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import useMediaQuery from "@mui/material/useMediaQuery";
-
 import { Routes, Route } from "react-router-dom";
 // import Dashboard from "./scenes/dashboard";
 import Home from "./scenes/home";
@@ -22,16 +20,13 @@ import SecretWord from "./scenes/secretword";
 
 function App() {
   const [theme, colorMode] = useMode();
-  const matches = useMediaQuery('(min-width: 600px)');
-
   
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          {matches ? <SidebarComponent/> : undefined}
-          {/* <SidebarComponent /> */}
+          <SidebarComponent />
           <main className="content">
             <Topbar />
             <Routes>

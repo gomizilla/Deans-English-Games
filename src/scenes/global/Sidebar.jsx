@@ -46,6 +46,10 @@ const SidebarComponent = () => {
     return (
         <Box
             sx={{
+                // position: "sticky",
+                // display: "flex",
+                // height: "100vh",
+                // zIndex: 10000,
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[300]} !important`,
                     // height: "100vh"
@@ -64,9 +68,12 @@ const SidebarComponent = () => {
                 "& .ps-menu-button:active": {
                     color: "#6870fa !important",
                 },
+                
             }}
         >
-            <Sidebar>
+            <Sidebar
+                breakPoint="md"
+            >
                 <Menu iconshape="square"> {/* iconShape creates an error...*/}
                     <MenuItem
                         onClick={() => collapseSidebar()}
@@ -84,7 +91,9 @@ const SidebarComponent = () => {
                                     {/* English Games */}
                                     {t('english-apps')}
                                 </Typography>
-                                <IconButton>
+                                <IconButton
+                                    // onClick={broken ? () => toggleSidebar() : () => collapseSidebar()}
+                                >
                                     <MenuOutlinedIcon 
                                     sx={{ color: colors.gray[100]}}
                                     />
