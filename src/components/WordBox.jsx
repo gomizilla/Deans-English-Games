@@ -19,7 +19,6 @@ const WordBox = ({ title, subtitle, icon }) => {
                 <Box
                     display="flex"
                     flexDirection="column"
-                    // justifyContent="center"
                     alignItems="center"
                 >
                     {icon}
@@ -31,15 +30,11 @@ const WordBox = ({ title, subtitle, icon }) => {
                         {title}
                     </Typography>
                 </Box>
-                {/* <Box>
-
-                </Box> */}
             </Box>
             <Box
                 display="flex"
                 justifyContent="center"
                 minHeight="22px"
-                // border="2px solid white"
             >
                 <Typography
                     variant="h5"
@@ -47,12 +42,6 @@ const WordBox = ({ title, subtitle, icon }) => {
                 >
                     {subtitle}
                 </Typography>
-                {/* <Typography
-                    variant="h5"
-                    fontStyle="italic"
-                    sx={{ color: colors.greenAccent[600] }}
-                >
-                </Typography> */}
             </Box>
         </Box>
     );

@@ -2,10 +2,8 @@
 import React, { useContext } from "react";
 import { Box, Typography, useTheme, IconButton } from "@mui/material";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
 import { AppContext } from "../index";
 import Letter from "./Letter";
-import { tempWordMain } from "../index";
 import { tokens } from "../../../theme";
 
 const Board = () => {
@@ -16,9 +14,6 @@ const Board = () => {
 
 
     const { BOARD_ROWS, WORD_LENGTH } = useContext(AppContext);
-
-    // const BOARD_ROWS = 6;
-    // const WORD_LENGTH = tempWordMain.split("").length;
 
     return (
         <Box
