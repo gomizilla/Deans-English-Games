@@ -47,8 +47,8 @@ const SidebarComponent = () => {
         <Box
             sx={{
                 // position: "sticky",
-                // display: "flex",
-                // height: "100vh",
+                display: "flex",
+                height: "100vh",
                 // zIndex: 10000,
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[300]} !important`,
