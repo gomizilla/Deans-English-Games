@@ -213,7 +213,7 @@ export const nhYear1 = {
             vocab: [
                 {
                     english_vocab: "trumpet",
-                    japanese_vocab: "",
+                    japanese_vocab: "トランペット", // 名
                 },
                 // {
                 //     english_vocab: "brass band", // need to fix
@@ -257,15 +257,15 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "today",
-                    japanese_vocab: "",
+                    japanese_vocab: "今日(は)、現在(では)", // 名　副
                 },
                 {
                     english_vocab: "yeah",
-                    japanese_vocab: "",
+                    japanese_vocab: "うん、そう(=yes)", // 副
                 },
                 {
                     english_vocab: "win",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・に勝つ", // 動
                 },
                 {
                     english_vocab: "someday",
@@ -290,7 +290,7 @@ export const nhYear1 = {
                 {
                     english_vocab: "towel",
                     english_plural: "towels",
-                    japanese_vocab: "",
+                    japanese_vocab: "タオル、手拭い", // 名
                 },
                 {
                     english_vocab: "bottle",
@@ -298,7 +298,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "week",
-                    japanese_vocab: "",
+                    japanese_vocab: "週、１週間",  //　名
                 },
                 {
                     english_vocab: "off",
@@ -306,7 +306,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "those",
-                    japanese_vocab: "",
+                    japanese_vocab: "あれらの、それらの", // 形
                 },
                 {
                     english_vocab: "man",
@@ -316,11 +316,11 @@ export const nhYear1 = {
                 {
                     english_vocab: "woman",
                     english_plural: "women",
-                    japanese_vocab: "",
+                    japanese_vocab: "女性、女の人", // 名
                 },
                 {
                     english_vocab: "they",
-                    japanese_vocab: "",
+                    japanese_vocab: "彼らは[が]、彼女らは[が]、それらは[が]", // 代
                 },
                 {
                     english_vocab: "coach",
@@ -348,11 +348,11 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "worry",
-                    japanese_vocab: "",
+                    japanese_vocab: "心配する、悩む", // 動
                 },
                 {
                     english_vocab: "yourself",
-                    japanese_vocab: "",
+                    japanese_vocab: "あなた自身を[に]", //　代
                 },
             ],
         },
@@ -503,7 +503,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "thirsty",
-                    japanese_vocab: "",
+                    japanese_vocab: "のどのかわいた", // 形
                 },
                 {
                     english_vocab: "need",
@@ -518,11 +518,11 @@ export const nhYear1 = {
             vocab: [
                 {
                     english_vocab: "yesterday",
-                    japanese_vocab: "",
+                    japanese_vocab: "昨日(は)", // 名　副
                 },
                 {
                     english_vocab: "went",
-                    japanese_vocab: "",
+                    japanese_vocab: "goの過去形", // 動
                 },
                 {
                     english_vocab: "ate",
@@ -572,11 +572,11 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "weekday",
-                    japanese_vocab: "",
+                    japanese_vocab: "平日", // 名
                 },
                 {
                     english_vocab: "weekend",
-                    japanese_vocab: "",
+                    japanese_vocab: "週末", // 名
                 },
                 // {
                 //     english_vocab: "scuba diving", // space, remove from wordle
@@ -628,7 +628,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "waterproof",
-                    japanese_vocab: "",
+                    japanese_vocab: "防水の", // 形
                 },
                 {
                     english_vocab: "camera",
@@ -681,11 +681,11 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "useful",
-                    japanese_vocab: "",
+                    japanese_vocab: "役に立つ、有用な", // 形
                 },
                 {
                     english_vocab: "them",
-                    japanese_vocab: "",
+                    japanese_vocab: "彼ら[彼女ら、それら]を[に]", // 代
                 },
                 {
                     english_vocab: "performer",
@@ -728,7 +728,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "which",
-                    japanese_vocab: "",
+                    japanese_vocab: "どちら、どれ、どちらの人[もの]", // 代
                 },
             ],
         },
@@ -743,19 +743,19 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "wait",
-                    japanese_vocab: "",
+                    japanese_vocab: "待つ", // 動
                 },
                 {
                     english_vocab: "whose",
-                    japanese_vocab: "",
+                    japanese_vocab: "だれの、だれのもの", // 代
                 },
                 {
                     english_vocab: "ticket",
-                    japanese_vocab: "",
+                    japanese_vocab: "切符、チケット", // 名
                 },
                 {
                     english_vocab: "yours",
-                    japanese_vocab: "",
+                    japanese_vocab: "あなた (たち) のもの", // 代
                 },
                 {
                     english_vocab: "mine",
@@ -793,7 +793,7 @@ export const nhYear1 = {
             vocab: [
                 {
                     english_vocab: "tomorrow",
-                    japanese_vocab: "",
+                    japanese_vocab: "明日（は）", // 名　副
                 },
                 {
                     english_vocab: "free",
@@ -809,7 +809,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "then",
-                    japanese_vocab: "",
+                    japanese_vocab: "そのとき（に）", // 副
                 },
                 {
                     english_vocab: "bye",
@@ -883,7 +883,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "work",
-                    japanese_vocab: "",
+                    japanese_vocab: "働く、作業をする", // 動
                 },
                 {
                     english_vocab: "as",
@@ -926,7 +926,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "understand",
-                    japanese_vocab: "",
+                    japanese_vocab: "（・・・を）理解する、わかる", // 動
                 },
             ],
         },
@@ -942,11 +942,11 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "well",
-                    japanese_vocab: "",
+                    japanese_vocab: "井戸", // 名
                 },
                 {
                     english_vocab: "village",
-                    japanese_vocab: "",
+                    japanese_vocab: "村", // 名
                 },
                 {
                     english_vocab: "collect",
@@ -954,7 +954,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "volunteer",
-                    japanese_vocab: "",
+                    japanese_vocab: "ボランティア", // 名
                 },
                 {
                     english_vocab: "build",
@@ -980,7 +980,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "thing",
-                    japanese_vocab: "",
+                    japanese_vocab: "もの、こと", // 名
                 },
                 {
                     english_vocab: "musical",
@@ -988,7 +988,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "theater",
-                    japanese_vocab: "",
+                    japanese_vocab: "劇場、映画館", // 名
                 },
                 {
                     english_vocab: "actor",
@@ -1024,7 +1024,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "took",
-                    japanese_vocab: "",
+                    japanese_vocab: "takeの過去形", // 動
                 },
                 {
                     english_vocab: "came",
@@ -1075,7 +1075,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "traditional",
-                    japanese_vocab: "",
+                    japanese_vocab: "伝統的な", // 形
                 },
                 {
                     english_vocab: "parent",
@@ -1128,7 +1128,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "were",
-                    japanese_vocab: "",
+                    japanese_vocab: "areの過去形", // 動　助
                 },
                 {
                     english_vocab: "half",
@@ -1172,11 +1172,11 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "tent",
-                    japanese_vocab: "",
+                    japanese_vocab: "テント", // 名
                 },
                 {
                     english_vocab: "trash",
-                    japanese_vocab: "",
+                    japanese_vocab: "ごみ、くず", // 名
                 },
                 {
                     english_vocab: "pick",
@@ -1200,7 +1200,7 @@ export const nhYear1 = {
                 },
                 {
                     english_vocab: "these",
-                    japanese_vocab: "",
+                    japanese_vocab: "これらの", // 形
                 },
                 {
                     english_vocab: "back",
