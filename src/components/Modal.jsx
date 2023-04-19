@@ -6,8 +6,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import { useTranslation } from 'react-i18next';
 import FormLabel from '@mui/material/FormLabel';
+
 import { tokens } from '../theme';
-import { nhYear1 } from '../data/vocabWords';
 
 function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
 
@@ -18,19 +18,12 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
     const colors = tokens(theme.palette.mode);
     const { t } = useTranslation();
 
-    // if (!open) return null;
-
     const handleChangeGrade = (event) => {
-        // setValue(event.target.value);
-        // console.log("event check: ", event.target.value);
-        // setGrade({grade: event.target.value});
         setCurrentGrade(event.target.value);
         setGrade({grade: event.target.value, unit: currentUnit});
     };
 
     const handleChangeUnit = (e) => {
-        // console.log("event unit check: ", e.target.value);
-        // setGrade({unit: e.target.value});
         setCurrentUnit(e.target.value);
         setGrade({grade: currentGrade, unit: e.target.value})
     };
@@ -46,40 +39,18 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
         onClose={onClose}
     >
         <Box
-            // position="absolute"
-            // top="20%"
-            // left="40%"
-            // border="1px solid yellow"
-            // backgroundColor={colors.primary[400]}
             textAlign="center"
             display="flex"
             justifyContent="center"
-            // alignContent="center"
             mt="15%"
         >
             <Box
-                // position="absolute"
-                // top="25%"
-                // left="40%"
                 backgroundColor={colors.primary[300]}
                 border="5px solid"
-                // border={`5px solid ${colors.redAccent[700]}`}
                 display="flex"
                 flexDirection="column"
                 p="5px"
             >
-                {/* <Box 
-                    onClick={onClose}
-                    // border="1px solid pink"
-                    textAlign="right"
-                    pr="5px"
-                    // sx={{cursor: "pointer"}}
-                    // backgroundColor="white"
-                    // width="-10%"
-                >
-                    X
-                </Box> */}
-
                 <Box>
                     <Typography
                         variant="h2"
@@ -87,7 +58,6 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                         {t('choose-your-grade')}
                     </Typography>
                     <FormControl>
-                        {/* <FormLabel>Grade</FormLabel> */}
                         <RadioGroup
                             aria-labelledby="demo-radio-buttons-group-label"
                             name="radio-buttons-group"
@@ -97,8 +67,6 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                             <Box
                                 display="grid"
                                 gridTemplateColumns="repeat(3, 1fr)"
-                                // border="2px solid yellow"
-                                // justifyItems="center"
                             >
                                 <FormControlLabel value="first" control={<Radio/>} label={t('grade-1')}/>
                                 <FormControlLabel value="second" control={<Radio/>} label={t('grade-2')}/>
@@ -124,7 +92,6 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                             <Box
                                 display="grid"
                                 gridTemplateColumns="repeat(3, 1fr)"
-                                // justifyItems="center"
                             >
                                 <FormControlLabel value="unit1" control={<Radio/>} label={t('unit-1')} />
                                 <FormControlLabel value="unit2" control={<Radio/>} label={t('unit-2')} />
@@ -168,14 +135,10 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                         }
 
                     </RadioGroup>
-                    
-                    {/* {grade} */}
                 </Box>
                 <Box 
                     onClick={onClose}
-                    // border="1px solid pink"
                     textAlign="center"
-                    // pr="5px"
                     pt="10px"
                     sx={{
                         "& .MuiButton-root": {
@@ -189,7 +152,6 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                     <Button
                         variant="outlined"
                         color="primary"
-                        // onClick={handleGradeAndUnit}
                         onClick={() => setPlayPressed(true)}
                     >
                         Play!
