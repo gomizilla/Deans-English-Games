@@ -37,16 +37,39 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
     <Modal
         open={open}
         onClose={onClose}
+        sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center"
+        }}
     >
         <Box
             textAlign="center"
-            display="flex"
-            justifyContent="center"
-            mt="15%"
+            sx={{
+                "@keyframes appear": {
+                    "0%": {
+                        opacity: "0%",
+                    },
+                    "25%": {
+                        opacity: "25%",
+                    },
+                    "50%": {
+                        opacity: "50%",
+                    },
+                    "75%": {
+                        opacity: "75%",
+                    },
+                    "100%": {
+                        opacity: "100%",
+                    },
+                },
+                animation: "appear 0.25s linear",
+            }}
         >
             <Box
                 backgroundColor={colors.primary[300]}
                 border="5px solid"
+                borderRadius="3px"
                 display="flex"
                 flexDirection="column"
                 p="5px"
@@ -75,7 +98,9 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                         </RadioGroup>
                     </FormControl>
                 </Box>
-                <Box>
+                <Box
+                    // height={currentGrade ? "180px" : undefined}
+                >
                     <Typography
                         variant="h3"
                     >
