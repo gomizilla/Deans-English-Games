@@ -25,7 +25,7 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
     return (
         <Box 
             sx={{
-                backgroundColor: disabled ? "#3a393c" : colors.primary[300],
+                backgroundColor: disabled ? colors.primary[700] : colors.primary[300], //#3a393c
                 "&:hover": {
                     background: `${colors.greenAccent[500]}`
                 },
@@ -44,7 +44,13 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
                 fontSize: matches ? "20px" : "13px",
                 fontWeight: "bolder",
                 padding: "5px",
-                }}
+                // background: "linear-gradient(to bottom right, white, white 48%, gray 48%, gray 52%, green 52%, green)"
+                background: disabled ? 
+                `linear-gradient(to bottom right, ${colors.primary[700]}, ${colors.primary[700]} 48%, 
+                    ${colors.redAccent[500]} 48%, ${colors.redAccent[500]} 52%, 
+                    ${colors.primary[700]} 52%, ${colors.primary[700]})`
+                : undefined    
+            }}
             onClick={selectedLetter}
         >
             { keyVal }

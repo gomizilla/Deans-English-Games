@@ -25,7 +25,8 @@ const Letter = ({ letterPos, round }) => {
         } else if (letterState === "almost") {
             return "#b49f39";
         } else if (letterState === "error") {
-            return "#3a393c";
+            // return "#3a393c";
+            return colors.gray[500]
         } else {
             return;
         }
@@ -47,7 +48,8 @@ const Letter = ({ letterPos, round }) => {
             height={matches ? "5em" : "3.5em"}
             width={matches ? "5em" : "3.5em"}
             backgroundColor={handleColor}
-            color="#fff"
+            color={colors.gray[200]}
+            // color="#fff"
         >
             {letter}
         </Box>
