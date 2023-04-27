@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./scenes/home";
 import Topbar from "./scenes/global/Topbar";
 import SidebarComponent from "./scenes/global/Sidebar";
+import Footer from "./scenes/global/Footer";
 import WordScramble from "./scenes/wordscramble";
 import SecretWord from "./scenes/secretword";
 // import Invoices from "./scenes/invoices";
@@ -42,7 +43,7 @@ function App() {
               {/* <Route path="/geography" element={<Geography />} /> */}
               {/* <Route path="/calendar" element={<Calendar />} /> */}
             </Routes>
-
+            <Footer />
           </main>
         </div>
       </ThemeProvider>
