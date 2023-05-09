@@ -1,4 +1,4 @@
-import { Box, IconButton, useTheme, Typography } from "@mui/material";
+import { Box, IconButton, useTheme, Typography, Avatar } from "@mui/material";
 import { tokens } from "../../theme";
 
 const Footer = () => {
@@ -28,58 +28,66 @@ const Footer = () => {
             backgroundColor={colors.blueAccent[700]}
         >
             <Box
-                // border="2px solid pink"
-                width="30%"
                 display="flex"
+                flexDirection="column"
+                minWidth="60%"
                 justifyContent="center"
-                backgroundColor={colors.greenAccent[700]}
+                alignItems="center"
+                border="2px solid white"
             >
-                <Typography
-                    // color={colors.primary[100]}
-                    // color="#fff"
-                    variant="h6"
+                <Box
+                    // border="2px solid pink"
+                    // width="30%"
+                    display="flex"
+                    justifyContent="center"
+                    backgroundColor={colors.greenAccent[700]}
                 >
-                    Created by Dean Walton
-                </Typography>
-                {/* <Typography>
-                    asdf
-                </Typography> */}
-            </Box>
-            <Box
-                // border="2px solid pink"
-                width="30%"
-                display="flex"
-                justifyContent="center"
-                backgroundColor={colors.greenAccent[700]}
-            >
-                <Typography
-                    // color={colors.primary[100]}
-                    // color="#fff"
-                    variant="h6"
+                    <Typography
+                        // color={colors.primary[100]}
+                        // color="#fff"
+                        variant="h6"
+                    >
+                        Created by Dean Walton
+                    </Typography>
+                    {/* <Typography>
+                        asdf
+                    </Typography> */}
+                </Box>
+                
+                <Box
+                    // border="2px solid pink"
+                    width="30%"
+                    display="flex"
+                    justifyContent="space-evenly"
+                    backgroundColor={colors.greenAccent[700]}
                 >
-                    Questions / Feedback ?
-                </Typography>
-                {/* <Typography>
-                    asdf
-                </Typography> */}
+                    <a
+                        href="https://www.google.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <Box
+                            component="img"
+                            width="30px"
+                            height="30px"
+                            src="/images/github.png"
+                        />
+                    </a>
+                    <a
+                        href="https://www.google.com"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        <Box
+                            component="img"
+                            width="30px"
+                            height="30px"
+                            src="/images/linkedin.png"
+                        />
+                    </a>
+                </Box>
             </Box>
-            <Box
-                // border="2px solid pink"
-                width="30%"
-                display="flex"
-                justifyContent="center"
-                backgroundColor={colors.greenAccent[700]}
-            >
-                <Typography
-                    // color={colors.primary[100]}
-                    // color="#fff"
-                >
-                    area 3
-                </Typography>
-                {/* <Typography>
-                    asdf
-                </Typography> */}
-            </Box>
+            
         </Box>
     )
 }
