@@ -8,7 +8,10 @@ const Home = () => {
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box m="20px">
+        <Box 
+            m="20px"
+            minHeight="80vh"
+        >
             <Box
                 display="flex"
                 justifyContent="space-between"

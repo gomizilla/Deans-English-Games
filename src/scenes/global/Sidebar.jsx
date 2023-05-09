@@ -59,6 +59,9 @@ const SidebarComponent = () => {
                 },
                 
             }}
+            border="2px solid green"
+            // minHeight="auto"
+            // position=""
         >
             <Sidebar
                 breakPoint="md"
