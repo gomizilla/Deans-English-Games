@@ -40,11 +40,21 @@ const SidebarComponent = () => {
 
     return (
         <Box
+            // position="sticky"
+            // top="0"
+            // position="sticky"
+            // position="-webkit-sticky"
             sx={{
-                // position: "sticky",
+                position: "-webkit-sticky",
+                position: "sticky",
                 display: "flex",
+                // alignSelf: "flex-end",
                 height: "100vh",
-                // zIndex: 10000,
+                zIndex: 10000,
+                top: 0,
+                bottom: 0,
+                left: 0,
+                // overflow: "hidden",
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[300]} !important`,
                 },
@@ -59,7 +69,7 @@ const SidebarComponent = () => {
                 },
                 
             }}
-            border="2px solid green"
+            // border="2px solid green"
             // minHeight="auto"
             // position=""
         >

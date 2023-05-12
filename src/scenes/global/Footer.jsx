@@ -8,24 +8,25 @@ const Footer = () => {
 
     return (
         <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            borderRadius={3}
             // border="2px solid yellow"
             bottom="0"
             // width="100%"
             // marginLeft="-250px"
             // position="relative"
-            position="relative"
+            // position="relative"
             // bottom="0"
             // m="20px"
             ml="20px"
             mr="20px"
-            mb="10px"
-            p="10px"
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
+            mb="5px"
+            // p="10px"
             // justifyContent="center"
             justifyContent="space-between"
-            backgroundColor={colors.blueAccent[700]}
+            backgroundColor={colors.redAccent[700]}
         >
             <Box
                 display="flex"
@@ -33,19 +34,20 @@ const Footer = () => {
                 minWidth="60%"
                 justifyContent="center"
                 alignItems="center"
-                border="2px solid white"
+                // border="2px solid white"
             >
                 <Box
                     // border="2px solid pink"
                     // width="30%"
                     display="flex"
                     justifyContent="center"
-                    backgroundColor={colors.greenAccent[700]}
+                    pt="5px"
+                    // backgroundColor={colors.greenAccent[700]}
                 >
                     <Typography
                         // color={colors.primary[100]}
                         // color="#fff"
-                        variant="h6"
+                        variant="h5"
                     >
                         Created by Dean Walton
                     </Typography>
@@ -59,7 +61,9 @@ const Footer = () => {
                     width="30%"
                     display="flex"
                     justifyContent="space-evenly"
-                    backgroundColor={colors.greenAccent[700]}
+                    // backgroundColor={colors.greenAccent[700]}
+                    pt="5px"
+                    gap="50px"
                 >
                     <a
                         href="https://www.google.com"
@@ -70,6 +74,10 @@ const Footer = () => {
                             component="img"
                             width="30px"
                             height="30px"
+                            sx={{
+                                maxHeight: {xs: 100},
+                                maxWidth: {xs: 100}
+                            }}
                             src="/images/github.png"
                         />
                     </a>
@@ -80,8 +88,13 @@ const Footer = () => {
                     >
                         <Box
                             component="img"
-                            width="30px"
-                            height="30px"
+                            // not working V
+                            sx={{
+                                width: 30,
+                                height: 30,
+                                maxHeight: {md: 100},
+                                maxWidth: {md: 100}
+                            }}
                             src="/images/linkedin.png"
                         />
                     </a>
