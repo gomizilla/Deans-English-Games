@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <Box 
             m="20px"
-            minHeight="75vh"
+            minHeight="70vh"
         >
             <Box
                 display="flex"

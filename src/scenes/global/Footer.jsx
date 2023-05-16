@@ -66,23 +66,24 @@ const Footer = () => {
                     gap="50px"
                 >
                     <a
-                        href="https://www.google.com"
+                        href="https://github.com/gomizilla"
                         target="_blank"
                         rel="noreferrer"
                     >
                         <Box
                             component="img"
-                            width="30px"
-                            height="30px"
+                            width="50px"
+                            height="50px"
                             sx={{
-                                maxHeight: {xs: 100},
-                                maxWidth: {xs: 100}
+                                maxHeight: {xs: "100px"},
+                                maxWidth: {xs: "100px"},
                             }}
                             src="/images/github.png"
+                            alt="Github"
                         />
                     </a>
                     <a
-                        href="https://www.google.com"
+                        href="https://www.linkedin.com/in/dean-walton/"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -90,12 +91,13 @@ const Footer = () => {
                             component="img"
                             // not working V
                             sx={{
-                                width: 30,
-                                height: 30,
+                                width: 50,
+                                height: 50,
                                 maxHeight: {md: 100},
                                 maxWidth: {md: 100}
                             }}
                             src="/images/linkedin.png"
+                            alt="LinkedIn"
                         />
                     </a>
                 </Box>

@@ -208,7 +208,7 @@ const SecretWord = () => {
     return (
         <Box 
             m="20px"
-            minHeight="75vh"
+            minHeight="70vh"
             // added 4/14/23
             // display="flex"
             // flexDirection="column"

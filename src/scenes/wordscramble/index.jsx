@@ -258,7 +258,7 @@ const WordScramble = () => {
         <Box 
             m="20px"
             // border="2px solid pink"
-            minHeight="75vh"
+            minHeight="70vh"
         >
             <Box
                 display="flex"
