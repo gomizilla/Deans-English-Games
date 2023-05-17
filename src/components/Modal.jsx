@@ -166,7 +166,7 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                 <Box 
                     onClick={onClose}
                     textAlign="center"
-                    border="2px solid black"
+                    // border="2px solid black"
                     pt="20px"
                     // mt="50px"
                     sx={{
