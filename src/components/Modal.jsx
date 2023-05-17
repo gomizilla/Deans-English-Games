@@ -166,7 +166,9 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                 <Box 
                     onClick={onClose}
                     textAlign="center"
-                    pt="10px"
+                    border="2px solid black"
+                    pt="20px"
+                    // mt="50px"
                     sx={{
                         "& .MuiButton-root": {
                             background: `${colors.redAccent[500]}`
