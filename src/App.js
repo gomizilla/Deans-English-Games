@@ -43,7 +43,7 @@ function App() {
               {/* <Route path="/geography" element={<Geography />} /> */}
               {/* <Route path="/calendar" element={<Calendar />} /> */}
             </Routes>
-            {/* <Footer /> */}
+            <Footer />
           </main>
         </div>
       </ThemeProvider>

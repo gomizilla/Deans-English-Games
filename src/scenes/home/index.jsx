@@ -20,7 +20,7 @@ const Home = () => {
                 // border="2px solid pink"
             >
                 <Header
-                    title="Dean's English Games"
+                    title="English Games"
                     subtitle="Please choose a game!"
                 />
             </Box>

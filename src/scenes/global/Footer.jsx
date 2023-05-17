@@ -66,7 +66,7 @@ const Footer = () => {
                     gap="50px"
                 >
                     <a
-                        href="https://github.com/gomizilla"
+                        // href="https://github.com/gomizilla"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -83,7 +83,7 @@ const Footer = () => {
                         />
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/dean-walton/"
+                        // href="https://www.linkedin.com/in/dean-walton/"
                         target="_blank"
                         rel="noreferrer"
                     >
