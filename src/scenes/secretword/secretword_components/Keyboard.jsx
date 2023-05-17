@@ -55,7 +55,7 @@ const Keyboard = () => {
             // marginTop="20px"
             marginTop={matches ? "20px" : "5px"}
             onKeyDown={handleKeyboard}
-            border="2px solid pink"
+            // border="2px solid pink"
         >
             <Box
                 display="flex"
