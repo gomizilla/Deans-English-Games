@@ -99,7 +99,7 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                     </FormControl>
                 </Box>
                 <Box
-                    // height={currentGrade ? "180px" : undefined}
+                    height={currentGrade ? "180px" : undefined}
                 >
                     <Typography
                         variant="h3"
