@@ -73,6 +73,7 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                 display="flex"
                 flexDirection="column"
                 p="5px"
+                height="360px"
             >
                 <Box>
                     <Typography
