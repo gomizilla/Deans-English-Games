@@ -73,7 +73,7 @@ const Keyboard = () => {
                 flex="33%"
                 flexDirection="row"
                 justifyContent="center"
-                margin="5px"
+                // margin="5px"
             >
                 {keyboardMid.map((key) => {
                     return <Key keyVal={key} disabled={notUsed.includes(key)} id={key}/>
