@@ -42,7 +42,7 @@ const Key = ({ keyVal, enterOrDelete, disabled }) => {
                 margin: matches ? "5px" : "3px",
                 // fontSize: "20px",
                 fontSize: matches ? "20px" : "13px",
-                height: "4.5em",
+                height: matches ? undefined : "4.5em",
                 fontWeight: "bolder",
                 padding: "5px",
                 // background: "linear-gradient(to bottom right, white, white 48%, gray 48%, gray 52%, green 52%, green)"
