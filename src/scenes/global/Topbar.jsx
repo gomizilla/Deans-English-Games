@@ -49,10 +49,10 @@ const Topbar = () => {
                     backgroundColor={colors.primary[400]} 
                     borderRadius="3px"
                 >
-                    <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
+                    {/* <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
                     <IconButton type="button" sx={{ p: 1}}>
                         <SearchIcon />
-                    </IconButton>    
+                    </IconButton>     */}
                 </Box>
                 
             </Box>

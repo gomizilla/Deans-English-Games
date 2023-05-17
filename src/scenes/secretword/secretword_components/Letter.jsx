@@ -12,7 +12,7 @@ const Letter = ({ letterPos, round }) => {
     const matches = useMediaQuery('(min-width: 600px)');
 
     
-    const { board, currentAttempt, secretWord, notUsed, setNotUsed } = useContext(AppContext);
+    const { board, currentAttempt, secretWord, notUsed, setNotUsed, totalAttempts, gameover } = useContext(AppContext);
     const letter = board[round][letterPos];
     const correct = secretWord[letterPos] === letter;
     const almost = !correct && letter !== "" && secretWord.includes(letter);
@@ -25,10 +25,23 @@ const Letter = ({ letterPos, round }) => {
         } else if (letterState === "almost") {
             return "#b49f39";
         } else if (letterState === "error") {
-            return "#3a393c";
+            return colors.gray[500]
         } else {
             return;
         }
+    }
+
+    const handleColorNonActiveRound = () => {
+        if (currentAttempt.round === round) return;
+        if ((letterState === false && letter !== "") && (totalAttempts > 5)) {
+            if (letter === secretWord[letterPos]) {
+                return "#538d43";
+            } else if (!correct && secretWord.includes(letter)) {
+                return "#b49f39";
+            } else {
+                return colors.gray[500];
+            }
+        } 
     }
 
     useEffect(() => {
@@ -46,8 +59,8 @@ const Letter = ({ letterPos, round }) => {
             alignItems="center"
             height={matches ? "5em" : "3.5em"}
             width={matches ? "5em" : "3.5em"}
-            backgroundColor={handleColor}
-            color="#fff"
+            backgroundColor={letterState === false ? handleColorNonActiveRound : handleColor}
+            color={colors.gray[200]}
         >
             {letter}
         </Box>

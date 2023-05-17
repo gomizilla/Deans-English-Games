@@ -67,27 +67,54 @@ const SecretWord = () => {
     }
 
     const onEnter = () => {
+
+        // if (totalAttempts >= 5) {
+        //     for (let i = 0; i < board[currentAttempt.round].length; i++) {
+        //         board[currentAttempt.round+1][i] = "🍕";
+        //     }
+        // }
+
         if (currentAttempt.letterPos === WORD_LENGTH) {
             setTotalAttempts(totalAttempts + 1);
         }
 
         if (currentAttempt.letterPos !== WORD_LENGTH) return;
+
+        // if (totalAttempts >= 5) {
+        //     handleClearRow(currentAttempt.round);
+        //     console.log("handle clear row called")
+        // }
+
         let currentWord = "";
         for (let i = 0; i < WORD_LENGTH; i++) {
             currentWord += board[currentAttempt.round][i];
         }
 
-        if (secretWord === currentWord) {
-            setGameover({gameover: true, guessedWord: true});
-        }
-
+        
         setCurrentAttempt({round: currentAttempt.round + 1, letterPos: 0});
-
+        
+        
         if (currentAttempt.round === BOARD_ROWS - 1 && gameover.guessWord === false) {
             setCurrentAttempt({round: 0, letterPos: 0});
-            handleDefaultBoard();  
+            // handleDefaultBoard();  
+            if (totalAttempts >= 5) {
+                for (let i = 0; i < board[currentAttempt.round].length; i++) {
+                    board[0][i] = "";
+                }
+            }
+        }
+
+        if (secretWord === currentWord) {
+            setGameover({gameover: true, guessedWord: true});
+            return;
         }
         
+        if (totalAttempts >= BOARD_ROWS) {
+            for (let i = 0; i < board[currentAttempt.round].length; i++) {
+                board[currentAttempt.round+1][i] = "";
+            }
+        }
+        // console.log("board: ", board);
     }
 
     const scramblerNew = () => {
@@ -172,8 +199,16 @@ const SecretWord = () => {
     
     };
 
+    const handleClearRow = (currentRow) => {
+        for (let i = 0; i < board[currentRow.length - 1]; i++) {
+            board[currentRow][i] = "";
+        };
+    };
+
     return (
-        <Box m="20px"
+        <Box 
+            m="20px"
+            minHeight="70vh"
             // added 4/14/23
             // display="flex"
             // flexDirection="column"

@@ -40,11 +40,21 @@ const SidebarComponent = () => {
 
     return (
         <Box
+            // position="sticky"
+            // top="0"
+            // position="sticky"
+            // position="-webkit-sticky"
             sx={{
-                // position: "sticky",
+                position: "-webkit-sticky",
+                position: "sticky",
                 display: "flex",
+                // alignSelf: "flex-end",
                 height: "100vh",
-                // zIndex: 10000,
+                zIndex: 10000,
+                top: 0,
+                bottom: 0,
+                left: 0,
+                // overflow: "hidden",
                 "& .ps-sidebar-container": {
                     background: `${colors.primary[300]} !important`,
                 },
@@ -59,6 +69,9 @@ const SidebarComponent = () => {
                 },
                 
             }}
+            // border="2px solid green"
+            // minHeight="auto"
+            // position=""
         >
             <Sidebar
                 breakPoint="md"
@@ -99,7 +112,7 @@ const SidebarComponent = () => {
                                     width="100px"
                                     height="100px"
                                     src={'https://images.unsplash.com/photo-1604883781269-d121d9ad20f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'}
-                                    style={{ cursor: "pointer", borderRadius: "50%"}}
+                                    style={{borderRadius: "50%"}}
                                 />
                             </Box>
                             <Box textAlign="center">
@@ -164,21 +177,24 @@ const SidebarComponent = () => {
                             Pages
                         </Typography>
                         <Item 
-                            title="Profile Form"
+                            // title="Profile Form"
+                            title="Placeholder"
                             // to="/form"
                             icon={<PersonOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="Calendar"
+                            // title="Calendar"
+                            title="Placeholder"
                             // to="/calendar"
                             icon={<CalendarTodayOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
-                            title="FAQ"
+                            // title="FAQ"
+                            title="Placeholder"
                             // to="/faq"
                             icon={<HelpOutlinedIcon />}
                             selected={selected}
