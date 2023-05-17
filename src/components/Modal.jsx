@@ -73,6 +73,8 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                 display="flex"
                 flexDirection="column"
                 p="5px"
+                // height="360px"
+                justifyContent="space-between"
             >
                 <Box>
                     <Typography
@@ -99,7 +101,7 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                     </FormControl>
                 </Box>
                 <Box
-                    // height={currentGrade ? "180px" : undefined}
+                    height={currentGrade ? "180px" : undefined}
                 >
                     <Typography
                         variant="h3"
@@ -164,7 +166,9 @@ function ModalComponent({open, onClose, grade, setGrade, setPlayPressed}) {
                 <Box 
                     onClick={onClose}
                     textAlign="center"
-                    pt="10px"
+                    // border="2px solid black"
+                    pt="20px"
+                    // mt="50px"
                     sx={{
                         "& .MuiButton-root": {
                             background: `${colors.redAccent[500]}`
