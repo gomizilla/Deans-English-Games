@@ -20,16 +20,11 @@ const Letter = ({ letterPos, round }) => {
     const letterState = currentAttempt.round > round && (correct ? "correct" : almost ? "almost" : "error");
 
     const handleColor = () => {
-        if (gameover.gameover === true && gameover.guessWord === true) {
-            console.log("gameover chekced");
-            return;
-        }
         if (letterState === "correct") {
             return "#538d43";
         } else if (letterState === "almost") {
             return "#b49f39";
         } else if (letterState === "error") {
-            // return "#3a393c";
             return colors.gray[500]
         } else {
             return;
@@ -39,12 +34,9 @@ const Letter = ({ letterPos, round }) => {
     const handleColorNonActiveRound = () => {
         if (currentAttempt.round === round) return;
         if ((letterState === false && letter !== "") && (totalAttempts > 5)) {
-            console.log("🍕🍕🍕🍕🍕🍕🍕🍕🍕🍕");
             if (letter === secretWord[letterPos]) {
-                // letterState = "correct";
                 return "#538d43";
             } else if (!correct && secretWord.includes(letter)) {
-                // letterState = "almost";
                 return "#b49f39";
             } else {
                 return colors.gray[500];
@@ -69,10 +61,8 @@ const Letter = ({ letterPos, round }) => {
             width={matches ? "5em" : "3.5em"}
             backgroundColor={letterState === false ? handleColorNonActiveRound : handleColor}
             color={colors.gray[200]}
-            // color="#fff"
         >
             {letter}
-            {/* {console.log("letter: ", letter, "letterState: ", letterState, "totalAttempts: ", totalAttempts)} */}
         </Box>
     )
 }
