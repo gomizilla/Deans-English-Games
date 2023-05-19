@@ -18,6 +18,9 @@ import SecretWord from "./scenes/secretword";
 // import Geography from "./scenes/geography";
 // import Calendar from "./scenes/calendar";
 
+import { inject } from "@vercel/analytics/*";
+
+inject();
 
 function App() {
   const [theme, colorMode] = useMode();
