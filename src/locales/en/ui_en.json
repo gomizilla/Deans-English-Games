@@ -1,11 +1,16 @@
 
 {
     "english-apps": "English Apps",
+    "choose-game": "Please choose a game!",
     "home": "Home",
     "apps": "Apps",
     "word-scramble": "Word Scramble",
     "secret-word": "Secret Word",
     "sentence-scramble": "Sentence Scramble",
+    "misc": "Misc",
+    "search": "Search",
+    "dictionary": "Dictionary",
+    "FAQ": "FAQ",
     "hint": "Hint: ",
     "answer": "Answer",
     "choose-your-grade": "Choose your grade",
