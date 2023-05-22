@@ -1,11 +1,16 @@
 
 {
     "english-apps": "英語のアプリ",
+    "choose-game": "英語のゲームを選んでください！",
     "home": "ホーム",
     "apps": "アプリ",
     "word-scramble": "文字の並び替え",
     "secret-word": "秘密の言葉",
     "sentence-scramble": "文章の並び替え",
+    "misc": "他",
+    "search": "調べ",
+    "dictionary": "辞書",
+    "FAQ": "よくある質問",
     "hint": "ヒント: ",
     "answer": "答え",
     "choose-your-grade": "学年を選ぶ",

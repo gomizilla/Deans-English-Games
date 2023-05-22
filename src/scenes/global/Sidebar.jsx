@@ -7,8 +7,10 @@ import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import AbcOutlinedIcon from "@mui/icons-material/AbcOutlined";
 import PsychologyAltOutlinedIcon from "@mui/icons-material/PsychologyAltOutlined";
 import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
-import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+// import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import SearchIcon from '@mui/icons-material/Search';
+// import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined";
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
@@ -162,39 +164,40 @@ const SidebarComponent = () => {
                             selected={selected}
                             setSelected={setSelected}
                         />
-                        <Item 
+                        {/* <Item 
                             title={t('sentence-scramble')}
                             // to="/invoices"
                             icon={<ReceiptOutlinedIcon />}
                             selected={selected}
                             setSelected={setSelected}
-                        />
+                        /> */}
                         <Typography
                             variant="h6"
                             color={colors.gray[300]}
                             sx={{ m: "15px 0 5px 20px"}}
                         >
-                            Pages
+                            {t('misc')}
                         </Typography>
                         <Item 
                             // title="Profile Form"
-                            title="Placeholder"
+                            title={t('search')}
                             // to="/form"
-                            icon={<PersonOutlinedIcon />}
+                            icon={<SearchIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
                             // title="Calendar"
-                            title="Placeholder"
+                            title={t('dictionary')}
                             // to="/calendar"
-                            icon={<CalendarTodayOutlinedIcon />}
+                            // icon={<CalendarTodayOutlinedIcon />}
+                            icon={<MenuBookIcon />}
                             selected={selected}
                             setSelected={setSelected}
                         />
                         <Item 
                             // title="FAQ"
-                            title="Placeholder"
+                            title={t('FAQ')}
                             // to="/faq"
                             icon={<HelpOutlinedIcon />}
                             selected={selected}

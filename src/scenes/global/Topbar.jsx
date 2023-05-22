@@ -1,8 +1,13 @@
 import { Box, IconButton, useTheme } from "@mui/material";
 import { useContext } from "react";
 
+import Link from "@mui/material/Link";
+import { Link as RouterLink } from "react-router-dom";
+
 import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
+
 
 import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
@@ -46,12 +51,18 @@ const Topbar = () => {
                 )}
                 <Box
                     display="flex" 
-                    backgroundColor={colors.primary[400]} 
+                    // backgroundColor={colors.primary[400]} 
                     borderRadius="3px"
                 >
-                    {/* <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase>
-                    <IconButton type="button" sx={{ p: 1}}>
-                        <SearchIcon />
+                    {/* <InputBase sx={{ ml: 2, flex: 1}} placeholder="Search"></InputBase> */}
+                    {/* <IconButton type="button" sx={{ p: 1}}>
+                        <Link 
+                            component={RouterLink}
+                            to="/"
+                            color={colors.gray[200]}
+                        >
+                            <HomeOutlinedIcon />
+                        </Link>
                     </IconButton>     */}
                 </Box>
                 
@@ -72,6 +83,19 @@ const Topbar = () => {
                 <IconButton onClick={changeLanguage} value="jp">
                     JP
                 </IconButton>
+                <IconButton 
+                    // type="button" 
+                    // sx={{ p: 1 }}
+                    // size="small"
+                >
+                    <Link 
+                        component={RouterLink}
+                        to="/"
+                        color={colors.primary[100]}
+                    >
+                        <HomeOutlinedIcon fontSize="large" />
+                    </Link>
+                </IconButton>  
                 {/* <IconButton>
                     <NotificationsOutlinedIcon />
                 </IconButton>
