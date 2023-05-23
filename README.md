@@ -9,6 +9,26 @@ Through simple gamification, it helps students retain English vocabulary they en
  - Open the repo with VSCode
  - Type `npm install` in the console to install all dependencies
 
+# Features
+
+## - Word Scramble
+
+A set of words have been scrambled. The user must type in the correct answer for each word to complete the game.
+
+For example: `plpeaepni => pineapple`
+
+## - Secret Word
+
+Wordle game feature adapted for Japanese junior high school students. Modified so that users have unlimited tries to guess the correct word. For use in the classroom *the student with the least amount of attempts* would be the winner.
+
+## - English/Japanese UI Localization
+
+<br />
+
+## - Light/Dark Mode
+
+<br />
+
 # Adding/Removing/Editing Vocabulary
 ## To add vocabulary
  - Add your desired vocab to the section you feel is most appropriate in the `vocabWords.js` file
