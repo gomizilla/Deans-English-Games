@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was made for Japanese junior high school students who have a hard time learning English.
+Through simple gamification, it helps students retain English vocabulary they encounter in school.
 
-## Available Scripts
+## How To Get It Running
 
-In the project directory, you can run:
+ - Clone this repository
+ - Open the repo with VSCode
+ - Type `npm install` in the console to install all dependencies
 
-### `npm start`
+# Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## - Word Scramble
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A set of words have been scrambled. The user must type in the correct answer for each word to complete the game.
 
-### `npm test`
+For example: `plpeaepni => pineapple`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## - Secret Word
 
-### `npm run build`
+Wordle game feature adapted for Japanese junior high school students. Modified so that users have unlimited tries to guess the correct word. For use in the classroom *the student with the least amount of attempts* would be the winner.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## - English/Japanese UI Localization
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## - Light/Dark Mode
 
-### `npm run eject`
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Adding/Removing/Editing Vocabulary
+## To add vocabulary
+ - Add your desired vocab to the section you feel is most appropriate in the `vocabWords.js` file
+ - Use the format: 
+    ```
+    {
+        english_vocab: "ENGLISH_WORD_HERE",
+        japanese_vocab: "JAPANESE_TRANSLATION_HERE"
+    },
+    ```
+    and put add after the last listed vocab, for example:
+    ```
+    unit1: {
+        part1: {
+            keySentence: {
+                1: "I am Meg Brown.",
+                2: "I like Japanese Food.",
+            },
+            vocab: [
+                {
+                    english_vocab: "call",
+                    japanese_vocab: "...を（ ～と ）呼ぶ、名づける",
+                },
+                {
+                    english_vocab: "often",
+                    japanese_vocab: "しばしば、よく",
+                },
+                {
+                    english_vocab: "ENGLISH_WORD_HERE",
+                    japanese_vocab: "JAPANESE_TRANSLATION_HERE"
+                },
+            ]
+        },
+    ```
+- Please note that at this time words with **spaces, hypens, and apostrophes** will not work apporpriately.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## To remove/edit vocabulary
+ - Simply delete or edit both the English/Japanese vocabulary you want:
+    ```
+        {
+            english_vocab: "DELETE/EDIT_ENGLISH_WORD",
+            japanese_vocab: "DELETE/EDIT_JAPANESE_TRANSLATION"
+        },
+    ```
+# Future Features
+ - Search functionality for words not included.
+ - Dictionary, a view of all vocabulary/sentences included for reference.
+ - FAQ page in both English and Japanese.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Feedback and Questions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any feedback or questions feel free to contact me and let me know!
