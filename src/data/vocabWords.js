@@ -2251,23 +2251,23 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "apply",
-                    japanese_vocab: "",
+                    japanese_vocab: "当てはまる", // 動詞
                 },
                 {
                     english_vocab: "Paralympic",
-                    japanese_vocab: "",
+                    japanese_vocab: "パラリンピック", // 名
                 },
                 {
                     english_vocab: "somewhere",
-                    japanese_vocab: "",
+                    japanese_vocab: "どこかに[へ、で]",
                 },
                 {
                     english_vocab: "below",
-                    japanese_vocab: "",
+                    japanese_vocab: "下に、下記に[の]", // 副
                 },
                 {
                     english_vocab: "above",
-                    japanese_vocab: "",
+                    japanese_vocab: "上に、上記に[の]", // 副
                 },
                 // {
                 //     english_vocab: "sitting volleyball",
@@ -2275,7 +2275,7 @@ export const nhYear3 = {
                 // },
                 {
                     english_vocab: "triathlon",
-                    japanese_vocab: "",
+                    japanese_vocab: "トライアスロン", // 名
                 },
             ]
         },
@@ -2287,23 +2287,23 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "ever",
-                    japanese_vocab: "",
+                    japanese_vocab: "[疑問文で]今まで、かつて", // 副
                 },
                 {
                     english_vocab: "been",
-                    japanese_vocab: "",
+                    japanese_vocab: "beの過去分詞", // 動、助
                 },
                 {
                     english_vocab: "match",
-                    japanese_vocab: "",
+                    japanese_vocab: "試合、競技", // 名
                 },
                 {
                     english_vocab: "athlete",
-                    japanese_vocab: "",
+                    japanese_vocab: "運動選手、アスリート", // 名
                 },
                 {
                     english_vocab: "internet",
-                    japanese_vocab: "",
+                    japanese_vocab: "インターネット", // 名
                 },
             ]
         },
@@ -2316,23 +2316,23 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "championship",
-                    japanese_vocab: "",
+                    japanese_vocab: "選手権、優勝", // 名
                 },
                 {
-                    english_vocab: "amazed",
-                    japanese_vocab: "",
+                    english_vocab: "amaze",
+                    japanese_vocab: "・・・をびっくりさせる", // 動
                 },
                 {
                     english_vocab: "speed",
-                    japanese_vocab: "",
+                    japanese_vocab: "スピード、速度", // 動
                 },
                 {
                     english_vocab: "amazing",
-                    japanese_vocab: "",
+                    japanese_vocab: "驚くべき", // 形
                 },
                 {
                     english_vocab: "uncomfortable",
-                    japanese_vocab: "",
+                    japanese_vocab: "心地よくない", // 形
                 },
                 // {
                 //     english_vocab: "well-known",
@@ -2340,31 +2340,31 @@ export const nhYear3 = {
                 // },
                 {
                     english_vocab: "winner",
-                    japanese_vocab: "",
+                    japanese_vocab: "勝者、受賞者", // 名
                 },
                 {
                     english_vocab: "positive",
-                    japanese_vocab: "",
+                    japanese_vocab: "肯定の、前向きな", // 形
                 },
                 {
                     english_vocab: "possible",
-                    japanese_vocab: "",
+                    japanese_vocab: "(物事が)可能な、できる", // 形
                 },
                 {
                     english_vocab: "establish",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を設立する", // 動
                 },
                 {
                     english_vocab: "user",
-                    japanese_vocab: "",
+                    japanese_vocab: "使用[利用]者、ユーザー", // 名
                 },
                 {
                     english_vocab: "satisfy",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を満足させる", // 動
                 },
                 {
                     english_vocab: "ordinary",
-                    japanese_vocab: "",
+                    japanese_vocab: "ふつうの", // 形
                 },
                 // {
                 //     english_vocab: "custom-made",
@@ -2372,23 +2372,23 @@ export const nhYear3 = {
                 // },
                 {
                     english_vocab: "sporty",
-                    japanese_vocab: "",
+                    japanese_vocab: "スポーティーな、走りの軽快な", // 形
                 },
                 {
                     english_vocab: "functional",
-                    japanese_vocab: "",
+                    japanese_vocab: "実用的な",  // 形
                 },
                 {
                     english_vocab: "stylish",
-                    japanese_vocab: "",
+                    japanese_vocab: "おしゃれな、センスのよい", // 形
                 },
                 {
                     english_vocab: "opinion",
-                    japanese_vocab: "",
+                    japanese_vocab: "意見、考え", // 名
                 },
                 {
                     english_vocab: "support",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を支援する、応援する", // 動
                 },
             ]
         },
@@ -2403,19 +2403,19 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "yet",
-                    japanese_vocab: "",
+                    japanese_vocab: "①[疑問文で]もう、すでに ②[否定文で]まだ、いまのところは", // 副
                 },
                 {
                     english_vocab: "read",
-                    japanese_vocab: "",
+                    japanese_vocab: "(・・・を)読む、読んで知る", // 動
                 },
                 {
                     english_vocab: "sleep",
-                    japanese_vocab: "",
+                    japanese_vocab: "眠る、寝ている", // 動
                 },
                 {
                     english_vocab: "already",
-                    japanese_vocab: "",
+                    japanese_vocab: "すでに、もう", // 副
                 },
             ]
         },
@@ -2427,19 +2427,19 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "poet",
-                    japanese_vocab: "",
+                    japanese_vocab: "詩人", // 名
                 },
                 {
                     english_vocab: "since",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・(して)以来", // 前、接
                 },
                 {
                     english_vocab: "image",
-                    japanese_vocab: "",
+                    japanese_vocab: "像、肖像、印象", // 名
                 },
                 {
                     english_vocab: "curious",
-                    japanese_vocab: "",
+                    japanese_vocab: "好奇心の強い", // 形
                 },
             ]
         },
@@ -2451,63 +2451,63 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "poem",
-                    japanese_vocab: "",
+                    japanese_vocab: "詩", // 名
                 },
                 {
                     english_vocab: "written",
-                    japanese_vocab: "",
+                    japanese_vocab: "writeの過去分詞", // 動
                 },
                 {
                     english_vocab: "rhyme",
-                    japanese_vocab: "",
+                    japanese_vocab: "韻をふむ", // 動
                 },
                 {
                     english_vocab: "seasonal",
-                    japanese_vocab: "",
+                    japanese_vocab: "季節の", // 形
                 },
                 {
                     english_vocab: "include",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を含む、含める", //　動
                 },
                 {
                     english_vocab: "rhythm",
-                    japanese_vocab: "",
+                    japanese_vocab: "リズム、調子", // 名
                 },
                 {
                     english_vocab: "syllable",
-                    japanese_vocab: "",
+                    japanese_vocab: "音節、シラブル", // 名
                 },
                 {
                     english_vocab: "become",
-                    japanese_vocab: "",
+                    japanese_vocab: "becomeの過去分詞", // 動
                 },
                 {
                     english_vocab: "quite",
-                    japanese_vocab: "",
+                    japanese_vocab: "かなり、相当", // 副
                 },
                 {
                     english_vocab: "less",
-                    japanese_vocab: "",
+                    japanese_vocab: "もっと少なく、より・・・でなく", // 副
                 },
                 {
                     english_vocab: "strict",
-                    japanese_vocab: "",
+                    japanese_vocab: "厳しい", // 形
                 },
                 {
                     english_vocab: "either",
-                    japanese_vocab: "",
+                    japanese_vocab: "[否定文の文末に用いて]・・・もまた(～ない)", // 副
                 },
                 {
                     english_vocab: "actually",
-                    japanese_vocab: "",
+                    japanese_vocab: "実は、本当は", // 副
                 },
                 {
                     english_vocab: "website",
-                    japanese_vocab: "",
+                    japanese_vocab: "ウェブサイト", // 名
                 },
                 {
                     english_vocab: "pop",
-                    japanese_vocab: "",
+                    japanese_vocab: "大衆的な", // 形
                 },
             ]
         },
