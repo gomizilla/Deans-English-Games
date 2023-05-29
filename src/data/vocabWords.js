@@ -1189,31 +1189,31 @@ export const nhYear2 = {
             vocab: [
                {
                 english_vocab: "golden",
-                japanese_vocab: "",
+                japanese_vocab: "金色の、すばらしい", // 形
                },
                {
                 english_vocab: "holiday",
-                japanese_vocab: "",
+                japanese_vocab: "休日、休暇", // 名
                },
                {
                 english_vocab: "abroad",
-                japanese_vocab: "",
+                japanese_vocab: "外国に[へ、で]、海外に[へ、で]、", // 副
                },
                {
                 english_vocab: "aunt",
-                japanese_vocab: "",
+                japanese_vocab: "おば、おばさん", // 名
                },
                {
                 english_vocab: "uncle",
-                japanese_vocab: "",
+                japanese_vocab: "おじ、おじさん", // 名
                },
                {
                 english_vocab: "husband",
-                japanese_vocab: "",
+                japanese_vocab: "夫", // 名
                },
                {
                 english_vocab: "wife",
-                japanese_vocab: "",
+                japanese_vocab: "妻", // 名
                },
             ]
         },
@@ -1224,19 +1224,19 @@ export const nhYear2 = {
             vocab: [
                 {
                     english_vocab: "far",
-                    japanese_vocab: "",
+                    japanese_vocab: "遠くに[へ]", // 副
                 },
                 {
                     english_vocab: "will",
-                    japanese_vocab: "",
+                    japanese_vocab: "①[単なる未来]・・・でしょう、・・・だろう ②[意志]・・・するつもりだ", //　助
                 },
                 {
                     english_vocab: "seafood",
-                    japanese_vocab: "",
+                    japanese_vocab: "シーフード", // 名
                 },
                 {
                     english_vocab: "reservation",
-                    japanese_vocab: "",
+                    japanese_vocab: "予約", // 名
                 },
             ]
         },
@@ -1248,43 +1248,43 @@ export const nhYear2 = {
             vocab: [
                 {
                     english_vocab: "meter",
-                    japanese_vocab: "",
+                    japanese_vocab: "メーテル", // 名
                 },
                 {
                     english_vocab: "tall",
-                    japanese_vocab: "",
+                    japanese_vocab: "身長[高さ]が・・・ある", // 形 maybe come back for longer definition
                 },
                 {
                     english_vocab: "weigh",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・の重さがある", // 動
                 },
                 {
                     english_vocab: "ton",
-                    japanese_vocab: "",
+                    japanese_vocab: "トン", // 名
                 },
                 {
                     english_vocab: "gift",
-                    japanese_vocab: "",
+                    japanese_vocab: "贈り物", // 名
                 },
                 {
                     english_vocab: "cookie",
-                    japanese_vocab: "",
+                    japanese_vocab: "クッキー", // 名
                 },
                 {
                     english_vocab: "rode",
-                    japanese_vocab: "",
+                    japanese_vocab: "rideの過去形", // 動
                 },
                 {
                     english_vocab: "scary",
-                    japanese_vocab: "",
+                    japanese_vocab: "恐ろしい, こわい", // 形
                 },
                 {
                     english_vocab: "communicate",
-                    japanese_vocab: "",
+                    japanese_vocab: "連絡する、意思の疎通をする", // 助
                 },
                 {
                     english_vocab: "culture",
-                    japanese_vocab: "",
+                    japanese_vocab: "文化",  // 名
                 },
             ]
         },
