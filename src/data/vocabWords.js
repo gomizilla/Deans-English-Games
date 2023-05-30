@@ -2520,23 +2520,23 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "danger",
-                    japanese_vocab: "",
+                    japanese_vocab: "危険(性)", // 名
                 },
                 {
                     english_vocab: "extinction",
-                    japanese_vocab: "",
+                    japanese_vocab: "絶滅", // 名
                 },
                 {
                     english_vocab: "climate",
-                    japanese_vocab: "",
+                    japanese_vocab: "気候", // 名
                 },
                 {
                     english_vocab: "survive",
-                    japanese_vocab: "",
+                    japanese_vocab: "生き残る", // 動
                 },
                 {
                     english_vocab: "condition",
-                    japanese_vocab: "",
+                    japanese_vocab: "状況", // 名
                 },
                
             ]
@@ -2548,7 +2548,7 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "cheetah",
-                    japanese_vocab: "",
+                    japanese_vocab: "チーター", // 名
                 },
             ]
         },
@@ -2560,99 +2560,99 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "let",
-                    japanese_vocab: "",
+                    japanese_vocab: "(人)に・・・させる", // 動
                 },
                 {
                     english_vocab: "until",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・まで(ずっと)、[否定文で]・・・までは(～しない)", // 前
                 },
                 {
                     english_vocab: "era",
-                    japanese_vocab: "",
+                    japanese_vocab: "時代、年代", // 名
                 },
                 {
                     english_vocab: "population",
-                    japanese_vocab: "",
+                    japanese_vocab: "人口、(動物の)個体数", // 名
                 },
                 {
                     english_vocab: "rapidly",
-                    japanese_vocab: "",
+                    japanese_vocab: "速く、急速に", // 副
                 },
                 {
                     english_vocab: "feather",
-                    japanese_vocab: "",
+                    japanese_vocab: "羽", // 名
                 },
                 {
                     english_vocab: "development",
-                    japanese_vocab: "",
+                    japanese_vocab: "開発", // 名
                 },
                 {
                     english_vocab: "destroy",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を破壊する", // 動
                 },
                 {
                     english_vocab: "environment",
-                    japanese_vocab: "",
+                    japanese_vocab: "環境", // 名
                 },
                 {
                     english_vocab: "capture",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を捕まえる", // 動
                 },
                 {
                     english_vocab: "breed",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を飼育する、繁殖する", // 動
                 },
                 {
                     english_vocab: "safely",
-                    japanese_vocab: "",
+                    japanese_vocab: "安全に", // 副
                 },
                 {
                     english_vocab: "die",
-                    japanese_vocab: "",
+                    japanese_vocab: "死ぬ", // 動
                 },
                 {
                     english_vocab: "government",
-                    japanese_vocab: "",
+                    japanese_vocab: "政府", // 名
                 },
                 {
                     english_vocab: "fly",
-                    japanese_vocab: "",
+                    japanese_vocab: "飛ぶ", // 動
                 },
                 {
                     english_vocab: "logging",
-                    japanese_vocab: "",
+                    japanese_vocab: "伐採", // 名
                 },
                 {
                     english_vocab: "mining",
-                    japanese_vocab: "",
+                    japanese_vocab: "採鉱、採掘", // 名
                 },
                 {
                     english_vocab: "surprisingly",
-                    japanese_vocab: "",
+                    japanese_vocab: "驚いたことには",  // 副
                 },
                 {
                     english_vocab: "electornic",
-                    japanese_vocab: "",
+                    japanese_vocab: "電子の", // 形
                 },
                 {
                     english_vocab: "device",
-                    japanese_vocab: "",
+                    japanese_vocab: "装置", // 名
                 },
                 {
-                    english_vocab: "mental",
-                    japanese_vocab: "",
+                    english_vocab: "metal",
+                    japanese_vocab: "金属", // 名
                 },
                 {
                     english_vocab: "ecosystem",
-                    japanese_vocab: "",
+                    japanese_vocab: "生態系", // 名
                 },
                 {
                     english_vocab: "species",
-                    japanese_vocab: "",
+                    japanese_vocab: "(生物学上の)種", // 名
                 },
                 {
                     english_vocab: "affect",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・に影響を与える", // 動
                 },
                 // {
                 //     english_vocab: "human being",
@@ -2660,7 +2660,7 @@ export const nhYear3 = {
                 // },
                 {
                     english_vocab: "relate",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を(～に)関係させる", // 動
                 },
                 
             ]
