@@ -2520,23 +2520,23 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "danger",
-                    japanese_vocab: "",
+                    japanese_vocab: "危険(性)", // 名
                 },
                 {
                     english_vocab: "extinction",
-                    japanese_vocab: "",
+                    japanese_vocab: "絶滅", // 名
                 },
                 {
                     english_vocab: "climate",
-                    japanese_vocab: "",
+                    japanese_vocab: "気候", // 名
                 },
                 {
                     english_vocab: "survive",
-                    japanese_vocab: "",
+                    japanese_vocab: "生き残る", // 動
                 },
                 {
                     english_vocab: "condition",
-                    japanese_vocab: "",
+                    japanese_vocab: "状況", // 名
                 },
                
             ]
@@ -2548,7 +2548,7 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "cheetah",
-                    japanese_vocab: "",
+                    japanese_vocab: "チーター", // 名
                 },
             ]
         },
@@ -2560,99 +2560,99 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "let",
-                    japanese_vocab: "",
+                    japanese_vocab: "(人)に・・・させる", // 動
                 },
                 {
                     english_vocab: "until",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・まで(ずっと)、[否定文で]・・・までは(～しない)", // 前
                 },
                 {
                     english_vocab: "era",
-                    japanese_vocab: "",
+                    japanese_vocab: "時代、年代", // 名
                 },
                 {
                     english_vocab: "population",
-                    japanese_vocab: "",
+                    japanese_vocab: "人口、(動物の)個体数", // 名
                 },
                 {
                     english_vocab: "rapidly",
-                    japanese_vocab: "",
+                    japanese_vocab: "速く、急速に", // 副
                 },
                 {
                     english_vocab: "feather",
-                    japanese_vocab: "",
+                    japanese_vocab: "羽", // 名
                 },
                 {
                     english_vocab: "development",
-                    japanese_vocab: "",
+                    japanese_vocab: "開発", // 名
                 },
                 {
                     english_vocab: "destroy",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を破壊する", // 動
                 },
                 {
                     english_vocab: "environment",
-                    japanese_vocab: "",
+                    japanese_vocab: "環境", // 名
                 },
                 {
                     english_vocab: "capture",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を捕まえる", // 動
                 },
                 {
                     english_vocab: "breed",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を飼育する、繁殖する", // 動
                 },
                 {
                     english_vocab: "safely",
-                    japanese_vocab: "",
+                    japanese_vocab: "安全に", // 副
                 },
                 {
                     english_vocab: "die",
-                    japanese_vocab: "",
+                    japanese_vocab: "死ぬ", // 動
                 },
                 {
                     english_vocab: "government",
-                    japanese_vocab: "",
+                    japanese_vocab: "政府", // 名
                 },
                 {
                     english_vocab: "fly",
-                    japanese_vocab: "",
+                    japanese_vocab: "飛ぶ", // 動
                 },
                 {
                     english_vocab: "logging",
-                    japanese_vocab: "",
+                    japanese_vocab: "伐採", // 名
                 },
                 {
                     english_vocab: "mining",
-                    japanese_vocab: "",
+                    japanese_vocab: "採鉱、採掘", // 名
                 },
                 {
                     english_vocab: "surprisingly",
-                    japanese_vocab: "",
+                    japanese_vocab: "驚いたことには",  // 副
                 },
                 {
                     english_vocab: "electornic",
-                    japanese_vocab: "",
+                    japanese_vocab: "電子の", // 形
                 },
                 {
                     english_vocab: "device",
-                    japanese_vocab: "",
+                    japanese_vocab: "装置", // 名
                 },
                 {
-                    english_vocab: "mental",
-                    japanese_vocab: "",
+                    english_vocab: "metal",
+                    japanese_vocab: "金属", // 名
                 },
                 {
                     english_vocab: "ecosystem",
-                    japanese_vocab: "",
+                    japanese_vocab: "生態系", // 名
                 },
                 {
                     english_vocab: "species",
-                    japanese_vocab: "",
+                    japanese_vocab: "(生物学上の)種", // 名
                 },
                 {
                     english_vocab: "affect",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・に影響を与える", // 動
                 },
                 // {
                 //     english_vocab: "human being",
@@ -2660,7 +2660,7 @@ export const nhYear3 = {
                 // },
                 {
                     english_vocab: "relate",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を(～に)関係させる", // 動
                 },
                 
             ]
@@ -2675,19 +2675,19 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "shelter",
-                    japanese_vocab: "",
+                    japanese_vocab: "避難所", // 名
                 },
                 {
                     english_vocab: "store",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を蓄える", // 動
                 },
                 {
                     english_vocab: "extinguisher",
-                    japanese_vocab: "",
+                    japanese_vocab: "消火器", // 名
                 },
                 {
                     english_vocab: "survey",
-                    japanese_vocab: "",
+                    japanese_vocab: "調査", // 名
                 },
             ]
         },
@@ -2699,19 +2699,19 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "done",
-                    japanese_vocab: "",
+                    japanese_vocab: "doの過去分詞", // 動
                 },
                 {
                     english_vocab: "emergency",
-                    japanese_vocab: "",
+                    japanese_vocab: "緊急事態", // 名
                 },
                 {
                     english_vocab: "kit",
-                    japanese_vocab: "",
+                    japanese_vocab: "道具[用具]一式", // 名
                 },
                 {
                     english_vocab: "link",
-                    japanese_vocab: "",
+                    japanese_vocab: "リンク、接続", // 名
                 },
             ]
         },
@@ -2723,19 +2723,19 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "earthquake",
-                    japanese_vocab: "",
+                    japanese_vocab: "地震", // 名
                 },
                 {
                     english_vocab: "terrible",
-                    japanese_vocab: "",
+                    japanese_vocab: "ひどい", // 形
                 },
                 {
                     english_vocab: "shaking",
-                    japanese_vocab: "",
+                    japanese_vocab: "揺れ", // 名
                 },
                 {
                     english_vocab: "drove",
-                    japanese_vocab: "",
+                    japanese_vocab: "driveの過去形", // 動
                 },
                 // {
                 //     english_vocab: "parking lot",
@@ -2743,67 +2743,67 @@ export const nhYear3 = {
                 // },
                 {
                     english_vocab: "scared",
-                    japanese_vocab: "",
+                    japanese_vocab: "(・・・を)こわがって", // 形
                 },
                 {
                     english_vocab: "finally",
-                    japanese_vocab: "",
+                    japanese_vocab: "ついに、やっと", // 副
                 },
                 {
                     english_vocab: "announcement",
-                    japanese_vocab: "",
+                    japanese_vocab: "アナウンス、発表", // 名
                 },
                 {
                     english_vocab: "latest",
-                    japanese_vocab: "",
+                    japanese_vocab: "最近の、最新の", // 形
                 },
                 {
                     english_vocab: "fortunately",
-                    japanese_vocab: "",
+                    japanese_vocab: "幸運にも", // 副
                 },
                 {
                     english_vocab: "traveler",
-                    japanese_vocab: "",
+                    japanese_vocab: "旅行者", // 名
                 },
                 {
                     english_vocab: "evacuation",
-                    japanese_vocab: "",
+                    japanese_vocab: "避難", // 名
                 },
                 {
                     english_vocab: "drill",
-                    japanese_vocab: "",
+                    japanese_vocab: "訓練、ドリル", // 名
                 },
                 {
                     english_vocab: "resident",
-                    japanese_vocab: "",
+                    japanese_vocab: "住民、居住者", // 名
                 },
                 {
                     english_vocab: "visitor",
-                    japanese_vocab: "",
+                    japanese_vocab: "観光客", // 名
                 },
                 {
                     english_vocab: "simulation",
-                    japanese_vocab: "",
+                    japanese_vocab: "シミュレーション", // 名
                 },
                 {
                     english_vocab: "themselves",
-                    japanese_vocab: "",
+                    japanese_vocab: "彼ら[彼女ら、それら]自身を[に]", // 代
                 },
                 {
                     english_vocab: "instruction",
-                    japanese_vocab: "",
+                    japanese_vocab: "指示", // 名
                 },
                 {
                     english_vocab: "given",
-                    japanese_vocab: "",
+                    japanese_vocab: "giveの過去分詞", // 動
                 },
                 {
                     english_vocab: "simple",
-                    japanese_vocab: "",
+                    japanese_vocab: "単純な、簡単な", // 形
                 },
                 {
                     english_vocab: "interview",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・にインタビューする", // 動
                 },
             ]
         },
@@ -2817,23 +2817,23 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "person",
-                    japanese_vocab: "",
+                    japanese_vocab: "人、個人", // 名
                 },
                 {
                     english_vocab: "respect",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を尊敬する、尊重する", // 動
                 },
                 {
                     english_vocab: "greatly",
-                    japanese_vocab: "",
+                    japanese_vocab: "おおいに、非常に", // 副
                 },
                 {
                     english_vocab: "born",
-                    japanese_vocab: "",
+                    japanese_vocab: "生まれる", // 動
                 },
                 {
                     english_vocab: "international",
-                    japanese_vocab: "",
+                    japanese_vocab: "国際的な", // 形
                 },
                 // {
                 //     english_vocab: "non-violence",
@@ -2841,15 +2841,15 @@ export const nhYear3 = {
                 // },
                 {
                     english_vocab: "Mahatma",
-                    japanese_vocab: "",
+                    japanese_vocab: "マハトマ[敬称]", // 名
                 },
                 {
                     english_vocab: "Indian",
-                    japanese_vocab: "",
+                    japanese_vocab: "インドの、インド人の、インド人", // 形、形、名
                 },
                 {
                     english_vocab: "rupee",
-                    japanese_vocab: "",
+                    japanese_vocab: "ルピー", // 名
                 },
             ]
         },
@@ -2860,23 +2860,23 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "independence",
-                    japanese_vocab: "",
+                    japanese_vocab: "独立", // 名
                 },
                 {
                     english_vocab: "violence",
-                    japanese_vocab: "",
+                    japanese_vocab: "暴力", // 名
                 },
                 {
                     english_vocab: "fight",
-                    japanese_vocab: "",
+                    japanese_vocab: "たたかう、たたかい", // たたかう＝動詞　たたかい＝名詞
                 },
                 {
                     english_vocab: "protest",
-                    japanese_vocab: "",
+                    japanese_vocab: "抗議する/抗議(運動)", // 動　名
                 },
                 {
                     english_vocab: "tough",
-                    japanese_vocab: "",
+                    japanese_vocab: "難な、難しい", // 形
                 },
                 
             ]
@@ -2889,43 +2889,43 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "lawyer",
-                    japanese_vocab: "",
+                    japanese_vocab: "弁護士", // 名
                 },
                 {
                     english_vocab: "discrimination",
-                    japanese_vocab: "",
+                    japanese_vocab: "差別", // 名
                 },
                 {
                     english_vocab: "freely",
-                    japanese_vocab: "",
+                    japanese_vocab: "自由に", // 副
                 },
                 {
                     english_vocab: "sidewalk",
-                    japanese_vocab: "",
+                    japanese_vocab: "歩道", // 名
                 },
                 {
                     english_vocab: "accept",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を受け入れる", // 動
                 },
                 {
                     english_vocab: "unfair",
-                    japanese_vocab: "",
+                    japanese_vocab: "不公平な、不当な", // 形
                 },
                 {
                     english_vocab: "angry",
-                    japanese_vocab: "",
+                    japanese_vocab: "怒った、腹を立てた",  // 形
                 },
                 {
                     english_vocab: "lead",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を導く、・・・を先導する", // 動
                 },
                 {
                     english_vocab: "movement",
-                    japanese_vocab: "",
+                    japanese_vocab: "(政治的・社会的な)運動", // 名
                 },
                 {
                     english_vocab: "arrest",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を逮捕する", // 動
                 },
                 // {
                 //     english_vocab: "non-violent",
@@ -2937,51 +2937,51 @@ export const nhYear3 = {
                 // },
                 {
                     english_vocab: "colony",
-                    japanese_vocab: "",
+                    japanese_vocab: "植民地", // 名
                 },
                 {
                     english_vocab: "salt",
-                    japanese_vocab: "",
+                    japanese_vocab: "塩、食塩", // 名
                 },
                 {
                     english_vocab: "tax",
-                    japanese_vocab: "",
+                    japanese_vocab: "税、税金", // 名
                 },
                 {
                     english_vocab: "expensive",
-                    japanese_vocab: "",
+                    japanese_vocab: "高価な、費用のかかる", // 形
                 },
                 {
                     english_vocab: "follower",
-                    japanese_vocab: "",
+                    japanese_vocab: "信奉者、支持者", // 名
                 },
                 {
                     english_vocab: "almost",
-                    japanese_vocab: "",
+                    japanese_vocab: "ほとんど",  // 副
                 },
                 {
                     english_vocab: "kilometer",
-                    japanese_vocab: "",
+                    japanese_vocab: "キロメートル", // 名
                 },
                 {
                     english_vocab: "reach",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を着く、到着する", // 動
                 },
                 {
                     english_vocab: "march",
-                    japanese_vocab: "",
+                    japanese_vocab: "行進、マーチ", // 名
                 },
                 {
                     english_vocab: "news",
-                    japanese_vocab: "",
+                    japanese_vocab: "ニュース、知らせ", // 名
                 },
                 {
                     english_vocab: "peaceful",
-                    japanese_vocab: "",
+                    japanese_vocab: "平和な", // 形
                 },
                 {
                     english_vocab: "leader",
-                    japanese_vocab: "",
+                    japanese_vocab: "指導者、リーダー", // 名
                 },
             ]
         },
@@ -2997,23 +2997,23 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "backpack",
-                    japanese_vocab: "",
+                    japanese_vocab: "バックパック",  // 名
                 },
                 {
                     english_vocab: "campaign",
-                    japanese_vocab: "",
+                    japanese_vocab: "キャンペーン", // 名
                 },
                 {
                     english_vocab: "unused",
-                    japanese_vocab: "",
+                    japanese_vocab: "未使用の", // 形
                 },
                 {
                     english_vocab: "supply",
-                    japanese_vocab: "",
+                    japanese_vocab: "[suppliesで]必需品", // 名
                 },
                 {
                     english_vocab: "donate",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を寄付する", // 動
                 },
             ]
         },
@@ -3024,7 +3024,7 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "definitely",
-                    japanese_vocab: "",
+                    japanese_vocab: "もちろん、確かに", // 副
                 },
             ]
         },
@@ -3036,190 +3036,97 @@ export const nhYear3 = {
             vocab: [
                 {
                     english_vocab: "imagine",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を想像する", // 動
                 },
                 {
                     english_vocab: "illiterate",
-                    japanese_vocab: "",
+                    japanese_vocab: "読み書きのできない", // 形
                 },
                 {
                     english_vocab: "receive",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を受け取る", // 動
                 },
                 {
                     english_vocab: "encourage",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を勇気づける、励ます", // 動
                 },
                 {
                     english_vocab: "son",
-                    japanese_vocab: "",
+                    japanese_vocab: "息子", // 名
                 },
                 {
                     english_vocab: "daughter",
-                    japanese_vocab: "",
+                    japanese_vocab: "娘", // 名
                 },
                 {
                     english_vocab: "ready",
-                    japanese_vocab: "",
+                    japanese_vocab: "用意ができて", // 形
                 },
                 {
                     english_vocab: "building",
-                    japanese_vocab: "",
+                    japanese_vocab: "建物、ビル", // 名
                 },
                 {
                     english_vocab: "air",
-                    japanese_vocab: "",
+                    japanese_vocab: "空気、空中",  // 名
                 },
                 {
                     english_vocab: "service",
-                    japanese_vocab: "",
+                    japanese_vocab: "サービス、公的事業", // 名
                 },
                 {
                     english_vocab: "globe",
-                    japanese_vocab: "",
+                    japanese_vocab: "地球", // 名
                 },
                 {
                     english_vocab: "exchange",
-                    japanese_vocab: "",
+                    japanese_vocab: "交流、やりとり", // 名
                 },
                 {
                     english_vocab: "depend",
-                    japanese_vocab: "",
+                    japanese_vocab: "頼る", // 動
                 },
                 {
                     english_vocab: "trade",
-                    japanese_vocab: "",
+                    japanese_vocab: "貿易", // 名
                 },
                 {
                     english_vocab: "survival",
-                    japanese_vocab: "",
+                    japanese_vocab: "存続、生き残ること", // 名
                 },
                 {
                     english_vocab: "import",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・輸入する", // 動
                 },
                 {
                     english_vocab: "pork",
-                    japanese_vocab: "",
+                    japanese_vocab: "豚肉", // 名
                 },
                 {
                     english_vocab: "coat",
-                    japanese_vocab: "",
+                    japanese_vocab: "上着、コート", // 名
                 },
                 {
                     english_vocab: "sold",
-                    japanese_vocab: "",
+                    japanese_vocab: "sellの過去分詞", // 動
                 },
                 {
                     english_vocab: "exception",
-                    japanese_vocab: "",
+                    japanese_vocab: "例外", // 名
                 },
                 {
                     english_vocab: "surround",
-                    japanese_vocab: "",
+                    japanese_vocab: "・・・を囲む", // 動
                 },
                 {
                     english_vocab: "daily",
-                    japanese_vocab: "",
+                    japanese_vocab: "日常の", // 形
                 },
                 {
                     english_vocab: "interdependent",
-                    japanese_vocab: "",
+                    japanese_vocab: "相互に依存している", // 形
                 },
             ]
         },
     },
 };
-
-export const nh1Vocab = [
-    {
-        english_vocab: "call",
-    },
-    {
-        english_vocab: "often",
-    },
-    {
-        english_vocab: "so",
-    },
-    {
-        english_vocab: "fan",
-    },
-    {
-        english_vocab: "cricket",
-    },
-    {
-        english_vocab: "just",
-    },
-    {
-        english_vocab: "there",
-    },
-    {
-        english_vocab: "little",
-    },
-    {
-        english_vocab: "every",
-    },
-    {
-        english_vocab: "but",
-    },
-    {
-        english_vocab: "cannot",
-    },
-    {
-        english_vocab: "market",
-    },
-    {
-        english_vocab: "wow",
-    },
-    {
-        english_vocab: "popular",
-    },
-    {
-        english_vocab: "crowded",
-    },
-    {
-        english_vocab: "symbol",
-    },
-    {
-        english_vocab: "picnic",
-    },
-    {
-        english_vocab: "area",
-    },
-    {
-        english_vocab: "hey",
-    },
-    {
-        english_vocab: "around",
-    },
-    {
-        english_vocab: "come",
-    },
-    {
-        english_vocab: "toast",
-    },
-    {
-        english_vocab: "yogurt",
-    },
-    {
-        english_vocab: "also",
-    },
-    {
-        english_vocab: "sounds",
-    },
-    {
-        english_vocab: "sausage",
-    },
-];
-
-export const nh2Vocab = [
-    {
-        english_vocab: "",
-    },
-];
-
-export const nh3Vocab = [
-    {
-        english_vocab: "",
-    }
-]
